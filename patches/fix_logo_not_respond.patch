@@ -1,0 +1,129 @@
+diff --git a/packages/apps-config/src/api/constants.ts b/packages/apps-config/src/api/constants.ts
+index 1a60679..099b003 100644
+--- a/packages/apps-config/src/api/constants.ts
++++ b/packages/apps-config/src/api/constants.ts
+@@ -32,5 +32,6 @@ export const DOCK_POS_TESTNET_GENESIS = '0x59d93e2ce42abb8aa52ca9a9e820233667104
+ export const NFTMART_GENESIS = '0xfcf9074303d8f319ad1bf0195b145871977e7c375883b834247cb01ff22f51f9';
+ 
+ export const SELENDRA_GENESIS = "0x8dbbe8a37d4c62d14835ba0f7e3baf70cf4b93a3e98c53d69544a7b9ea42d0df"
++export const SELENDRA_TESTNET_GENESIS = "0x779c945be9025d1fc27e7fc0235ff4f1b062c93e2c455f3e0d4f919d12f8c817"
+ 
+ export const CARDAMOM_GENESIS = "0x3d7efe9e36b20531f2a735feac13f3cad96798b2d9036a6950dac8076c19c545"
+diff --git a/packages/apps-config/src/endpoints/index.ts b/packages/apps-config/src/endpoints/index.ts
+index 4075f91..8c91cc5 100644
+--- a/packages/apps-config/src/endpoints/index.ts
++++ b/packages/apps-config/src/endpoints/index.ts
+@@ -6,7 +6,7 @@ import type { LinkOption } from './types';
+ 
+ import { defaultT } from '../util';
+ import { createCustom, createDev, createOwn } from './development';
+-import { prodSelendra } from './production';
++import { prodSelendra, prodSelendraTestnet} from './production';
+ import { expandEndpoints } from './util';
+ 
+ export { CUSTOM_ENDPOINT_KEY } from './development';
+@@ -23,7 +23,15 @@ export function createWsEndpoints(t: TFunction = defaultT, firstOnly = false, wi
+       value: ''
+     },
+     ...expandEndpoints(t, [prodSelendra], firstOnly, withSort),
+-    // {
++    {
++      isDisabled: false,
++      isHeader: true,
++      isSpaced: true,
++      text: t('rpc.header.Selendra.relay', 'Selendra Testnet', { ns: 'apps-config' }),
++      textBy: '',
++      value: ''
++    },
++    ...expandEndpoints(t, [prodSelendraTestnet], firstOnly, withSort),
+     //   isDisabled: false,
+     //   isHeader: true,
+     //   text: t('rpc.header.Cardamom.relay', 'Cardamom & parachains (Testnet)', { ns: 'apps-config' }),
+diff --git a/packages/apps-config/src/endpoints/production.ts b/packages/apps-config/src/endpoints/production.ts
+index 5b34f41..ae8f71d 100644
+--- a/packages/apps-config/src/endpoints/production.ts
++++ b/packages/apps-config/src/endpoints/production.ts
+@@ -3,3 +3,4 @@
+ 
+ // export * from './testnetRelayCardamom';
+ export * from './productionSelendra';
++export * from './productionSelendraTestnet';
+diff --git a/packages/apps-config/src/endpoints/productionSelendra.ts b/packages/apps-config/src/endpoints/productionSelendra.ts
+index 245c638..a35cdba 100644
+--- a/packages/apps-config/src/endpoints/productionSelendra.ts
++++ b/packages/apps-config/src/endpoints/productionSelendra.ts
+@@ -33,8 +33,8 @@ export const prodSelendra: EndpointOption = {
+   info: 'selendra',
+   text: 'Selendra',
+   providers: {
+-    'Selendra 1': 'wss://rpc-mainnet.selendra.org',
+-    'Selendra 2': 'wss://rpc-mainnet2.selendra.org'
++    'Digital Ocean 1': 'wss://rpc-mainnet.selendra.org',
++    'Sabay 2': 'wss://rpc-mainnet2.selendra.org'
+   },
+   teleport: [1000],
+   // linked: [
+diff --git a/packages/apps-config/src/ui/colors.ts b/packages/apps-config/src/ui/colors.ts
+index 06ea012..47713cd 100644
+--- a/packages/apps-config/src/ui/colors.ts
++++ b/packages/apps-config/src/ui/colors.ts
+@@ -222,6 +222,7 @@ const nodeZenlink = 'linear-gradient(45deg, #F20082 0%, #FF4D4D 100%)';
+ const nodeSubGame = '#EB027D';
+ const nodeZCloak = 'linear-gradient(to right, #E89A76 0%, #C5B8CC 50%, #B0B4D7 100%)';
+ const nodeselendra = '#03A9F4';
++const nodeselendraTestnet = '#db0f74';
+ const nodecardamom = '#d65555';
+ const nodeindra = '#ed1576';
+ const nodeindradent = '#ed1576';
+@@ -444,6 +445,7 @@ export const chainColors: Record<string, string> = Object.entries({
+   'ZERO.IO': chainZero,
+   // eslint-disable-next-line sort-keys
+   selendra: nodeselendra,
++  'selendra testnet': nodeselendraTestnet,
+   // eslint-disable-next-line sort-keys
+   cardamom: nodecardamom,
+   indracore: nodeindra,
+@@ -558,6 +560,7 @@ export const nodeColors = Object.entries({
+   'Zenlink Collator': nodeZenlink,
+   // eslint-disable-next-line sort-keys
+   selendra: nodeselendra,
++  'selendra testnet': nodeselendraTestnet,
+   // eslint-disable-next-line sort-keys
+   cardamom: nodecardamom,
+   indracore: nodeindra,
+@@ -579,6 +582,7 @@ export const specColors = Object.entries({
+   westmint: specWestmint,
+   // eslint-disable-next-line sort-keys
+   selendra: nodeselendra,
++  'selendra testnet': nodeselendraTestnet,
+   // eslint-disable-next-line sort-keys
+   cardamom: nodecardamom,
+   indracore: nodeindra,
+diff --git a/packages/apps-config/src/ui/logos/index.ts b/packages/apps-config/src/ui/logos/index.ts
+index 13e2de6..bb1f92f 100644
+--- a/packages/apps-config/src/ui/logos/index.ts
++++ b/packages/apps-config/src/ui/logos/index.ts
+@@ -347,6 +347,7 @@ export const chainLogos = Object.entries({
+   'zcloak poc1': nodeZCloak,
+   // eslint-disable-next-line sort-keys
+   selendra: selendraLogo,
++  'selendra testnet': selendraLogo,
+   // eslint-disable-next-line sort-keys
+   cardamom: CardamomLogo,
+   indracore: IndraLogo,
+@@ -528,6 +529,7 @@ export const nodeLogos = Object.entries({
+   Zenlink: nodeZenlink,
+   'Zenlink Collator': nodeZenlink,
+   selendra: selendraLogo,
++  'selendra testnet': selendraLogo,
+   cardamom: CardamomLogo,
+   indracore: IndraLogo,
+   indranet: IndraLogo,
+@@ -760,6 +762,7 @@ export const namedLogos: Record<string, unknown> = {
+   zeitgeist: nodeZeitgeist,
+   zero: nodeZero,
+   selendra: selendraLogo,
++  'selendra testnet': selendraLogo,
+   cardamom: CardamomLogo,
+   indracore: IndraLogo,
+   indranet: IndraLogo,
