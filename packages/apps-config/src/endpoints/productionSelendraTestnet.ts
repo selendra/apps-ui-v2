@@ -33,7 +33,7 @@ export const prodSelendraTestnet: EndpointOption = {
   info: 'selendra',
   text: 'Selendra Testnet',
   providers: {
-    'Selendra Ocean': 'wss://rpc-testnet.selendra.org',
+    'Selendra TheNat': 'wss://rpc-testnet-3.selendra.org',
     'Selendra Sabay': 'wss://rpc-sabay-testnet.selendra.org'
   },
   teleport: [1000],
