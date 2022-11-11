@@ -7,7 +7,7 @@ import { externalLogos } from '../ui/logos';
 
 export default {
   chains: {
-    'Selendra Testnet': 'selendra-testnet'
+    'Selendra Testnet': 'Selendra Testnet'
   },
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   create: (_chain: string, path: string, data: BN | number | string): string =>

@@ -5,6 +5,8 @@ import type { EndpointOption } from './types';
 
 import { SELENDRA_TESTNET_GENESIS } from '../api/constants';
 
+import { getTeleports } from './util';
+
 /* eslint-disable sort-keys */
 
 // The available endpoints that will show in the dropdown. For the most part (with the exception of
@@ -27,17 +29,34 @@ import { SELENDRA_TESTNET_GENESIS } from '../api/constants';
 //   }
 // ];
 
-export const prodSelendraTestnet: EndpointOption = {
-  dnslink: 'selendraTestnet',
+
+export const prodParasSelendraTestnetCommon: EndpointOption[] = [
+  {
+    info: 'Indranet Testnet',
+    paraId: 1000,
+    text: 'Indranet Parachain',
+    teleport: [-1],
+    providers: {
+    'Digital Ocean': 'wss://rpc-testnet.selendra.org',
+    'The Natt': 'wss://rpc2-testnet-indra.selendra.org',
+    }
+  }
+];
+
+export const prodRelaySelendraTestnet: EndpointOption = {
+  dnslink: 'Selendra Testnet',
   genesisHash: SELENDRA_TESTNET_GENESIS,
-  info: 'selendra',
-  text: 'Selendra Testnet',
+  info: 'Selendra Testnet',
+  text: 'Selendra Relaychain',
   providers: {
-    'Selendra TheNat': 'wss://rpc-testnet-3.selendra.org',
-    'Selendra Sabay': 'wss://rpc-sabay-testnet.selendra.org'
+    // 'Digital Ocean': 'wss://rpc-testnet.selendra.org',
+    'The Natt': 'wss://rpc2-testnet.selendra.org',
+    // NOTE: Keep this as the last entry, nothing after it
+    'light client': 'light://substrate-connect/selendra' // NOTE: Keep last
   },
-  teleport: [1000],
-  // linked: [
-  //   ...prodParasSelendraCommon
-  // ]
+  teleport: getTeleports(prodParasSelendraTestnetCommon),
+  linked: [
+    ...prodParasSelendraTestnetCommon,
+  ]
 };
+

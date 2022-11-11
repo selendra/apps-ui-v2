@@ -2,5 +2,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // export * from './testnetRelayCardamom';
-export * from './productionSelendra';
-export * from './productionSelendraTestnet';
+// export * from './productionSelendra';
+// export * from './productionSelendraTestnet';
+
+// export * from './prodParasSelendraCommon';
+export * from './prodRelaySelendra';
+export * from './prodRelaySelendraTestnet';

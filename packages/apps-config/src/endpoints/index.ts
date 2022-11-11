@@ -6,8 +6,10 @@ import type { LinkOption } from './types';
 
 import { defaultT } from '../util';
 import { createCustom, createDev, createOwn } from './development';
-import { prodSelendra, prodSelendraTestnet} from './production';
+// import { prodRelaySelendra, prodSelendraTestnet} from './production';
+import { prodRelaySelendra} from './production';
 import { expandEndpoints } from './util';
+import { prodRelaySelendraTestnet } from './prodRelaySelendraTestnet';
 
 export { CUSTOM_ENDPOINT_KEY } from './development';
 
@@ -18,20 +20,21 @@ export function createWsEndpoints(t: TFunction = defaultT, firstOnly = false, wi
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
-      text: t('rpc.header.Selendra.relay', 'Selendra Mainnet', { ns: 'apps-config' }),
+      text: t('rpc.header.Selendra.relay', 'Selendra & Parachain', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },
-    ...expandEndpoints(t, [prodSelendra], firstOnly, withSort),
+    ...expandEndpoints(t, [prodRelaySelendra], firstOnly, withSort),
     {
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
-      text: t('rpc.header.Selendra.relay', 'Selendra Testnet', { ns: 'apps-config' }),
+      text: t('rpc.header.Selendra.relay', 'Selendra Testnet & Parachain', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },
-    ...expandEndpoints(t, [prodSelendraTestnet], firstOnly, withSort),
+    ...expandEndpoints(t, [prodRelaySelendraTestnet], firstOnly, withSort),
+    // ...expandEndpoints(t, [prodSelendraTestnet], firstOnly, withSort),
     //   isDisabled: false,
     //   isHeader: true,
     //   text: t('rpc.header.Cardamom.relay', 'Cardamom & parachains (Testnet)', { ns: 'apps-config' }),

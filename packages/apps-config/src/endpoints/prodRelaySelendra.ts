@@ -48,7 +48,7 @@ export const prodParasSelendraCommon: EndpointOption[] = [
   {
     info: 'indra',
     paraId: 1000,
-    text: 'Indra',
+    text: 'Indranet Parachain',
     teleport: [-1],
     providers: {
     'Digital Ocean': 'wss://rpc-indra.selendra.org',
@@ -61,7 +61,7 @@ export const prodRelaySelendra: EndpointOption = {
   dnslink: 'selendra',
   genesisHash: SELENDRA_GENESIS,
   info: 'selendra',
-  text: 'Selendra',
+  text: 'Selendra Relaychain',
   providers: {
     'Digital Ocean': 'wss://rpc.selendra.org',
     'The Natt': 'wss://rpc2.selendra.org',

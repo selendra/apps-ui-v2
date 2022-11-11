@@ -222,10 +222,10 @@ const nodeZenlink = 'linear-gradient(45deg, #F20082 0%, #FF4D4D 100%)';
 const nodeSubGame = '#EB027D';
 const nodeZCloak = 'linear-gradient(to right, #E89A76 0%, #C5B8CC 50%, #B0B4D7 100%)';
 const nodeselendra = '#03A9F4';
-const nodeselendraTestnet = '#db0f74';
+const nodeselendraTestnet = '#9333ea';
+const nodeindraTestnet = '#9333ea';
 const nodecardamom = '#d65555';
-const nodeindra = '#ed1576';
-const nodeindradent = '#ed1576';
+const nodeindra = '#03A9F4';
 
 // based on the spec name
 const specShell = '#2e86ab'; // '#0596FC';
@@ -445,14 +445,12 @@ export const chainColors: Record<string, string> = Object.entries({
   'ZERO.IO': chainZero,
   // eslint-disable-next-line sort-keys
   selendra: nodeselendra,
-  'selendra testnet': nodeselendraTestnet,
+  'Selendra Testnet': nodeselendraTestnet,
   // eslint-disable-next-line sort-keys
   cardamom: nodecardamom,
-  indracore: nodeindra,
-  indranet: nodeindra,
   // eslint-disable-next-line sort-keys
-  indradent: nodeindradent,
-  indradentTestnet: nodeindradent
+  indra: nodeindra,
+  'Indranet Testnet': nodeindraTestnet
 }).reduce<Record<string, string>>((colors, [chain, color]) => ({
   ...colors,
   [sanitize(chain)]: color
@@ -560,14 +558,12 @@ export const nodeColors = Object.entries({
   'Zenlink Collator': nodeZenlink,
   // eslint-disable-next-line sort-keys
   selendra: nodeselendra,
-  'selendra testnet': nodeselendraTestnet,
+  'Selendra Testnet': nodeselendraTestnet,
   // eslint-disable-next-line sort-keys
   cardamom: nodecardamom,
-  indracore: nodeindra,
-  indranet: nodeindra,
   // eslint-disable-next-line sort-keys
-  indradent: nodeindradent,
-  indradentTestnet: nodeindradent
+  indra: nodeindra,
+  'Indranet Testnet': nodeindraTestnet
 }).reduce<Record<string, string>>((colors, [node, color]) => ({
   ...colors,
   [sanitize(node)]: color
@@ -582,14 +578,12 @@ export const specColors = Object.entries({
   westmint: specWestmint,
   // eslint-disable-next-line sort-keys
   selendra: nodeselendra,
-  'selendra testnet': nodeselendraTestnet,
+  'Selendra Testnet': nodeselendraTestnet,
   // eslint-disable-next-line sort-keys
   cardamom: nodecardamom,
-  indracore: nodeindra,
-  indranet: nodeindra,
   // eslint-disable-next-line sort-keys
-  indradent: nodeindradent,
-  indradentTestnet: nodeindradent
+  indra: nodeindra,
+  'Indranet Testnet': nodeindraTestnet
 }).reduce<Record<string, string>>((colors, [spec, color]) => ({
   ...colors,
   [sanitize(spec)]: color

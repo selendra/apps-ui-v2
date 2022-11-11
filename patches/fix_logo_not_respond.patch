@@ -71,15 +71,15 @@ index 06ea012..47713cd 100644
  const nodeSubGame = '#EB027D';
  const nodeZCloak = 'linear-gradient(to right, #E89A76 0%, #C5B8CC 50%, #B0B4D7 100%)';
  const nodeselendra = '#03A9F4';
-+const nodeselendraTestnet = '#db0f74';
++const nodeselendraTestnet = '#9333ea';
  const nodecardamom = '#d65555';
  const nodeindra = '#ed1576';
- const nodeindradent = '#ed1576';
+ const nodeindraTestnet = '#ed1576';
 @@ -444,6 +445,7 @@ export const chainColors: Record<string, string> = Object.entries({
    'ZERO.IO': chainZero,
    // eslint-disable-next-line sort-keys
    selendra: nodeselendra,
-+  'selendra testnet': nodeselendraTestnet,
++  'Selendra Testnet': nodeselendraTestnet,
    // eslint-disable-next-line sort-keys
    cardamom: nodecardamom,
    indracore: nodeindra,
@@ -87,7 +87,7 @@ index 06ea012..47713cd 100644
    'Zenlink Collator': nodeZenlink,
    // eslint-disable-next-line sort-keys
    selendra: nodeselendra,
-+  'selendra testnet': nodeselendraTestnet,
++  'Selendra Testnet': nodeselendraTestnet,
    // eslint-disable-next-line sort-keys
    cardamom: nodecardamom,
    indracore: nodeindra,
@@ -95,7 +95,7 @@ index 06ea012..47713cd 100644
    westmint: specWestmint,
    // eslint-disable-next-line sort-keys
    selendra: nodeselendra,
-+  'selendra testnet': nodeselendraTestnet,
++  'Selendra Testnet': nodeselendraTestnet,
    // eslint-disable-next-line sort-keys
    cardamom: nodecardamom,
    indracore: nodeindra,
@@ -107,7 +107,7 @@ index 13e2de6..bb1f92f 100644
    'zcloak poc1': nodeZCloak,
    // eslint-disable-next-line sort-keys
    selendra: selendraLogo,
-+  'selendra testnet': selendraLogo,
++  'Selendra Testnet': selendraLogo,
    // eslint-disable-next-line sort-keys
    cardamom: CardamomLogo,
    indracore: IndraLogo,
@@ -115,7 +115,7 @@ index 13e2de6..bb1f92f 100644
    Zenlink: nodeZenlink,
    'Zenlink Collator': nodeZenlink,
    selendra: selendraLogo,
-+  'selendra testnet': selendraLogo,
++  'Selendra Testnet': selendraLogo,
    cardamom: CardamomLogo,
    indracore: IndraLogo,
    indranet: IndraLogo,
@@ -123,7 +123,7 @@ index 13e2de6..bb1f92f 100644
    zeitgeist: nodeZeitgeist,
    zero: nodeZero,
    selendra: selendraLogo,
-+  'selendra testnet': selendraLogo,
++  'Selendra Testnet': selendraLogo,
    cardamom: CardamomLogo,
    indracore: IndraLogo,
    indranet: IndraLogo,

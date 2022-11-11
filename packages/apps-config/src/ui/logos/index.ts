@@ -177,9 +177,10 @@ import nodeZenlink from './nodes/zenlink.svg';
 import nodeZero from './nodes/zero.svg';
 import emptyLogo from './empty.svg';
 import selendraLogo from './nodes/selendra.png';
-import indradentLogo from './nodes/indra.png';
+import selendratestnetLogo from './nodes/selendratestnet.png';
+import indratestnetLogo from './nodes/indratestnet.png';
 import CardamomLogo from './nodes/cardamom.png';
-import IndraLogo from './nodes/indra.png';
+import indraLogo from './nodes/indra.png';
 // last-resort fallback, just something empty
 
 // Alphabetical overrides based on the actual matched chain name
@@ -347,14 +348,12 @@ export const chainLogos = Object.entries({
   'zcloak poc1': nodeZCloak,
   // eslint-disable-next-line sort-keys
   selendra: selendraLogo,
-  'selendra testnet': selendraLogo,
+  'Selendra Testnet': selendratestnetLogo,
   // eslint-disable-next-line sort-keys
   cardamom: CardamomLogo,
-  indracore: IndraLogo,
-  indranet: IndraLogo,
   // eslint-disable-next-line sort-keys
-  indradent: indradentLogo,
-  indradentTestnet: indradentLogo
+  indra: indraLogo,
+  'Indranet Testnet': indratestnetLogo
 }).reduce<Record<string, unknown>>((logos, [chain, logo]) => ({
   ...logos,
   [sanitize(chain)]: logo
@@ -529,12 +528,10 @@ export const nodeLogos = Object.entries({
   Zenlink: nodeZenlink,
   'Zenlink Collator': nodeZenlink,
   selendra: selendraLogo,
-  'selendra testnet': selendraLogo,
+  'Selendra Testnet': selendratestnetLogo,
   cardamom: CardamomLogo,
-  indracore: IndraLogo,
-  indranet: IndraLogo,
-  indradent: indradentLogo,
-  indradentTestnet: indradentLogo
+  indra: indraLogo,
+  'Indranet Testnet': indratestnetLogo,
 }).reduce<Record<string, unknown>>((logos, [node, logo]) => ({
   ...logos,
   [sanitize(node)]: logo
@@ -762,12 +759,10 @@ export const namedLogos: Record<string, unknown> = {
   zeitgeist: nodeZeitgeist,
   zero: nodeZero,
   selendra: selendraLogo,
-  'selendra testnet': selendraLogo,
+  'Selendra Testnet': selendratestnetLogo,
   cardamom: CardamomLogo,
-  indracore: IndraLogo,
-  indranet: IndraLogo,
-  indradent: indradentLogo,
-  indradentTestnet: indradentLogo
+  indra: indraLogo,
+  'Indranet Testnet': indratestnetLogo,
 };
 
 // extension logos
