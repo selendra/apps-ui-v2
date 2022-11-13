@@ -37,8 +37,8 @@ export const prodParasSelendraTestnetCommon: EndpointOption[] = [
     text: 'Indranet Parachain',
     teleport: [-1],
     providers: {
-    'Digital Ocean': 'wss://rpc-testnet.selendra.org',
-    'The Natt': 'wss://rpc2-testnet-indra.selendra.org',
+    'The Natt': 'wss://rpc-testnet-indra.selendra.org',
+    'Digital Ocean': 'wss://rpc2-testnet-indra.selendra.org',
     }
   }
 ];
@@ -49,8 +49,8 @@ export const prodRelaySelendraTestnet: EndpointOption = {
   info: 'Selendra Testnet',
   text: 'Selendra Relaychain',
   providers: {
-    // 'Digital Ocean': 'wss://rpc-testnet.selendra.org',
-    'The Natt': 'wss://rpc2-testnet.selendra.org',
+    'The Natt': 'wss://rpc-testnet.selendra.org',
+    'Digital Ocean': 'wss://rpc2-testnet.selendra.org',
     // NOTE: Keep this as the last entry, nothing after it
     'light client': 'light://substrate-connect/selendra' // NOTE: Keep last
   },

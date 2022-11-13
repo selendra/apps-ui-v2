@@ -63,8 +63,8 @@ export const prodRelaySelendra: EndpointOption = {
   info: 'selendra',
   text: 'Selendra Relaychain',
   providers: {
-    'Digital Ocean': 'wss://rpc.selendra.org',
-    'The Natt': 'wss://rpc2.selendra.org',
+    'The Natt': 'wss://rpc.selendra.org',
+    'Digital Ocean': 'wss://rpc2.selendra.org',
     // NOTE: Keep this as the last entry, nothing after it
     'light client': 'light://substrate-connect/selendra' // NOTE: Keep last
   },
