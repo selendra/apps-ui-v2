@@ -449,7 +449,7 @@ export const chainColors: Record<string, string> = Object.entries({
   // eslint-disable-next-line sort-keys
   cardamom: nodecardamom,
   // eslint-disable-next-line sort-keys
-  indra: nodeindra,
+  Indranet: nodeindra,
   'Indranet Testnet': nodeindraTestnet
 }).reduce<Record<string, string>>((colors, [chain, color]) => ({
   ...colors,
@@ -562,7 +562,7 @@ export const nodeColors = Object.entries({
   // eslint-disable-next-line sort-keys
   cardamom: nodecardamom,
   // eslint-disable-next-line sort-keys
-  indra: nodeindra,
+  Indranet: nodeindra,
   'Indranet Testnet': nodeindraTestnet
 }).reduce<Record<string, string>>((colors, [node, color]) => ({
   ...colors,
@@ -582,7 +582,7 @@ export const specColors = Object.entries({
   // eslint-disable-next-line sort-keys
   cardamom: nodecardamom,
   // eslint-disable-next-line sort-keys
-  indra: nodeindra,
+  Indranet: nodeindra,
   'Indranet Testnet': nodeindraTestnet
 }).reduce<Record<string, string>>((colors, [spec, color]) => ({
   ...colors,

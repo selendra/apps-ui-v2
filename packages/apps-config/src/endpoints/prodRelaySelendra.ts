@@ -46,13 +46,13 @@ import { getTeleports } from './util';
 
 export const prodParasSelendraCommon: EndpointOption[] = [
   {
-    info: 'indra',
+    info: 'Indranet',
     paraId: 1000,
     text: 'Indranet Parachain',
     teleport: [-1],
     providers: {
-    'Digital Ocean': 'wss://rpc-indra.selendra.org',
-    'The Natt': 'wss://rpc2-indra.selendra.org',
+    'The Natt': 'wss://rpc-indranet.selendra.org',
+    'Digital Ocean': 'wss://rpc2-indranet.selendra.org',
     }
   }
 ];

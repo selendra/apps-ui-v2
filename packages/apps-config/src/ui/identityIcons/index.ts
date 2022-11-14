@@ -23,7 +23,7 @@ export const identitySpec: Record<string, string> = [
   ['westmint', 'polkadot'],
   ['selendra', 'robohash'],
   ['cardamom', 'substrate'],
-  ['indra', 'beachball'],
+  ['indranet', 'beachball'],
   ['Indranet Testnet', 'beachball']
 ].reduce((icons, [spec, icon]): Record<string, string> => ({
   ...icons,

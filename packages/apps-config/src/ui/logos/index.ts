@@ -352,7 +352,7 @@ export const chainLogos = Object.entries({
   // eslint-disable-next-line sort-keys
   cardamom: CardamomLogo,
   // eslint-disable-next-line sort-keys
-  indra: indraLogo,
+  Indranet: indraLogo,
   'Indranet Testnet': indratestnetLogo
 }).reduce<Record<string, unknown>>((logos, [chain, logo]) => ({
   ...logos,
@@ -530,7 +530,7 @@ export const nodeLogos = Object.entries({
   selendra: selendraLogo,
   'Selendra Testnet': selendratestnetLogo,
   cardamom: CardamomLogo,
-  indra: indraLogo,
+  Indranet: indraLogo,
   'Indranet Testnet': indratestnetLogo,
 }).reduce<Record<string, unknown>>((logos, [node, logo]) => ({
   ...logos,
@@ -761,7 +761,7 @@ export const namedLogos: Record<string, unknown> = {
   selendra: selendraLogo,
   'Selendra Testnet': selendratestnetLogo,
   cardamom: CardamomLogo,
-  indra: indraLogo,
+  Indranet: indraLogo,
   'Indranet Testnet': indratestnetLogo,
 };
 
