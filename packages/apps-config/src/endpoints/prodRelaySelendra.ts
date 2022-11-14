@@ -66,7 +66,6 @@ export const prodRelaySelendra: EndpointOption = {
     'The Natt': 'wss://rpc.selendra.org',
     'Digital Ocean': 'wss://rpc2.selendra.org',
     // NOTE: Keep this as the last entry, nothing after it
-    'light client': 'light://substrate-connect/selendra' // NOTE: Keep last
   },
   teleport: getTeleports(prodParasSelendraCommon),
   linked: [

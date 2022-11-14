@@ -33,11 +33,7 @@ function expandLinked (input: LinkOption[]): LinkOption[] {
         expandLinked(entry.linked).map((child): LinkOption => {
           child.genesisHashRelay = entry.genesisHash;
           child.isChild = true;
-          child.textRelay = input.length
-            ? input[0].text
-            : undefined;
           child.valueRelay = valueRelay;
-
           return child;
         })
       )
