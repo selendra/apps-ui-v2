@@ -51,8 +51,8 @@ export const prodParasSelendraCommon: EndpointOption[] = [
     text: 'Indranet Parachain',
     teleport: [-1],
     providers: {
-    'The Natt': 'wss://rpc-indranet.selendra.org',
-    'Digital Ocean': 'wss://rpc2-indranet.selendra.org',
+    'Digital Ocean0': 'wss://rpc0-indranet.selendra.org',
+    'Digital Ocean1': 'wss://rpc1-indranet.selendra.org',
     }
   }
 ];
@@ -63,8 +63,8 @@ export const prodRelaySelendra: EndpointOption = {
   info: 'selendra',
   text: 'Selendra Relaychain',
   providers: {
-    'The Natt': 'wss://rpc.selendra.org',
-    'Digital Ocean': 'wss://rpc2.selendra.org',
+    'Digital Ocean0': 'wss://rpc0.selendra.org',
+    'Digital Ocean1': 'wss://rpc1.selendra.org',
     // NOTE: Keep this as the last entry, nothing after it
   },
   teleport: getTeleports(prodParasSelendraCommon),
