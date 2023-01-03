@@ -10,6 +10,8 @@
   "rpc.header.live": "Live networks",
   "rpc.header.polkadot.relay": "Polkadot & parachains",
   "rpc.header.rococo.relay": "Test Rococo & parachains",
+  "rpc.header.selendra.relay": "Selendra & parachains",
+  "rpc.header.selendra.testnet.relay": "Selendra Testnet & parachains",
   "rpc.header.test": "Test networks",
   "rpc.header.westend.relay": "Test Westend & parachains",
   "rpc.hosted.via": "via {{host}}",

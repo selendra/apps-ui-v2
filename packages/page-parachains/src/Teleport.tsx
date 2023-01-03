@@ -20,7 +20,7 @@ interface Props {
 }
 
 const INVALID_PARAID = Number.MAX_SAFE_INTEGER;
-const XCM_LOC = ['xcm', 'xcmPallet', 'polkadotXcm'];
+const XCM_LOC = ['xcm', 'xcmPallet', 'selendraXcm'];
 
 function createOption ({ info, paraId, text }: LinkOption): Option {
   return {

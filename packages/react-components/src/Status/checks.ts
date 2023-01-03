@@ -62,7 +62,7 @@ const CHECKS: Record<string, Record<string, EventCheck>> = {
   multisig: {
     MultisigExecuted: dispatchResultMulti
   },
-  polkadotXcm: xcmPallet,
+  selendraXcm: xcmPallet,
   proxy: {
     ProxyExecuted: dispatchResult
   },

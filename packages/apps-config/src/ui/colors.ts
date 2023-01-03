@@ -14,6 +14,11 @@ const emptyColor = '#99999';
 
 // based on chain name
 // alphabetical
+const nodeselendra = '#03A9F4';
+const nodeselendraTestnet = '#9333ea';
+const nodeindraTestnet = '#9333ea';
+const nodecardamom = '#d65555';
+const nodeindra = '#03A9F4';
 const chainSherpax = '#6bbee8';
 const chain3dpass = '#323232';
 const chainAcala = '#645AFF';
@@ -274,9 +279,13 @@ export { emptyColor };
 // Alphabetical overrides based on the actual matched chain name
 // NOTE: This is as retrieved via the system.chain RPC
 export const chainColors: Record<string, string> = Object.entries({
+  'selendra': nodeselendra,
+  'Selendra Testnet': nodeselendraTestnet,
+  'Indranet Testnet': nodeindraTestnet,
+  Indranet: nodeindra,
+  Acala: chainAcala,
   '3DP testnet': chain3dpass,
   '3dpass - The Ledger of Things': chain3dpass,
-  Acala: chainAcala,
   'Acala Dev': chainAcala,
   'acala mandala pc1': chainRoccoMandala,
   'acala mandala pc2': chainRoccoMandala,
@@ -533,6 +542,10 @@ export const chainColors: Record<string, string> = Object.entries({
 // Alphabetical overrides based on the actual software node type
 // NOTE: This is as retrieved via the system.name RPC
 export const nodeColors = Object.entries({
+  'selendra': nodeselendra,
+  'Selendra Testnet': nodeselendraTestnet,
+  'Indranet Testnet': nodeindraTestnet,
+  Indranet: nodeindra,
   'Ajuna Node': nodeAjuna,
   'Apron Node': nodeApron,
   Astar: nodeAstar,
@@ -656,9 +669,14 @@ export const nodeColors = Object.entries({
 // NOTE: This is as retrieved via the system.name RPC
 export const specColors = Object.entries({
   shell: specShell,
-  statemine: specStatemine,
-  statemint: specStatemint,
-  westmint: specWestmint
+  selendra: nodeselendra,
+  'Selendra Testnet': nodeselendraTestnet,
+  // eslint-disable-next-line sort-keys
+  cardamom: nodecardamom,
+  // eslint-disable-next-line sort-keys
+  Indranet: nodeindra,
+  'Indranet Testnet': nodeindraTestnet
+
 }).reduce<Record<string, string>>((colors, [spec, color]) => ({
   ...colors,
   [sanitize(spec)]: color

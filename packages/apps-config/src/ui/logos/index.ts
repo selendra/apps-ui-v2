@@ -8,6 +8,12 @@
 
 // anything for a specific chain, most would probably fit into the node category (but allow for chain-specific)
 // alphabetical
+import selendraLogo from './nodes/selendra.png';
+import selendratestnetLogo from './nodes/selendratestnet.png';
+import indratestnetLogo from './nodes/indratestnet.png';
+import CardamomLogo from './nodes/cardamom.png';
+import indraLogo from './nodes/indra.png';
+
 import { sanitize } from '../util';
 import chain3dpass from './chains/3dpass.png';
 import chainAcala from './chains/acala.svg';
@@ -246,6 +252,13 @@ import emptyLogo from './empty.svg';
 // Alphabetical overrides based on the actual matched chain name
 // NOTE: This is as retrieved via system.chain RPC
 export const chainLogos = Object.entries({
+  selendra: selendraLogo,
+  'Selendra Testnet': selendratestnetLogo,
+  // eslint-disable-next-line sort-keys
+  cardamom: CardamomLogo,
+  // eslint-disable-next-line sort-keys
+  Indranet: indraLogo,
+  'Indranet Testnet': indratestnetLogo,
   'Acurast Rococo Testnet': chainAcurast,
   'Ajuna Testnet': nodeAjuna,
   'Aleph Zero': chainAleph,
@@ -494,6 +507,12 @@ export const chainLogos = Object.entries({
 // Alphabetical overrides based on the actual software node type
 // NOTE: This is as retrieved via system.name RPC
 export const nodeLogos = Object.entries({
+  selendra: selendraLogo,
+  'Selendra Testnet': selendratestnetLogo,
+  // eslint-disable-next-line sort-keys
+  cardamom: CardamomLogo,
+  // eslint-disable-next-line sort-keys
+  Indranet: indraLogo,
   'Acala Node': chainAcala,
   'Acurast Parachain Collator': chainAcurast,
   'Ajuna Node': nodeAjuna,
@@ -724,6 +743,13 @@ export const specLogos = Object.entries({
 // (Generally would be the 'network' key in the known ss58 as per
 // https://github.com/polkadot-js/common/blob/master/packages/networks/src/index.ts)
 export const namedLogos: Record<string, unknown> = {
+  selendra: selendraLogo,
+  'Selendra Testnet': selendratestnetLogo,
+  // eslint-disable-next-line sort-keys
+  cardamom: CardamomLogo,
+  // eslint-disable-next-line sort-keys
+  Indranet: indraLogo,
+  'Indranet Testnet': indratestnetLogo,
   '3dpass': chain3dpass,
   '3dpass-testnet': chain3dpass,
   acala: chainAcala,
