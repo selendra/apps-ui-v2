@@ -18,12 +18,12 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'selendra-testnet',
     providers: {
-      'Digital Ocean 0': 'wss://rpc0-testnet.selendra.org',
-      'Digital Ocean 1': 'wss://rpc1-testnet.selendra.org',
+      'Endpoint 0': 'wss://rpc0-testnet.selendra.org',
+      'Endpoint 1': 'wss://rpc1-testnet.selendra.org',
     },
     text: 'Selendra Testnet',
     ui: {
-      color: '#9333ea',
+      color: '#004766',
       logo: nodesSelendratestnetPNG
     }
   },
