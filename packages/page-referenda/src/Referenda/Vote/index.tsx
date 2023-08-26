@@ -1,7 +1,10 @@
 // Copyright 2017-2023 @polkadot/app-democracy authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+<<<<<<< HEAD
 import type { TFunction } from 'i18next';
+=======
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { ApiPromise } from '@polkadot/api';
 import type { Preimage } from '@polkadot/react-hooks/types';
 import type { BN } from '@polkadot/util';
@@ -9,8 +12,13 @@ import type { PalletVote, TrackInfo } from '../../types.js';
 
 import React, { useMemo, useState } from 'react';
 
+<<<<<<< HEAD
 import { Button, Modal, ProposedAction, styled, ToggleGroup, TxButton, VoteAccount } from '@polkadot/react-components';
+=======
+import { Button, Modal, styled, ToggleGroup, TxButton, VoteAccount } from '@polkadot/react-components';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useAccounts, useApi, useToggle } from '@polkadot/react-hooks';
+import { ProposedAction } from '@polkadot/react-params';
 
 import { useTranslation } from '../../translate.js';
 import VoteAbstain from './VoteAbstain.js';
@@ -33,7 +41,7 @@ function filterMembers (allAccounts: string[], members?: string[], ranks?: BN[],
   if (members) {
     const accounts = members.filter((a) => allAccounts.includes(a));
 
-    if (ranks && trackInfo && trackInfo.compare) {
+    if (ranks && trackInfo?.compare) {
       const cmp = trackInfo.compare;
 
       return accounts.filter((_, i) => cmp(ranks[i]));
@@ -45,7 +53,7 @@ function filterMembers (allAccounts: string[], members?: string[], ranks?: BN[],
   return members;
 }
 
-function createVoteOpts (api: ApiPromise, t: TFunction): { text: string, value: string }[] {
+function createVoteOpts (api: ApiPromise, t: (key: string, options?: { replace: Record<string, unknown> }) => string): { text: string, value: string }[] {
   let hasAbstain = false;
 
   try {
@@ -56,15 +64,15 @@ function createVoteOpts (api: ApiPromise, t: TFunction): { text: string, value: 
 
   return hasAbstain
     ? [
-      { text: t<string>('Aye'), value: 'aye' },
-      { text: t<string>('Nay'), value: 'nay' },
-      { text: t<string>('Split'), value: 'split' },
-      { text: t<string>('Abstain'), value: 'abstain' }
+      { text: t('Aye'), value: 'aye' },
+      { text: t('Nay'), value: 'nay' },
+      { text: t('Split'), value: 'split' },
+      { text: t('Abstain'), value: 'abstain' }
     ]
     : [
-      { text: t<string>('Aye'), value: 'aye' },
-      { text: t<string>('Nay'), value: 'nay' },
-      { text: t<string>('Split'), value: 'split' }
+      { text: t('Aye'), value: 'aye' },
+      { text: t('Nay'), value: 'nay' },
+      { text: t('Split'), value: 'split' }
     ];
 }
 
@@ -107,20 +115,24 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
       {isOpen && (
         <StyledModal
           className={className}
+<<<<<<< HEAD
           header={t<string>('Vote on referendum')}
+=======
+          header={t('Vote on referendum')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onClose={toggleOpen}
           size='large'
         >
           <Modal.Content>
             {preimage && (
-              <Modal.Columns hint={t<string>('If this proposal is passed, the changes will be applied via dispatch and the deposit returned.')}>
+              <Modal.Columns hint={t('If this proposal is passed, the changes will be applied via dispatch and the deposit returned.')}>
                 <ProposedAction
                   idNumber={id}
                   proposal={preimage.proposal}
                 />
               </Modal.Columns>
             )}
-            <Modal.Columns hint={t<string>('The vote will be recorded for this account. If another account delegated to this one, the delegated votes will also be counted.')}>
+            <Modal.Columns hint={t('The vote will be recorded for this account. If another account delegated to this one, the delegated votes will also be counted.')}>
               <VoteAccount
                 filter={filteredMembers}
                 onChange={setAccountId}
@@ -130,7 +142,7 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
               <>
                 <Modal.Columns
                   className='centerVoteType'
-                  hint={t<string>('The type of vote that you wish to cast on the referendum.')}
+                  hint={t('The type of vote that you wish to cast on the referendum.')}
                 >
                   <ToggleGroup
                     onChange={setVoteTypeIndex}
@@ -182,7 +194,11 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
                 <TxButton
                   accountId={accountId}
                   icon='check-to-slot'
+<<<<<<< HEAD
                   label={t<string>('Vote')}
+=======
+                  label={t('Vote')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onStart={toggleOpen}
                   params={params}
                   tx={api.tx[palletVote].vote}
@@ -193,7 +209,11 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
                   <TxButton
                     accountId={accountId}
                     icon='ban'
+<<<<<<< HEAD
                     label={t<string>('Vote Nay')}
+=======
+                    label={t('Vote Nay')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                     onStart={toggleOpen}
                     params={[id, false]}
                     tx={api.tx[palletVote].vote}
@@ -201,7 +221,11 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
                   <TxButton
                     accountId={accountId}
                     icon='check'
+<<<<<<< HEAD
                     label={t<string>('Vote Aye')}
+=======
+                    label={t('Vote Aye')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                     onStart={toggleOpen}
                     params={[id, true]}
                     tx={api.tx[palletVote].vote}
@@ -215,7 +239,11 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
       <Button
         icon='check-to-slot'
         isDisabled={isDisabled}
+<<<<<<< HEAD
         label={t<string>('Vote')}
+=======
+        label={t('Vote')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         onClick={toggleOpen}
       />
     </>

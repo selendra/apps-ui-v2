@@ -18,12 +18,16 @@ function Proposals ({ proposals }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
 
   const sortedIds = useMemo(
-    () => proposals && proposals.proposalIds.sort((a, b) => a.cmp(b)),
+    () => proposals?.proposalIds.sort((a, b) => a.cmp(b)),
     [proposals]
   );
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('proposals'), 'start', 3],
+=======
+    [t('proposals'), 'start', 3],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [],
     [],
     [t<string>('proposer'), 'address'],
@@ -34,7 +38,7 @@ function Proposals ({ proposals }: Props): React.ReactElement<Props> {
 
   return (
     <Table
-      empty={proposals && sortedIds && t<string>('There are no pending proposals')}
+      empty={proposals && sortedIds && t('There are no pending proposals')}
       header={headerRef.current}
     >
       {proposals && sortedIds?.map((id): React.ReactNode => (

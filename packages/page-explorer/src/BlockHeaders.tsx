@@ -18,12 +18,16 @@ function BlockHeaders ({ headers }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('recent blocks'), 'start', 3]
+=======
+    [t('recent blocks'), 'start', 3]
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (
     <Table
-      empty={t<string>('No blocks available')}
+      empty={t('No blocks available')}
       header={headerRef.current}
     >
       {headers

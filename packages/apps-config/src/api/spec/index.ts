@@ -47,6 +47,10 @@ import equilibrium from './equilibrium.js';
 import fantour from './fantour.js';
 // See https://github.com/polkadot-js/apps/pull/9243
 // import fragnova from './fragnova.js';
+<<<<<<< HEAD
+=======
+import ferrum from './ferrum.js';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import frequency from './frequency.js';
 import galital from './galital.js';
 import galitalParachain from './galital-parachain.js';
@@ -89,6 +93,10 @@ import pangolin from './pangolin.js';
 import pangoro from './pangoro.js';
 import parallel from './parallel.js';
 import parami from './parami.js';
+<<<<<<< HEAD
+=======
+import peaq from './peaq.js';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import phoenix from './phoenix.js';
 import pichiu from './pichiu.js';
 import polkadex from './polkadex.js';
@@ -142,7 +150,6 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'Darwinia PC2': pangolin,
   Equilibrium: equilibrium,
   Genshiro: genshiro,
-  'Genshiro Rococo Testnet': genshiro,
   Pangolin: pangolin,
   Pangoro: pangoro,
   VLN: vln,
@@ -195,6 +202,10 @@ const spec: Record<string, OverrideBundleDefinition> = {
   // See https://github.com/polkadot-js/apps/pull/9243
   // fragnova,
   // 'fragnova-testnet': fragnova,
+<<<<<<< HEAD
+=======
+  'ferrum-parachain': ferrum,
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   frequency,
   'frequency-rococo': frequency,
   galital,
@@ -215,6 +226,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'jupiter-prep': jupiter,
   'jupiter-rococo': jupiterRococo,
   'jur-chain': jur,
+  'jur-node': jur,
   kerria: parallel,
   khala,
   'kintsugi-parachain': interbtc,
@@ -248,6 +260,9 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'origintrail-parachain': origintrail,
   parallel,
   parami,
+  'peaq-node': peaq,
+  'peaq-node-dev': peaq,
+  'peaq-node-krest': peaq,
   'phoenix-node': phoenix,
   'phoenix-parachain': phoenix,
   pichiu,
@@ -256,6 +271,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   polymesh_testnet: polymeshTestnet,
   'pontem-node': pontem,
   prism,
+  'quantum-portal-network-parachain': ferrum,
   quartz,
   realis,
   'riochain-runtime': riochain,

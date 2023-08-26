@@ -2,17 +2,30 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Location } from 'history';
+<<<<<<< HEAD
 import type { SectionType, TabItem } from './types.js';
+=======
+import type { TabItem } from '../types.js';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 import React, { useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 
+<<<<<<< HEAD
 import { styled } from '../styled.js';
 import CurrentSection from './CurrentSection.js';
 import Tab from './Tab.js';
 import Delimiter from './TabsSectionDelimiter.js';
 
 export const TabsCtx = React.createContext<SectionType>({});
+=======
+import { TabsCtx } from '@polkadot/react-hooks/ctx/Tabs';
+
+import { styled } from '../styled.js';
+import CurrentSection from './CurrentSection.js';
+import Tab from './Tab.js';
+import Delimiter from './TabsSectionDelimiter.js';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 interface Props {
   className?: string;

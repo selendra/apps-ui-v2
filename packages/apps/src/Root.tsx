@@ -13,7 +13,10 @@ import { ApiStatsCtxRoot, BlockAuthorsCtxRoot, BlockEventsCtxRoot, KeyringCtxRoo
 import { settings } from '@polkadot/ui-settings';
 
 import Apps from './Apps.js';
+<<<<<<< HEAD
 import { darkTheme, lightTheme } from './themes.js';
+=======
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 interface Props {
   isElectron: boolean;
@@ -21,14 +24,13 @@ interface Props {
 }
 
 function createTheme ({ uiTheme }: { uiTheme: string }): ThemeDef {
-  const validTheme = uiTheme === 'dark' ? 'dark' : 'light';
+  const theme = uiTheme === 'dark'
+    ? 'dark'
+    : 'light';
 
-  document && document.documentElement &&
-    document.documentElement.setAttribute('data-theme', validTheme);
+  document?.documentElement?.setAttribute('data-theme', theme);
 
-  return uiTheme === 'dark'
-    ? darkTheme
-    : lightTheme;
+  return { theme };
 }
 
 function Root ({ isElectron, store }: Props): React.ReactElement<Props> {
@@ -39,7 +41,11 @@ function Root ({ isElectron, store }: Props): React.ReactElement<Props> {
   }, []);
 
   // The ordering here is critical. It defines the hierarchy of dependencies,
+<<<<<<< HEAD
   // i.e. Block* could from Api. Certainly no cross-deps allowed
+=======
+  // i.e. Block* depends on Api. Certainly no cross-deps allowed
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   return (
     <Suspense fallback='...'>
       <ThemeProvider theme={theme}>

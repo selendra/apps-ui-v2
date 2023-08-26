@@ -35,7 +35,7 @@ function formatInspect ({ inner = [], name = '', outer = [] }: Inspect, result: 
     result.push({ name, value: value.join(' ') });
   }
 
-  for (let i = 0; i < inner.length; i++) {
+  for (let i = 0, count = inner.length; i < count; i++) {
     formatInspect(inner[i], result);
   }
 
@@ -85,7 +85,11 @@ function DecodedInspect ({ className, hex, inspect, label }: Props): React.React
               className='isLink'
               key='hex'
             >
+<<<<<<< HEAD
               <td><label>{t<string>('link')}</label></td>
+=======
+              <td><label>{t('link')}</label></td>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               <td>
                 <a
                   href={link}

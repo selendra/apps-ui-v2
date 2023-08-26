@@ -28,14 +28,23 @@ function Waiting ({ className = '', favorites, legend, sessionInfo, toggleFavori
 
   const header = useRef<[string?, string?, number?][]>([
     // favorite, badges, details, expand
+<<<<<<< HEAD
     [t<string>('waiting'), 'start', 4]
+=======
+    [t('waiting'), 'start', 4]
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (
     <Table
       className={className}
+<<<<<<< HEAD
       empty={isNextTick && validatorsWaiting && t<string>('No waiting validators found')}
       emptySpinner={t<string>('Retrieving waiting validators')}
+=======
+      empty={isNextTick && validatorsWaiting && t('No waiting validators found')}
+      emptySpinner={t('Retrieving waiting validators')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       header={header.current}
       isSplit
       legend={legend}

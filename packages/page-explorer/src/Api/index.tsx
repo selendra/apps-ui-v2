@@ -99,9 +99,9 @@ function Api ({ className }: Props): React.ReactElement<Props> {
 
   const { bytesLegend, requestsLegend } = useMemo(
     () => ({
-      bytesLegend: [t<string>('sent'), t<string>('recv'), t<string>('average')],
-      errorsLegend: [t<string>('errors')],
-      requestsLegend: [t<string>('total'), t<string>('requests'), t<string>('subscriptions'), t<string>('average')]
+      bytesLegend: [t('sent'), t('recv'), t('average')],
+      errorsLegend: [t('errors')],
+      requestsLegend: [t('total'), t('requests'), t('subscriptions'), t('average')]
     }), [t]
   );
 
@@ -119,24 +119,40 @@ function Api ({ className }: Props): React.ReactElement<Props> {
     <StyledDiv className={className}>
       <SummaryBox>
         <section>
+<<<<<<< HEAD
           <CardSummary label={t<string>('sent')}>
+=======
+          <CardSummary label={t('sent')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             {isLoaded
               ? <>{formatNumber(last.stats.total.bytesSent / 1024)}kB</>
               : EMPTY_BYTES}
           </CardSummary>
+<<<<<<< HEAD
           <CardSummary label={t<string>('recv')}>
+=======
+          <CardSummary label={t('recv')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             {isLoaded
               ? <>{formatNumber(last.stats.total.bytesRecv / 1024)}kB</>
               : EMPTY_BYTES}
           </CardSummary>
         </section>
         <section>
+<<<<<<< HEAD
           <CardSummary label={t<string>('total req')}>
+=======
+          <CardSummary label={t('total req')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             {isLoaded
               ? <>{formatNumber(last.stats.total.requests)}</>
               : EMPTY_NUMBER}
           </CardSummary>
+<<<<<<< HEAD
           <CardSummary label={t<string>('total sub')}>
+=======
+          <CardSummary label={t('total sub')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             {isLoaded
               ? <>{formatNumber(last.stats.total.subscriptions)}</>
               : EMPTY_NUMBER}
@@ -148,14 +164,22 @@ function Api ({ className }: Props): React.ReactElement<Props> {
           colors={COLORS_REQUESTS}
           legends={requestsLegend}
           options={OPTIONS}
+<<<<<<< HEAD
           title={t<string>('requests made')}
+=======
+          title={t('requests made')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={requestsChart}
         />
         <Chart
           colors={COLORS_BYTES}
           legends={bytesLegend}
           options={OPTIONS}
+<<<<<<< HEAD
           title={t<string>('bytes transferred')}
+=======
+          title={t('bytes transferred')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={bytesChart}
         />
       </NextTick>

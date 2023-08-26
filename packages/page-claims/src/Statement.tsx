@@ -42,7 +42,11 @@ function Statement ({ className, kind, systemChain }: Props): React.ReactElement
 
   return (
     <StyledDiv className={className}>
+<<<<<<< HEAD
       {t<string>('Please read these terms and conditions carefully. By submitting this statement, you are deemed to have accepted these Terms and Conditions. If you do not agree to these terms, please refrain from accessing or proceeding. You can also find them at:')}
+=======
+      {t('Please read these terms and conditions carefully. By submitting this statement, you are deemed to have accepted these Terms and Conditions. If you do not agree to these terms, please refrain from accessing or proceeding. You can also find them at:')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       <a
         className='statementUrl'
         href={statementUrl}

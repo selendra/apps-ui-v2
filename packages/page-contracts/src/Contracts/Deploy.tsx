@@ -48,8 +48,8 @@ function Deploy ({ codeHash, constructorIndex = 0, onClose, setConstructorIndex 
     [codeHash]
   );
 
-  const [name, isNameValid, setName] = useNonEmptyString(code && code.json.name);
-  const { contractAbi, errorText, isAbiError, isAbiSupplied, isAbiValid, onChangeAbi, onRemoveAbi } = useAbi([code && code.json.abi, code && code.contractAbi], codeHash, true);
+  const [name, isNameValid, setName] = useNonEmptyString(code?.json.name);
+  const { contractAbi, errorText, isAbiError, isAbiSupplied, isAbiValid, onChangeAbi, onRemoveAbi } = useAbi([code?.json.abi, code?.contractAbi], codeHash, true);
 
   const blueprint = useMemo(
     () => isAbiValid && codeHash && contractAbi
@@ -104,7 +104,7 @@ function Deploy ({ codeHash, constructorIndex = 0, onClose, setConstructorIndex 
             abi: stringify(result.contract.abi.json),
             genesisHash: api.genesisHash.toHex()
           },
-          name,
+          name: name || undefined,
           tags: []
         });
 
@@ -128,7 +128,7 @@ function Deploy ({ codeHash, constructorIndex = 0, onClose, setConstructorIndex 
           label={t<string>('deployment account')}
           labelExtra={
             <Available
-              label={t<string>('transferrable')}
+              label={t('transferrable')}
               params={accountId}
             />
           }
@@ -173,24 +173,36 @@ function Deploy ({ codeHash, constructorIndex = 0, onClose, setConstructorIndex 
           <InputBalance
             isError={!isValueValid}
             isZeroable
-            label={t<string>('value')}
+            label={t('value')}
             onChange={setValue}
             value={value}
           />
         )}
         <Input
           isDisabled={!withSalt}
+<<<<<<< HEAD
           label={t<string>('unique deployment salt')}
           labelExtra={
             <Toggle
               label={t<string>('use deployment salt')}
+=======
+          label={t('unique deployment salt')}
+          labelExtra={
+            <Toggle
+              label={t('use deployment salt')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setWithSalt}
               value={withSalt}
             />
           }
           onChange={setSalt}
+<<<<<<< HEAD
           placeholder={t<string>('0x prefixed hex, e.g. 0x1234 or ascii data')}
           value={withSalt ? salt : t<string>('<none>')}
+=======
+          placeholder={t('0x prefixed hex, e.g. 0x1234 or ascii data')}
+          value={withSalt ? salt : t('<none>')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         />
         <InputMegaGas
           weight={weight}

@@ -6,6 +6,10 @@ import type { ActionStatus } from '@polkadot/react-components/Status/types';
 import type { Balance, Conviction } from '@polkadot/types/interfaces';
 import type { KeyringAddress } from '@polkadot/ui-keyring/types';
 import type { BN } from '@polkadot/util';
+<<<<<<< HEAD
+=======
+import type { HexString } from '@polkadot/util/types';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 export type { AppProps as ComponentProps } from '@polkadot/react-components/types';
 
@@ -65,7 +69,7 @@ export interface AddressState {
 }
 
 export interface CreateOptions {
-  genesisHash?: string;
+  genesisHash?: HexString;
   name: string;
   tags?: string[];
 }

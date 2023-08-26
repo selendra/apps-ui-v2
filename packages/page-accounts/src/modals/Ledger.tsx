@@ -82,25 +82,29 @@ function LedgerModal ({ className, onClose }: Props): React.ReactElement<Props> 
   return (
     <Modal
       className={className}
-      header={t<string>('Add account via Ledger')}
+      header={t('Add account via Ledger')}
       onClose={onClose}
       size='large'
     >
       <Modal.Content>
-        <Modal.Columns hint={t<string>('The name for this account as it will appear under your accounts.')}>
+        <Modal.Columns hint={t('The name for this account as it will appear under your accounts.')}>
           <Input
             autoFocus
             className='full'
             isError={!isNameValid}
-            label={t<string>('name')}
+            label={t('name')}
             onChange={_onChangeName}
-            placeholder={t<string>('account name')}
+            placeholder={t('account name')}
             value={name}
           />
         </Modal.Columns>
         <Modal.Columns hint={t<string>('The account type that you wish to create. This is the top-level derivation.')}>
           <Dropdown
+<<<<<<< HEAD
             label={t<string>('account type')}
+=======
+            label={t('account type')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setAccIndex}
             options={accOps.current}
             value={accIndex}
@@ -108,7 +112,11 @@ function LedgerModal ({ className, onClose }: Props): React.ReactElement<Props> 
         </Modal.Columns>
         <Modal.Columns hint={t<string>('The address index on the account that you wish to add. This is the second-level derivation.')}>
           <Dropdown
+<<<<<<< HEAD
             label={t<string>('address index')}
+=======
+            label={t('address index')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setAddIndex}
             options={addOps.current}
             value={addIndex}
@@ -123,7 +131,7 @@ function LedgerModal ({ className, onClose }: Props): React.ReactElement<Props> 
           icon='plus'
           isBusy={isBusy}
           isDisabled={!isNameValid}
-          label={t<string>('Save')}
+          label={t('Save')}
           onClick={_onSave}
         />
       </Modal.Actions>

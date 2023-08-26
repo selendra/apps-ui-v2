@@ -22,17 +22,25 @@ function Candidates ({ allVotes = {}, electionsInfo, hasElections }: Props): Rea
   const { t } = useTranslation();
 
   const headerCandidatesRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('candidates'), 'start', 2]
   ]);
 
   const headerRunnersRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
     [t<string>('runners up'), 'start', 2]
+=======
+    [t('candidates'), 'start', 2]
+  ]);
+
+  const headerRunnersRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+    [t('runners up'), 'start', 2]
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (
     <>
       <Table
-        empty={electionsInfo && t<string>('No runners up found')}
+        empty={electionsInfo && t('No runners up found')}
         header={headerRunnersRef.current}
         isSplit
       >
@@ -47,7 +55,7 @@ function Candidates ({ allVotes = {}, electionsInfo, hasElections }: Props): Rea
         ))}
       </Table>
       <Table
-        empty={electionsInfo && t<string>('No candidates found')}
+        empty={electionsInfo && t('No candidates found')}
         header={headerCandidatesRef.current}
         isSplit
       >

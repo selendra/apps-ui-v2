@@ -113,31 +113,35 @@ function ProposeExternal ({ className = '', isMember, members }: Props): React.R
       <Button
         icon='plus'
         isDisabled={!isMember}
-        label={t<string>('Propose external')}
+        label={t('Propose external')}
         onClick={toggleVisible}
       />
       {isVisible && (
         <Modal
           className={className}
-          header={t<string>('Propose external (majority)')}
+          header={t('Propose external (majority)')}
           onClose={toggleVisible}
           size='large'
         >
           <Modal.Content>
-            <Modal.Columns hint={t<string>('The council account for the proposal. The selection is filtered by the current members.')}>
+            <Modal.Columns hint={t('The council account for the proposal. The selection is filtered by the current members.')}>
               <InputAddress
                 filter={members}
+<<<<<<< HEAD
                 label={t<string>('propose from account')}
+=======
+                label={t('propose from account')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setAcountId}
                 type='account'
                 withLabel
               />
             </Modal.Columns>
-            <Modal.Columns hint={t<string>('The hash of the proposal image, either already submitted or valid for the specific call.')}>
+            <Modal.Columns hint={t('The hash of the proposal image, either already submitted or valid for the specific call.')}>
               <Input
                 autoFocus
                 isError={!isHashValid}
-                label={t<string>('preimage hash')}
+                label={t('preimage hash')}
                 onChange={_onChangeHash}
                 value={hash}
               />
@@ -147,7 +151,11 @@ function ProposeExternal ({ className = '', isMember, members }: Props): React.R
                   isDisabled={!!preimage?.proposalLength && !preimage?.proposalLength.isZero() && isHashValid && isImageLenValid}
                   isError={!isImageLenValid}
                   key='inputLength'
+<<<<<<< HEAD
                   label={t<string>('preimage length')}
+=======
+                  label={t('preimage length')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onChange={_onChangeImageLen}
                   value={imageLen}
                 />
@@ -159,7 +167,11 @@ function ProposeExternal ({ className = '', isMember, members }: Props): React.R
               accountId={accountId}
               icon='plus'
               isDisabled={!threshold || !members.includes(accountId || '') || !proposal || (isCurrentPreimage && !isImageLenValid)}
+<<<<<<< HEAD
               label={t<string>('Propose')}
+=======
+              label={t('Propose')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onStart={toggleVisible}
               params={
                 api.tx[modLocation].propose.meta.args.length === 3

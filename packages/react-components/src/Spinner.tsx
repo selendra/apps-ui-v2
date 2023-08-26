@@ -23,7 +23,11 @@ function Spinner ({ className = '', label, noLabel, variant = 'app' }: Props): R
         className={variant === 'push' ? '' : 'highlight--bg highlight--border'}
         src={spinnerSrc}
       />
+<<<<<<< HEAD
       {!noLabel && variant.startsWith('app') && <div className='text'>{label || t<string>('Retrieving data')}</div>}
+=======
+      {!noLabel && variant.startsWith('app') && <div className='text'>{label || t('Retrieving data')}</div>}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     </StyledSpinner>
   );
 }

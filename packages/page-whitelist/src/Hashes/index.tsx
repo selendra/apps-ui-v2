@@ -23,7 +23,11 @@ function Hashes ({ className }: Props): React.ReactElement<Props> {
   const hashes = useHashes();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('calls'), 'start'],
+=======
+    [t('calls'), 'start'],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [undefined, 'all'],
     [undefined, 'media--1300']
   ]);
@@ -33,10 +37,10 @@ function Hashes ({ className }: Props): React.ReactElement<Props> {
       <Summary hashes={hashes} />
       <Table
         className={className}
-        empty={hashes && t<string>('No call hashes found')}
+        empty={hashes && t('No call hashes found')}
         header={headerRef.current}
       >
-        {hashes && hashes.map((h) => (
+        {hashes?.map((h) => (
           <Details
             key={h}
             value={h}

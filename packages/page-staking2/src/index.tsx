@@ -42,11 +42,19 @@ function StakingApp ({ basePath }: Props): React.ReactElement<Props> {
     {
       isRoot: true,
       name: 'sign',
+<<<<<<< HEAD
       text: t<string>('Validators')
     },
     isFunction(api.query.nominationPools?.minCreateBond) && {
       name: 'pools',
       text: t<string>('Pools')
+=======
+      text: t('Validators')
+    },
+    isFunction(api.query.nominationPools?.minCreateBond) && {
+      name: 'pools',
+      text: t('Pools')
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     }
   ]);
 

@@ -32,7 +32,11 @@ function Candidate ({ address, balance, className = '', hasElections, isPrime, v
             <Tag
               className='absolute'
               color='green'
+<<<<<<< HEAD
               label={t<string>('prime')}
+=======
+              label={t('prime')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             />
           )}
         </td>

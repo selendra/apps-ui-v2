@@ -85,7 +85,11 @@ function Addresses ({ className }: Props): React.ReactElement<Props> {
         <InputAddressSimple
           autoFocus
           isError={!publicKey}
+<<<<<<< HEAD
           label={t<string>('address to convert')}
+=======
+          label={t('address to convert')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           noConvert
           onChange={setAddress}
         />
@@ -93,7 +97,11 @@ function Addresses ({ className }: Props): React.ReactElement<Props> {
       <div className='ui--row'>
         <Dropdown
           defaultValue={prefix}
+<<<<<<< HEAD
           label={t<string>('address prefix')}
+=======
+          label={t('address prefix')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={setPrefix}
           options={prefixOptions}
         />
@@ -103,7 +111,7 @@ function Addresses ({ className }: Props): React.ReactElement<Props> {
           <div className='ui--row'>
             <Static
               className='medium'
-              label={t<string>('input ss58 prefix')}
+              label={t('input ss58 prefix')}
               value={formatNumber(inputSS58)}
             />
           </div>
@@ -113,14 +121,18 @@ function Addresses ({ className }: Props): React.ReactElement<Props> {
                 defaultValue={converted}
                 isDisabled
                 key={converted}
-                label={t<string>('converted address')}
+                label={t('converted address')}
               />
             </div>
           )}
           <div className='ui--row'>
             <Static
               className='full'
+<<<<<<< HEAD
               label={t<string>('hex public key')}
+=======
+              label={t('hex public key')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               value={publicKey}
             />
           </div>

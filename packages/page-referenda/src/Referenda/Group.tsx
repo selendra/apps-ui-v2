@@ -67,13 +67,13 @@ function Group ({ activeIssuance, className, isMember, members, palletReferenda,
   return (
     <Table
       className={className}
-      empty={referenda && t<string>('No active referenda')}
+      empty={referenda && t('No active referenda')}
       header={header}
       headerChildren={headerChildren}
       isSplit={!trackId}
       key={key}
     >
-      {referenda && referenda.map((r) => (
+      {referenda?.map((r) => (
         <Referendum
           activeIssuance={activeIssuance}
           isMember={isMember}

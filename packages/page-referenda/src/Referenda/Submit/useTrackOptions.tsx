@@ -14,8 +14,13 @@ import { bnToBn } from '@polkadot/util';
 import { getTrackInfo, getTrackName } from '../../util.js';
 
 function getTrackOptions (api: ApiPromise, specName: string, palletReferenda: string, tracks: TrackDescription[], include?: (BN | number)[], exclude?: (BN | number)[]): TrackOption[] {
+<<<<<<< HEAD
   const includeBn = include && include.map((v) => bnToBn(v));
   const excludeBn = exclude && exclude.map((v) => bnToBn(v));
+=======
+  const includeBn = include?.map((v) => bnToBn(v));
+  const excludeBn = exclude?.map((v) => bnToBn(v));
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
   return tracks
     .filter(({ id }) =>

@@ -30,17 +30,21 @@ function Add ({ className, imageHash }: Props): React.ReactElement<Props> {
       {isAddOpen && (
         <Modal
           className={className}
-          header={t<string>('Submit preimage')}
+          header={t('Submit preimage')}
           onClose={toggleAdd}
           size='large'
         >
           <Modal.Content>
-            <Modal.Columns hint={t<string>('This account will pay the fees for the preimage, based on the size thereof.')}>
+            <Modal.Columns hint={t('This account will pay the fees for the preimage, based on the size thereof.')}>
               <InputAddress
+<<<<<<< HEAD
                 label={t<string>('send from account')}
+=======
+                label={t('send from account')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 labelExtra={
                   <Available
-                    label={<span className='label'>{t<string>('transferrable')}</span>}
+                    label={<span className='label'>{t('transferrable')}</span>}
                     params={accountId}
                   />
                 }
@@ -56,7 +60,7 @@ function Add ({ className, imageHash }: Props): React.ReactElement<Props> {
               extrinsic={notePreimageTx}
               icon='plus'
               isDisabled={!accountId || !isMatched || !notePreimageTx}
-              label={t<string>('Submit preimage')}
+              label={t('Submit preimage')}
               onStart={toggleAdd}
             />
           </Modal.Actions>
@@ -64,7 +68,7 @@ function Add ({ className, imageHash }: Props): React.ReactElement<Props> {
       )}
       <Button
         icon='plus'
-        label={t<string>('Add preimage')}
+        label={t('Add preimage')}
         onClick={toggleAdd}
       />
     </>

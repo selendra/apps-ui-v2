@@ -107,7 +107,7 @@ function ContractsTable ({ contracts: keyringContracts }: Props): React.ReactEle
   return (
     <>
       <Table
-        empty={t<string>('No contracts available')}
+        empty={t('No contracts available')}
         header={headerRef.current}
       >
         {contracts.map((contract, index): React.ReactNode => (

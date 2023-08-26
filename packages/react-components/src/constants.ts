@@ -1,15 +1,19 @@
 // Copyright 2017-2023 @polkadot/react-components authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+<<<<<<< HEAD
 import type { ComponentMap } from '@polkadot/react-params/types';
 
 import BalanceParam from '@polkadot/react-params/Param/Balance';
 
+=======
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 export const rewardDestinationOptions = [
   { text: 'Stash account (increase the amount at stake)', value: 0 },
   { text: 'Stash account (do not increase the amount at stake)', value: 1 },
   { text: 'Controller account', value: 2 }
 ];
+<<<<<<< HEAD
 
 export const balanceCalls = [
   'auctions.bid',
@@ -52,3 +56,5 @@ export const balanceCallsOverrides: ComponentMap = {
 };
 
 export const balanceEventsOverrides = balanceCallsOverrides;
+=======
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f

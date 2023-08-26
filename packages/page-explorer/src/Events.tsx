@@ -45,7 +45,11 @@ function Events ({ className = '', emptyLabel, error, eventClassName, events, la
 
   const header = useMemo<[React.ReactNode?, string?, number?][]>(
     () => [
+<<<<<<< HEAD
       [label || t<string>('recent events'), 'start']
+=======
+      [label || t('recent events'), 'start']
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     ],
     [label, t]
   );
@@ -53,7 +57,7 @@ function Events ({ className = '', emptyLabel, error, eventClassName, events, la
   return (
     <Table
       className={className}
-      empty={emptyLabel || t<string>('No events available')}
+      empty={emptyLabel || t('No events available')}
       header={header}
     >
       {error
@@ -62,10 +66,17 @@ function Events ({ className = '', emptyLabel, error, eventClassName, events, la
             className={eventClassName}
             key='error'
           >
+<<<<<<< HEAD
             <td><MarkError content={t<string>('Unable to decode the block events. {{error}}', { replace: { error: error.message } })} /></td>
           </tr>
         )
         : events && events.map((e) => renederEvent(eventClassName, e))
+=======
+            <td><MarkError content={t('Unable to decode the block events. {{error}}', { replace: { error: error.message } })} /></td>
+          </tr>
+        )
+        : events?.map((e) => renederEvent(eventClassName, e))
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       }
     </Table>
   );

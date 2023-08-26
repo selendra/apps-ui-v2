@@ -9,8 +9,14 @@ import type { DecodedExtrinsic } from './types.js';
 import React, { useCallback, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+<<<<<<< HEAD
 import { Call as CallDisplay, Input, InputExtrinsic, MarkError, styled } from '@polkadot/react-components';
 import { useApi } from '@polkadot/react-hooks';
+=======
+import { Input, InputExtrinsic, MarkError, styled } from '@polkadot/react-components';
+import { useApi } from '@polkadot/react-hooks';
+import { Call as CallDisplay } from '@polkadot/react-params';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { assert, compactToU8a, isHex, u8aConcat, u8aEq } from '@polkadot/util';
 
 import Decoded from './Decoded.js';
@@ -125,9 +131,9 @@ function Decoder ({ className, defaultValue, setLast }: Props): React.ReactEleme
       <Input
         defaultValue={initialValue}
         isError={!extrinsicFn}
-        label={t<string>('hex-encoded call')}
+        label={t('hex-encoded call')}
         onChange={_setExtrinsicHex}
-        placeholder={t<string>('0x...')}
+        placeholder={t('0x...')}
       />
       {extrinsicError && (
         <MarkError content={extrinsicError} />
@@ -138,7 +144,7 @@ function Decoder ({ className, defaultValue, setLast }: Props): React.ReactEleme
             defaultValue={extrinsicFn}
             isDisabled
             key={`extrinsicKey:${extrinsicKey}`}
-            label={t<string>('decoded call')}
+            label={t('decoded call')}
           />
           <CallDisplay
             className='details'

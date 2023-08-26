@@ -59,7 +59,11 @@ function Parachains ({ actionsQueue, ids, leasePeriod, scheduled }: Props): Reac
   const [validators, validatorMap] = useValidators(ids);
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('parachains'), 'start', 2],
+=======
+    [t('parachains'), 'start', 2],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     ['', 'media--1400'],
     [t<string>('head'), 'start media--1500'],
     [t<string>('lifecycle'), 'start'],
@@ -89,7 +93,7 @@ function Parachains ({ actionsQueue, ids, leasePeriod, scheduled }: Props): Reac
 
   return (
     <Table
-      empty={knownIds && t<string>('There are no registered parachains')}
+      empty={knownIds && t('There are no registered parachains')}
       header={headerRef.current}
     >
       {knownIds?.map(([id, key]): React.ReactNode => (

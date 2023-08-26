@@ -70,7 +70,11 @@ function Summary ({ avgStaked, className, lastEra, lowStaked, minNominated, minN
     <StyledSummaryBox className={className}>
       <section className='media--800'>
         <CardSummary
+<<<<<<< HEAD
           label={t<string>('total staked')}
+=======
+          label={t('total staked')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           progress={progressStake}
         >
           <FormatBalance
@@ -81,7 +85,11 @@ function Summary ({ avgStaked, className, lastEra, lowStaked, minNominated, minN
         </CardSummary>
       </section>
       <section className='media--800'>
+<<<<<<< HEAD
         <CardSummary label={t<string>('returns')}>
+=======
+        <CardSummary label={t('returns')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           {totalIssuance && (stakedReturn > 0)
             ? Number.isFinite(stakedReturn)
               ? <>{stakedReturn.toFixed(1)}{percent}</>
@@ -92,7 +100,11 @@ function Summary ({ avgStaked, className, lastEra, lowStaked, minNominated, minN
       </section>
       <section className='media--1000'>
         <CardSummary
+<<<<<<< HEAD
           label={`${t<string>('lowest / avg staked')}`}
+=======
+          label={`${t('lowest / avg staked')}`}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           progress={progressAvg}
         >
           <span className={progressAvg.isBlurred ? '--tmp' : ''}>
@@ -116,8 +128,8 @@ function Summary ({ avgStaked, className, lastEra, lowStaked, minNominated, minN
             className='media--1600'
             label={
               minNominatorBond
-                ? t<string>('min nominated / threshold')
-                : t<string>('min nominated')}
+                ? t('min nominated / threshold')
+                : t('min nominated')}
           >
             <FormatBalance
               value={minNominated}
@@ -137,7 +149,11 @@ function Summary ({ avgStaked, className, lastEra, lowStaked, minNominated, minN
         )}
       </section>
       <section>
+<<<<<<< HEAD
         <CardSummary label={t<string>('last reward')}>
+=======
+        <CardSummary label={t('last reward')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           <FormatBalance
             className={lastReward ? '' : '--tmp'}
             value={lastReward || 1}

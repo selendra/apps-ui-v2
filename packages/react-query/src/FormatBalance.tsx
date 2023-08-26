@@ -21,7 +21,11 @@ interface Props {
   isShort?: boolean;
   label?: React.ReactNode;
   labelPost?: LabelPost;
+<<<<<<< HEAD
   value?: Compact<any> | BN | string | number | null | 'all';
+=======
+  value?: Compact<any> | BN | string | number | null;
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   valueFormatted?: string;
   withCurrency?: boolean;
   withSi?: boolean;
@@ -95,7 +99,7 @@ function FormatBalance ({ children, className = '', format, formatIndex, isShort
             ? splitFormat(valueFormatted, labelPost, isShort)
             : value
               ? value === 'all'
-                ? <>{t<string>('everything')}{labelPost || ''}</>
+                ? <>{t('everything')}{labelPost || ''}</>
                 : applyFormat(value, formatInfo, withCurrency, withSi, isShort, labelPost)
               : isString(labelPost)
                 ? `-${labelPost.toString()}`

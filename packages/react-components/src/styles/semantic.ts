@@ -1,9 +1,13 @@
 // Copyright 2017-2023 @polkadot/react-components authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+<<<<<<< HEAD
 import type { ThemeDef } from '@polkadot/react-hooks/ctx/types';
 
 export default (_theme: ThemeDef): string => `
+=======
+export default `
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   .ui.hidden.divider {
     margin: 0.5rem 0;
   }

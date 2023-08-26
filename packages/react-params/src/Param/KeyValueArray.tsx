@@ -50,7 +50,11 @@ function parseFile (raw: Uint8Array): Parsed {
 
 function KeyValueArray ({ className = '', defaultValue, isDisabled, isError, label, onChange, onEnter, onEscape, registry, withLabel }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
+<<<<<<< HEAD
   const [placeholder, setPlaceholder] = useState<string>(t<string>('click to select or drag and drop JSON key/value (hex-encoded) file'));
+=======
+  const [placeholder, setPlaceholder] = useState<string>(t('click to select or drag and drop JSON key/value (hex-encoded) file'));
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
   const _onChange = useCallback(
     (raw: Uint8Array): void => {
@@ -67,7 +71,11 @@ function KeyValueArray ({ className = '', defaultValue, isDisabled, isError, lab
       } catch (error) {
         console.error('Error converting json k/v', error);
 
+<<<<<<< HEAD
         setPlaceholder(t<string>('click to select or drag and drop JSON key/value (hex-encoded) file'));
+=======
+        setPlaceholder(t('click to select or drag and drop JSON key/value (hex-encoded) file'));
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       }
 
       onChange && onChange(encoded);

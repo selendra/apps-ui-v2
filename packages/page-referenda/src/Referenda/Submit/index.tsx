@@ -45,7 +45,7 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
   const [isOpen, toggleOpen] = useToggle();
   const [accountId, setAccountId] = useState<string | null>(null);
   const [trackId, setTrack] = useState<number | undefined>(undefined);
-  const [origin, setOrigin] = useState<RawParam['value'] | null>(null);
+  const [origin, setOrigin] = useState<RawParam['value']>(null);
   const [{ imageHash, isImageHashValid }, setImageHash] = useState<HashState>({ imageHash: null, isImageHashValid: false });
   const [{ imageLen, imageLenDefault, isImageLenValid }, setImageLen] = useState<ImageState>({ imageLen: BN_ZERO, isImageLenValid: false });
   const [enactIndex, setEnactIndex] = useState(0);
@@ -109,8 +109,8 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
 
   const enactOpts = useMemo(
     () => [
-      { text: t<string>('After delay'), value: 'after' },
-      { text: t<string>('At block'), value: 'at' }
+      { text: t('After delay'), value: 'after' },
+      { text: t('At block'), value: 'at' }
     ],
     [t]
   );
@@ -155,18 +155,26 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
       {isOpen && (
         <StyledModal
           className={className}
+<<<<<<< HEAD
           header={t<string>('Submit proposal')}
+=======
+          header={t('Submit proposal')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onClose={toggleOpen}
           size='large'
         >
           <Modal.Content>
-            <Modal.Columns hint={t<string>('The proposal will be registered from this account and the balance lock will be applied here.')}>
+            <Modal.Columns hint={t('The proposal will be registered from this account and the balance lock will be applied here.')}>
               <InputAddress
                 filter={members}
+<<<<<<< HEAD
                 label={t<string>('propose from account')}
+=======
+                label={t('propose from account')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 labelExtra={
                   <Available
-                    label={<span className='label'>{t<string>('transferrable')}</span>}
+                    label={<span className='label'>{t('transferrable')}</span>}
                     params={accountId}
                   />
                 }
@@ -174,7 +182,11 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
                 type='account'
               />
             </Modal.Columns>
+<<<<<<< HEAD
             <Modal.Columns hint={t<string>('The origin (and by extension track) that you wish to submit for, each has a different period, different root and acceptance criteria.')}>
+=======
+            <Modal.Columns hint={t('The origin (and by extension track) that you wish to submit for, each has a different period, different root and acceptance criteria.')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               <TrackDropdown
                 onChange={setTrack}
                 palletReferenda={palletReferenda}
@@ -190,7 +202,7 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
               {originOptions && (
                 <Dropdown
                   defaultValue={originOptions[0].value}
-                  label={t<string>('track origin')}
+                  label={t('track origin')}
                   onChange={_onChangeOriginMulti}
                   options={originOptions}
                 />
@@ -199,15 +211,15 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
             <Modal.Columns
               hint={
                 <>
-                  <p>{t<string>('The hash of the preimage for the proposal as previously submitted or intended.')}</p>
-                  <p>{t<string>('The length value witll be auto-populated from the on-chain value if is is found.')}</p>
+                  <p>{t('The hash of the preimage for the proposal as previously submitted or intended.')}</p>
+                  <p>{t('The length value witll be auto-populated from the on-chain value if is is found.')}</p>
                 </>
               }
             >
               <Input
                 autoFocus
                 isError={!isImageHashValid}
-                label={t<string>('preimage hash')}
+                label={t('preimage hash')}
                 onChange={_onChangeImageHash}
                 value={imageHash || ''}
               />
@@ -216,14 +228,18 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
                 isDisabled={!!preimage?.proposalLength && !preimage?.proposalLength.isZero() && isImageHashValid && isImageLenValid}
                 isError={!isImageLenValid}
                 key='inputLength'
-                label={t<string>('preimage length')}
+                label={t('preimage length')}
                 onChange={_onChangeImageLen}
                 value={imageLen}
               />
             </Modal.Columns>
             <Modal.Columns
               align='center'
+<<<<<<< HEAD
               hint={t<string>('The moment of enactment, either at a specific block, or after a specific number of blocks.')}
+=======
+              hint={t('The moment of enactment, either at a specific block, or after a specific number of blocks.')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             >
               <ToggleGroup
                 onChange={setEnactIndex}
@@ -233,33 +249,33 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
             </Modal.Columns>
             {enactIndex === 0
               ? (
-                <Modal.Columns hint={t<string>('The number of blocks to delay enactment after proposal approval.')}>
+                <Modal.Columns hint={t('The number of blocks to delay enactment after proposal approval.')}>
                   <InputNumber
                     defaultValue={BN_HUNDRED}
                     isError={isInvalidAt}
-                    label={t<string>('after number of blocks')}
+                    label={t('after number of blocks')}
                     onChange={setAfterBlocks}
                     value={afterBlocks}
                   />
                 </Modal.Columns>
               )
               : (
-                <Modal.Columns hint={t<string>('A specific block to enact the proposal at.')}>
+                <Modal.Columns hint={t('A specific block to enact the proposal at.')}>
                   <InputNumber
                     defaultValue={initialAt}
                     isError={isInvalidAt}
-                    label={t<string>('at specific block')}
+                    label={t('at specific block')}
                     onChange={setAtBlock}
                     value={atBlock}
                   />
                 </Modal.Columns>
               )
             }
-            <Modal.Columns hint={t<string>('The deposit for this proposal will be locked for the referendum duration.')}>
+            <Modal.Columns hint={t('The deposit for this proposal will be locked for the referendum duration.')}>
               <InputBalance
                 defaultValue={api.consts[palletReferenda as 'referenda'].submissionDeposit}
                 isDisabled
-                label={t<string>('submission deposit')}
+                label={t('submission deposit')}
               />
             </Modal.Columns>
           </Modal.Content>
@@ -268,7 +284,11 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
               accountId={accountId}
               icon='plus'
               isDisabled={!selectedOrigin || !isImageHashValid || !isImageLenValid || !accountId || isInvalidAt || !preimage?.proposalHash}
+<<<<<<< HEAD
               label={t<string>('Submit proposal')}
+=======
+              label={t('Submit proposal')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onStart={toggleOpen}
               params={[
                 selectedOrigin,
@@ -289,7 +309,11 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
       <Button
         icon='plus'
         isDisabled={!isMember}
+<<<<<<< HEAD
         label={t<string>('Submit proposal')}
+=======
+        label={t('Submit proposal')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         onClick={toggleOpen}
       />
     </>

@@ -14,17 +14,29 @@
   },
   "sideEffects": true,
   "type": "module",
+<<<<<<< HEAD
   "version": "0.129.2-0-x",
+=======
+  "version": "0.132.2-70-x",
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "browser": {
     "fs": false,
     "path": false
   },
   "dependencies": {
+<<<<<<< HEAD
     "@polkadot/api": "^10.5.1",
     "@polkadot/extension-compat-metamask": "^0.46.2",
     "@polkadot/extension-dapp": "^0.46.2",
     "@polkadot/rpc-provider": "^10.5.1",
     "fflate": "^0.7.4",
+=======
+    "@polkadot/api": "^10.9.1",
+    "@polkadot/extension-compat-metamask": "^0.46.5",
+    "@polkadot/extension-dapp": "^0.46.5",
+    "@polkadot/rpc-provider": "^10.9.1",
+    "fflate": "^0.8.0",
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     "rxjs": "^7.8.1"
   },
   "peerDependencies": {

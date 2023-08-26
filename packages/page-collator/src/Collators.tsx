@@ -21,20 +21,27 @@ function Collators ({ className }: Props): React.ReactElement<Props> {
   const { byAuthor } = useBlockAuthors();
 
   const hdrRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('collators'), 'start', 2],
     [t<string>('deposit'), 'number'],
     [t<string>('balance'), 'number'],
     [t<string>('last #'), 'number']
+=======
+    [t('collators'), 'start', 2],
+    [t('deposit'), 'number'],
+    [t('balance'), 'number'],
+    [t('last #'), 'number']
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (
     <div className={className}>
       <Summary />
       <Table
-        empty={collators && t<string>('No running collators')}
+        empty={collators && t('No running collators')}
         header={hdrRef.current}
       >
-        {collators && collators.map((c) => (
+        {collators?.map((c) => (
           <Collator
             info={c}
             key={c.accountId}

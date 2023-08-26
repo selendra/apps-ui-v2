@@ -1,14 +1,29 @@
 // Copyright 2017-2023 @polkadot/apps authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck Currently we have a bit too many of these
+
 import CrustPinner from '@crustio/crust-pin';
 import PinataSDK from '@pinata/sdk';
+<<<<<<< HEAD
 import cloudflare from 'dnslink-cloudflare';
 import fs from 'node:fs';
 
 import { execSync } from '@polkadot/dev/scripts/util.mjs';
 
 // @ts-ignore
+=======
+// @ts-expect-error No definition file
+import cloudflare from 'dnslink-cloudflare';
+import fs from 'node:fs';
+
+// @ts-expect-error No definition file
+import { execSync } from '@polkadot/dev/scripts/util.mjs';
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore Using ignore since the file won't be there in dev
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { createWsEndpoints } from '../packages/apps-config/build/endpoints/index.js';
 
 console.log('$ scripts/ipfsUpload.mjs', process.argv.slice(2).join(' '));
@@ -134,7 +149,11 @@ async function unpin (exclude) {
       .map((r) => r.ipfs_pin_hash)
       .filter((hash) => hash !== exclude);
 
+<<<<<<< HEAD
     for (let i = 0; i < hashes.length; i++) {
+=======
+    for (let i = 0, count = hashes.length; i < count; i++) {
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       const hash = hashes[i];
 
       try {
@@ -166,7 +185,11 @@ async function dnslink (hash) {
         .join('.')
     );
 
+<<<<<<< HEAD
   for (let i = 0; i < records.length; i++) {
+=======
+  for (let i = 0, count = records.length; i < count; i++) {
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     const record = records[i];
 
     try {

@@ -1,10 +1,13 @@
 // Copyright 2017-2023 @polkadot/apps-routing authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { TFunction } from 'i18next';
 import type { ApiPromise } from '@polkadot/api';
 import type { PalletStakingExposure } from '@polkadot/types/lookup';
+<<<<<<< HEAD
 import type { Route } from './types.js';
+=======
+import type { Route, TFunction } from './types.js';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 import Component from '@polkadot/app-staking';
 import { ZERO_ACCOUNT } from '@polkadot/react-hooks/useWeight';
@@ -28,7 +31,21 @@ function needsApiCheck (api: ApiPromise): boolean {
 
   try {
     // we need to be able to bond
+<<<<<<< HEAD
     api.tx.staking.bond(ZERO_ACCOUNT, BN_ONE, { Account: ZERO_ACCOUNT });
+=======
+    if (api.tx.staking.bond.meta.args.length === 3) {
+      // previous generation, controller account is required
+      // @ts-expect-error Previous generation
+      api.tx.staking.bond(ZERO_ACCOUNT, BN_ONE, { Account: ZERO_ACCOUNT });
+    } else if (api.tx.staking.bond.meta.args.length === 2) {
+      // current, no controller account
+      api.tx.staking.bond(BN_ONE, { Account: ZERO_ACCOUNT });
+    } else {
+      // unknown
+      return false;
+    }
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   } catch {
     console.warn('Unable to create staking bond transaction, disabling staking route');
 

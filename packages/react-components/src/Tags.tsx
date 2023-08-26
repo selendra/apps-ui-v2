@@ -33,7 +33,11 @@ function Tags ({ children, className = '', isEditable, isEditing, onChange, onSa
           label={tag}
         />
       ))
+<<<<<<< HEAD
       : <div>{t<string>('none')}</div>,
+=======
+      : <div>{t('none')}</div>,
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [t, value]
   );
 
@@ -48,7 +52,7 @@ function Tags ({ children, className = '', isEditable, isEditing, onChange, onSa
   return (
     <StyledDiv className={`${className} ui--Tags`}>
       {withTitle && (
-        <h5>{t<string>('Tags')}</h5>
+        <h5>{t('Tags')}</h5>
       )}
       {isEditable && isEditing
         ? (

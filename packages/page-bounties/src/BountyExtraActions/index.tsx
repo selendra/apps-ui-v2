@@ -130,28 +130,32 @@ function Index ({ bestNumber, className, description, index, proposals, status }
               {showCloseBounty && (
                 <Menu.Item
                   key='closeBounty'
+<<<<<<< HEAD
                   label={t<string>('Close')}
+=======
+                  label={t('Close')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onClick={toggleCloseBounty}
                 />
               )}
               {showRejectCurator && (
                 <Menu.Item
                   key='rejectCurator'
-                  label={t<string>('Reject curator')}
+                  label={t('Reject curator')}
                   onClick={toggleRejectCurator}
                 />
               )}
               {showExtendExpiry && (
                 <Menu.Item
                   key='extendExpiry'
-                  label={t<string>('Extend expiry')}
+                  label={t('Extend expiry')}
                   onClick={toggleExtendExpiry}
                 />
               )}
               {showGiveUpCurator && (
                 <Menu.Item
                   key='giveUpCurator'
-                  label={t<string>('Give up')}
+                  label={t('Give up')}
                   onClick={toggleGiveUpCurator}
                 />
               )}

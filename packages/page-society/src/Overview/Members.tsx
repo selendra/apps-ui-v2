@@ -21,16 +21,22 @@ function Members ({ className = '', mapMembers }: Props): React.ReactElement<Pro
   const bestNumber = useBestNumber();
 
   const headerRef = useRef<[React.ReactNode?, string?, number?][]>([
+<<<<<<< HEAD
     [t<string>('members'), 'start', 2],
     [t<string>('voted on'), 'start'],
     [t<string>('strikes')],
+=======
+    [t('members'), 'start', 2],
+    [t('voted on'), 'start'],
+    [t('strikes')],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     []
   ]);
 
   return (
     <Table
       className={className}
-      empty={mapMembers && t<string>('No active members')}
+      empty={mapMembers && t('No active members')}
       header={headerRef.current}
     >
       {mapMembers?.map((value): React.ReactNode => (

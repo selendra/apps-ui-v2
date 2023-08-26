@@ -1,7 +1,6 @@
 // Copyright 2017-2023 @polkadot/app-staking authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { TFunction } from 'i18next';
 import type { DeriveStakerReward } from '@polkadot/api-derive/types';
 import type { OwnPool } from '@polkadot/app-staking2/Pools/types';
 import type { StakerState } from '@polkadot/react-hooks/types';
@@ -124,7 +123,7 @@ function getAvailable (allRewards: Record<string, DeriveStakerReward[]> | null |
   return {};
 }
 
-function getOptions (blockTime: BN, eraLength: BN | undefined, historyDepth: BN | undefined, t: TFunction): EraSelection[] {
+function getOptions (blockTime: BN, eraLength: BN | undefined, historyDepth: BN | undefined, t: (key: string, options?: { replace: Record<string, unknown> }) => string): EraSelection[] {
   if (!eraLength || !historyDepth) {
     return [{ text: '', value: 0 }];
   }
@@ -142,7 +141,7 @@ function getOptions (blockTime: BN, eraLength: BN | undefined, historyDepth: BN 
     }
 
     eraSelection.push({
-      text: t<string>('{{days}} days', { replace: { days: days.toString() } }),
+      text: t('{{days}} days', { replace: { days: days.toString() } }),
       value: dayBlocks.div(eraLength).toNumber()
     });
 
@@ -150,7 +149,7 @@ function getOptions (blockTime: BN, eraLength: BN | undefined, historyDepth: BN 
   }
 
   eraSelection.push({
-    text: t<string>('Max, {{eras}} eras', { replace: { eras: historyDepth.toNumber() } }),
+    text: t('Max, {{eras}} eras', { replace: { eras: historyDepth.toNumber() } }),
     value: historyDepth.toNumber()
   });
 
@@ -167,7 +166,7 @@ function Payouts ({ className = '', historyDepth, isInElection, ownPools, ownVal
   const blockTime = useBlockInterval();
 
   const poolStashes = useMemo(
-    () => ownPools && ownPools.map(({ stashId }) => stashId),
+    () => ownPools?.map(({ stashId }) => stashId),
     [ownPools]
   );
 
@@ -185,9 +184,15 @@ function Payouts ({ className = '', historyDepth, isInElection, ownPools, ownVal
 
   const headerStashes = useMemo<[React.ReactNode?, string?, number?][]>(
     () => [
+<<<<<<< HEAD
       [myStashesIndex ? t<string>('payout/stash') : t<string>('overall/validator'), 'start', 2],
       [t<string>('eras'), 'start'],
       [myStashesIndex ? t<string>('own') : t<string>('total')],
+=======
+      [myStashesIndex ? t('payout/stash') : t('overall/validator'), 'start', 2],
+      [t('eras'), 'start'],
+      [myStashesIndex ? t('own') : t('total')],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       [('remaining')],
       [undefined, undefined, 3]
     ],
@@ -195,9 +200,15 @@ function Payouts ({ className = '', historyDepth, isInElection, ownPools, ownVal
   );
 
   const headerValidatorsRef = useRef<[React.ReactNode?, string?, number?][]>([
+<<<<<<< HEAD
     [t<string>('payout/validator'), 'start', 2],
     [t<string>('eras'), 'start'],
     [t<string>('own')],
+=======
+    [t('payout/validator'), 'start', 2],
+    [t('eras'), 'start'],
+    [t('own')],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [('remaining')],
     [undefined, undefined, 3]
   ]);
@@ -255,10 +266,10 @@ function Payouts ({ className = '', historyDepth, isInElection, ownPools, ownVal
       <Table
         empty={!isLoadingRewards && stashes && (
           myStashesIndex
-            ? t<string>('No pending payouts for your stashes')
-            : t<string>('No pending payouts for your validators')
+            ? t('No pending payouts for your stashes')
+            : t('No pending payouts for your validators')
         )}
-        emptySpinner={t<string>('Retrieving info for the selected eras, this will take some time')}
+        emptySpinner={t('Retrieving info for the selected eras, this will take some time')}
         footer={footerStash}
         header={headerStashes}
         isFixed

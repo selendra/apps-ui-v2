@@ -9,6 +9,10 @@ import type { NominatedByMap, SortedTargets, TargetSortBy, ValidatorInfo } from 
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
+<<<<<<< HEAD
+=======
+import Legend from '@polkadot/app-staking2/Legend';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { Button, Icon, styled, Table, Toggle } from '@polkadot/react-components';
 import { useApi, useAvailableSlashes, useBlocksPerDays, useSavedFlags } from '@polkadot/react-hooks';
 import { BN_HUNDRED } from '@polkadot/util';
@@ -16,7 +20,10 @@ import { BN_HUNDRED } from '@polkadot/util';
 import { MAX_NOMINATIONS } from '../constants.js';
 import ElectionBanner from '../ElectionBanner.js';
 import Filtering from '../Filtering.js';
+<<<<<<< HEAD
 import Legend from '../Legend.js';
+=======
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useTranslation } from '../translate.js';
 import useIdentities from '../useIdentities.js';
 import Nominate from './Nominate.js';
@@ -207,10 +214,10 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
   const [sorted, setSorted] = useState<ValidatorInfo[] | undefined>();
 
   const labelsRef = useRef({
-    rankBondOther: t<string>('other stake'),
-    rankBondOwn: t<string>('own stake'),
-    rankBondTotal: t<string>('total stake'),
-    rankOverall: t<string>('return')
+    rankBondOther: t('other stake'),
+    rankBondOwn: t('own stake'),
+    rankBondTotal: t('total stake'),
+    rankOverall: t('return')
   });
 
   const flags = useMemo(
@@ -290,10 +297,17 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
   // False positive, this is part of the type...
   // eslint-disable-next-line func-call-spacing
   const header = useMemo<[React.ReactNode?, string?, number?, (() => void)?][]>(() => [
+<<<<<<< HEAD
     [t<string>('validators'), 'start', 4],
     [t<string>('payout'), 'media--1400'],
     [t<string>('nominators'), 'media--1200', 2],
     [t<string>('comm.'), 'media--1100'],
+=======
+    [t('validators'), 'start', 4],
+    [t('payout'), 'media--1400'],
+    [t('nominators'), 'media--1200', 2],
+    [t('comm.'), 'media--1100'],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     ...(SORT_KEYS as (keyof typeof labelsRef.current)[]).map((header): [React.ReactNode?, string?, number?, (() => void)?] => [
       <>{labelsRef.current[header]}<Icon icon={sortBy === header ? (sortFromMax ? 'chevron-down' : 'chevron-up') : 'minus'} /></>,
       `${sorted ? `isClickable ${sortBy === header ? 'highlight--border' : ''} number` : 'number'} ${CLASSES[header] || ''}`,
@@ -314,7 +328,7 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
       >
         <Toggle
           className='staking--buttonToggle'
-          label={t<string>('one validator per operator')}
+          label={t('one validator per operator')}
           onChange={setToggle.withGroup}
           value={toggles.withGroup}
         />
@@ -322,8 +336,8 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
           className='staking--buttonToggle'
           label={
             MAX_COMM_PERCENT > 0
-              ? t<string>('comm. <= {{maxComm}}%', { replace: { maxComm: MAX_COMM_PERCENT } })
-              : t<string>('comm. <= median')
+              ? t('comm. <= {{maxComm}}%', { replace: { maxComm: MAX_COMM_PERCENT } })
+              : t('comm. <= median')
           }
           onChange={setToggle.withoutComm}
           value={toggles.withoutComm}
@@ -332,8 +346,8 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
           className='staking--buttonToggle'
           label={
             MAX_CAP_PERCENT < 100
-              ? t<string>('capacity < {{maxCap}}%', { replace: { maxCap: MAX_CAP_PERCENT } })
-              : t<string>('with capacity')
+              ? t('capacity < {{maxCap}}%', { replace: { maxCap: MAX_CAP_PERCENT } })
+              : t('with capacity')
           }
           onChange={setToggle.withoutOver}
           value={toggles.withoutOver}
@@ -342,14 +356,14 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
           // FIXME have some sane era defaults for Aura
           <Toggle
             className='staking--buttonToggle'
-            label={t<string>('recent payouts')}
+            label={t('recent payouts')}
             onChange={setToggle.withPayout}
             value={toggles.withPayout}
           />
         )}
         <Toggle
           className='staking--buttonToggle'
-          label={t<string>('currently elected')}
+          label={t('currently elected')}
           onChange={setToggle.withElected}
           value={toggles.withElected}
         />
@@ -380,7 +394,7 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
         <Button
           icon='check'
           isDisabled={!validators?.length || !ownNominators?.length}
-          label={t<string>('Most profitable')}
+          label={t('Most profitable')}
           onClick={_selectProfitable}
         />
         <Nominate
@@ -391,7 +405,7 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
       </Button.Group>
       <ElectionBanner isInElection={isInElection} />
       <Table
-        empty={sorted && t<string>('No active validators to check')}
+        empty={sorted && t('No active validators to check')}
         emptySpinner={
           <>
             {!(validators && allIdentity) && <div>{t<string>('Retrieving validators')}</div>}
@@ -403,7 +417,7 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
         header={header}
         legend={<Legend />}
       >
-        {displayList && displayList.map((info): React.ReactNode =>
+        {displayList?.map((info): React.ReactNode =>
           <Validator
             allSlashes={allSlashes}
             canSelect={canSelect}

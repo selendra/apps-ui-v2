@@ -30,10 +30,17 @@ function Pools ({ className, list, targets }: Props): React.ReactElement<Props> 
   const sessionProgress = useCall<DeriveSessionProgress>(api.derive.session.progress);
 
   const hdrRef = useRef<[React.ReactNode?, string?, number?][]>([
+<<<<<<< HEAD
     [t<string>('pools'), 'start', 2],
     [t<string>('account'), 'address'],
     [t<string>('bonded')],
     [t<string>('claimable')],
+=======
+    [t('pools'), 'start', 2],
+    [t('account'), 'address'],
+    [t('bonded')],
+    [t('claimable')],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [],
     []
   ]);
@@ -41,7 +48,7 @@ function Pools ({ className, list, targets }: Props): React.ReactElement<Props> 
   return (
     <Table
       className={className}
-      empty={list && t<string>('Not participating in any pools. Join a pool first.')}
+      empty={list && t('Not participating in any pools. Join a pool first.')}
       header={hdrRef.current}
     >
       {list?.map(({ members, poolId }, count): React.ReactNode => (

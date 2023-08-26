@@ -14,10 +14,17 @@
   },
   "sideEffects": false,
   "type": "module",
+<<<<<<< HEAD
   "version": "0.129.2-0-x",
   "dependencies": {
     "@polkadot/api-contract": "^10.5.1",
     "eventemitter3": "^5.0.0"
+=======
+  "version": "0.132.2-70-x",
+  "dependencies": {
+    "@polkadot/api-contract": "^10.9.1",
+    "eventemitter3": "^5.0.1"
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   },
   "peerDependencies": {
     "react": "*",

@@ -22,16 +22,24 @@ function Bounties ({ className }: Props): React.ReactElement {
   const info = useBounties();
 
   const sorted = useMemo(
-    () => info && info.bounties && [...info.bounties].sort((a, b) => b.index.cmp(a.index)),
+    () => info?.bounties && [...info.bounties].sort((a, b) => b.index.cmp(a.index)),
     [info]
   );
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('bounties'), 'start', 3],
     [t<string>('value')],
     [t<string>('curator'), 'start'],
     [t<string>('next action'), 'start', 3]
+=======
+    [t('bounties'), 'start', 3],
+    [t('value')],
+    [t('curator'), 'start'],
+    [t('next action'), 'start', 3]
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
+  const bestNumber = info.bestNumber;
 
   return (
     <StyledDiv className={className}>
@@ -41,12 +49,16 @@ function Bounties ({ className }: Props): React.ReactElement {
       </Button.Group>
       <Table
         className='bounties-table-wrapper'
-        empty={sorted && t<string>('No open bounties')}
+        empty={sorted && t('No open bounties')}
         header={headerRef.current}
       >
-        {sorted && info.bestNumber && sorted.map(({ bounty, description, index, proposals }) => (
+        {sorted && bestNumber && sorted.map(({ bounty, description, index, proposals }) => (
           <Bounty
+<<<<<<< HEAD
             bestNumber={info.bestNumber as BN}
+=======
+            bestNumber={bestNumber}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             bounty={bounty}
             description={description}
             index={index}

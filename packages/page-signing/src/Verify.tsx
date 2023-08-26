@@ -27,7 +27,7 @@ function Verify ({ className = '' }: Props): React.ReactElement {
   const [{ data, isHexData }, setData] = useState<{ data: string; isHexData: boolean }>({ data: '', isHexData: false });
   const [{ isValidPk, publicKey }, setPublicKey] = useState<{ isValidPk: boolean; publicKey: Uint8Array | null }>({ isValidPk: false, publicKey: null });
   const [{ isValidSignature, signature }, setSignature] = useState<{ isValidSignature: boolean; signature: string }>({ isValidSignature: false, signature: '' });
-  const [cryptoOptions] = useState([{ text: t<string>('Crypto not detected'), value: 'unknown' }].concat(settings.availableCryptos as { text: string; value: string }[]));
+  const [cryptoOptions] = useState([{ text: t('Crypto not detected'), value: 'unknown' }].concat(settings.availableCryptos as { text: string; value: string }[]));
 
   useEffect((): void => {
     let cryptoType: CryptoTypes = 'unknown';
@@ -80,7 +80,7 @@ function Verify ({ className = '' }: Props): React.ReactElement {
           className='full'
           isError={!isValidPk}
           isInput
-          label={t<string>('verify using address')}
+          label={t('verify using address')}
           onChange={_onChangeAddress}
         />
       </div>
@@ -88,7 +88,11 @@ function Verify ({ className = '' }: Props): React.ReactElement {
         <Input
           autoFocus
           className='full'
+<<<<<<< HEAD
           label={t<string>('using the following data')}
+=======
+          label={t('using the following data')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={_onChangeData}
           value={data}
         />
@@ -104,7 +108,7 @@ function Verify ({ className = '' }: Props): React.ReactElement {
         <Input
           className='full'
           isError={!isValidSignature}
-          label={t<string>('the supplied signature')}
+          label={t('the supplied signature')}
           onChange={_onChangeSignature}
           value={signature}
         />
@@ -113,16 +117,20 @@ function Verify ({ className = '' }: Props): React.ReactElement {
         <Dropdown
           defaultValue={cryptoType}
           isDisabled
-          label={t<string>('signature crypto type')}
+          label={t('signature crypto type')}
           options={cryptoOptions}
         />
         <Static
           className='medium'
+<<<<<<< HEAD
           label={t<string>('hex input data')}
+=======
+          label={t('hex input data')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={
             isHexData
-              ? t<string>('Yes')
-              : t<string>('No')
+              ? t('Yes')
+              : t('No')
           }
         />
       </div>

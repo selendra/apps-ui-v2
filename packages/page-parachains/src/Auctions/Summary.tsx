@@ -29,17 +29,30 @@ function Summary ({ auctionInfo, className, lastWinners }: Props): React.ReactEl
   return (
     <SummaryBox className={className}>
       <section>
+<<<<<<< HEAD
         <CardSummary label={t<string>('auctions')}>
+=======
+        <CardSummary label={t('auctions')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           {auctionInfo
             ? formatNumber(auctionInfo.numAuctions)
             : <span className='--tmp'>99</span>}
         </CardSummary>
+<<<<<<< HEAD
         <CardSummary label={t<string>('active')}>
           {auctionInfo
             ? auctionInfo.leasePeriod
               ? t<string>('yes')
               : t<string>('no')
             : <span className='--tmp'>{t<string>('no')}</span>
+=======
+        <CardSummary label={t('active')}>
+          {auctionInfo
+            ? auctionInfo.leasePeriod
+              ? t('yes')
+              : t('no')
+            : <span className='--tmp'>{t('no')}</span>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           }
         </CardSummary>
       </section>
@@ -47,13 +60,13 @@ function Summary ({ auctionInfo, className, lastWinners }: Props): React.ReactEl
         <>
           <section>
             {auctionInfo.leasePeriod && (
-              <CardSummary label={t<string>('first - last')}>
+              <CardSummary label={t('first - last')}>
                 {formatNumber(auctionInfo.leasePeriod)} - {formatNumber(auctionInfo.leasePeriod.add(api.consts.auctions.leasePeriodsPerSlot as u32).isub(BN_ONE))}
               </CardSummary>
             )}
             {totalIssuance && lastWinners && (
               <CardSummary
-                label={t<string>('total')}
+                label={t('total')}
                 progress={{
                   hideValue: true,
                   total: totalIssuance,
@@ -73,7 +86,7 @@ function Summary ({ auctionInfo, className, lastWinners }: Props): React.ReactEl
               bestNumber.lt(auctionInfo.endBlock)
                 ? (
                   <CardSummary
-                    label={t<string>('end period at')}
+                    label={t('end period at')}
                     progress={{
                       hideGraph: true,
                       total: auctionInfo.endBlock,
@@ -86,7 +99,7 @@ function Summary ({ auctionInfo, className, lastWinners }: Props): React.ReactEl
                 )
                 : (
                   <CardSummary
-                    label={t<string>('ending period')}
+                    label={t('ending period')}
                     progress={{
                       total: api.consts.auctions?.endingPeriod as BlockNumber,
                       value: bestNumber.sub(auctionInfo.endBlock),

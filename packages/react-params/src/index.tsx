@@ -7,7 +7,7 @@ import type { ComponentMap, ParamDef, RawParam, RawParamOnChangeValue, RawParams
 
 import React from 'react';
 
-import { api } from '@polkadot/react-api';
+import { statics } from '@polkadot/react-api/statics';
 import { ErrorBoundary } from '@polkadot/react-components';
 import { stringify } from '@polkadot/util';
 
@@ -15,6 +15,11 @@ import Holder from './Holder.js';
 import ParamComp from './ParamComp.js';
 import translate from './translate.js';
 import { createValue } from './values.js';
+<<<<<<< HEAD
+=======
+
+export * from './Named/index.js';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 interface Props extends I18nProps {
   children?: React.ReactNode;
@@ -25,7 +30,7 @@ interface Props extends I18nProps {
   onError?: () => void;
   onEscape?: () => void;
   overrides?: ComponentMap;
-  params: ParamDef[];
+  params?: ParamDef[];
   registry?: Registry;
   values?: RawParams | null;
   withBorder?: boolean;
@@ -44,7 +49,7 @@ class Params extends React.PureComponent<Props, State> {
     params: null
   };
 
-  public static getDerivedStateFromProps ({ isDisabled, params, registry = api.registry, values }: Props, prevState: State): Pick<State, never> | null {
+  public static getDerivedStateFromProps ({ isDisabled, params = [], registry = statics.api.registry, values }: Props, prevState: State): Pick<State, never> | null {
     if (isDisabled || stringify(prevState.params) === stringify(params)) {
       return null;
     }
@@ -54,7 +59,7 @@ class Params extends React.PureComponent<Props, State> {
       values: params.reduce(
         (result: RawParams, param, index): RawParams => {
           result.push(
-            values && values[index]
+            values?.[index]
               ? values[index]
               : createValue(registry, param)
           );
@@ -82,10 +87,14 @@ class Params extends React.PureComponent<Props, State> {
   }
 
   public override render (): React.ReactNode {
+<<<<<<< HEAD
     const { children, className = '', isDisabled, isError, onEnter, onEscape, overrides, params, registry = api.registry, withBorder = true, withExpander } = this.props;
+=======
+    const { children, className = '', isDisabled, isError, onEnter, onEscape, overrides, params, registry = statics.api.registry, withBorder = true, withExpander } = this.props;
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     const { values = this.props.values } = this.state;
 
-    if (!values || !values.length) {
+    if (!values?.length) {
       return null;
     }
 
@@ -97,7 +106,7 @@ class Params extends React.PureComponent<Props, State> {
       >
         <ErrorBoundary onError={this.onRenderError}>
           <div className='ui--Params-Content'>
-            {values && params.map(({ name, type }: ParamDef, index: number): React.ReactNode => (
+            {values && params?.map(({ name, type }: ParamDef, index: number): React.ReactNode => (
               <ParamComp
                 defaultValue={values[index]}
                 index={index}
@@ -159,4 +168,4 @@ class Params extends React.PureComponent<Props, State> {
   };
 }
 
-export default translate<React.ComponentType<Props>>(Params);
+export default translate<Props>(Params);

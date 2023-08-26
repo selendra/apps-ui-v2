@@ -19,11 +19,11 @@ interface Props {
 
 function Summary ({ className, members, rule }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
-  const ipfsLink = useIpfsLink(rule && rule.cid && rule.cid.ipfs);
+  const ipfsLink = useIpfsLink(rule?.cid?.ipfs);
 
   return (
     <SummaryBox className={className}>
-      <CardSummary label={t<string>('rule')}>
+      <CardSummary label={t('rule')}>
         {rule
           ? rule.hasRule
             ? ipfsLink
@@ -34,12 +34,18 @@ function Summary ({ className, members, rule }: Props): React.ReactElement<Props
                   target='_blank'
                 >{ipfsLink.ipfsShort}</a>
               )
+<<<<<<< HEAD
               : t<string>('yes')
             : t<string>('no')
           : <span className='--tmp'>{t<string>('no')}</span>
+=======
+              : t('yes')
+            : t('no')
+          : <span className='--tmp'>{t('no')}</span>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         }
       </CardSummary>
-      <CardSummary label={t<string>('members')}>
+      <CardSummary label={t('members')}>
         {members
           ? formatNumber(members.length)
           : <span className='--tmp'>99</span>

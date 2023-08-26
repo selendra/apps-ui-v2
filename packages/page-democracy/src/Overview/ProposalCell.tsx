@@ -7,8 +7,14 @@ import type { HexString } from '@polkadot/util/types';
 
 import React from 'react';
 
+<<<<<<< HEAD
 import { CallExpander, styled } from '@polkadot/react-components';
 import { useApi, usePreimage } from '@polkadot/react-hooks';
+=======
+import { styled } from '@polkadot/react-components';
+import { useApi, usePreimage } from '@polkadot/react-hooks';
+import { CallExpander } from '@polkadot/react-params';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 import { useTranslation } from '../translate.js';
 import ExternalCell from './ExternalCell.js';
@@ -53,7 +59,11 @@ function ProposalCell ({ className = '', imageHash, isCollective, proposal }: Pr
   return (
     <StyledTd className={`${className} all`}>
       <CallExpander
+<<<<<<< HEAD
         labelHash={t<string>('proposal hash')}
+=======
+        labelHash={t('proposal hash')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         value={displayProposal}
         withHash={!isTreasury && !isExternal}
       >

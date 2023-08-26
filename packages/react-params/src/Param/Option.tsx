@@ -57,7 +57,11 @@ function OptionDisplay ({ className = '', defaultValue: _defaultValue, isDisable
         label={label}
         labelExtra={!isDisabled && (
           <Toggle
+<<<<<<< HEAD
             label={t<string>('include option')}
+=======
+            label={t('include option')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setIsActive}
             value={isActive}
           />

@@ -22,25 +22,33 @@ function CandidateVoting ({ candidateId, isMember, ownMembers }: Props): React.R
   const [accountId, setAccountId] = useState<string | null>(null);
 
   const voteOptsRef = useRef([
-    { text: t<string>('Aye, I approve'), value: true },
-    { text: t<string>('Nay, I do not approve'), value: false }
+    { text: t('Aye, I approve'), value: true },
+    { text: t('Nay, I do not approve'), value: false }
   ]);
 
   return (
     <>
       {isVisible && (
         <Modal
-          header={t<string>('Vote for candidate')}
+          header={t('Vote for candidate')}
           onClose={toggleVisible}
         >
           <Modal.Content>
             <InputAddress
               filter={ownMembers}
+<<<<<<< HEAD
               label={t<string>('vote from account')}
               onChange={setAccountId}
             />
             <Dropdown
               label={t<string>('vote for candidate')}
+=======
+              label={t('vote from account')}
+              onChange={setAccountId}
+            />
+            <Dropdown
+              label={t('vote for candidate')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setVote}
               options={voteOptsRef.current}
               value={vote}
@@ -50,7 +58,7 @@ function CandidateVoting ({ candidateId, isMember, ownMembers }: Props): React.R
             <TxButton
               accountId={accountId}
               icon='check'
-              label={t<string>('Vote')}
+              label={t('Vote')}
               onStart={toggleVisible}
               params={[candidateId, vote]}
               tx={api.tx.society.vote}
@@ -61,7 +69,7 @@ function CandidateVoting ({ candidateId, isMember, ownMembers }: Props): React.R
       <Button
         icon='check'
         isDisabled={!isMember}
-        label={t<string>('Vote')}
+        label={t('Vote')}
         onClick={toggleVisible}
       />
     </>

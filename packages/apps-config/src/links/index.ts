@@ -5,7 +5,10 @@ import type { ExternalDef } from './types.js';
 
 import { Commonwealth } from './commonwealth.js';
 import { Dotreasury } from './dotreasury.js';
+<<<<<<< HEAD
 import { DotScanner } from './dotscanner.js';
+=======
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { KodaDot } from './kodadot.js';
 import { Polkaholic } from './polkaholic.js';
 import { Polkascan } from './polkascan.js';
@@ -18,7 +21,6 @@ import { Subsquare } from './subsquare.js';
 
 export const externalLinks: Record<string, ExternalDef> = {
   Commonwealth,
-  DotScanner,
   Dotreasury,
   KodaDot,
   Polkaholic,

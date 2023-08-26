@@ -55,20 +55,24 @@ function BountyInitiateVoting ({ description, index, proposals }: Props): React.
         <Button
           icon='step-forward'
           isDisabled={false}
-          label={t<string>('Initiate voting')}
+          label={t('Initiate voting')}
           onClick={toggleOpen}
         />
         {isOpen && (
           <Modal
-            header={`${t<string>('Initiate voting')} - "${truncateTitle(description, 30)}"`}
+            header={`${t('Initiate voting')} - "${truncateTitle(description, 30)}"`}
             onClose={toggleOpen}
             size='large'
           >
             <Modal.Content>
-              <Modal.Columns hint={t<string>('The council member that will create a motion, submission equates to an "aye" vote for chosen option.')}>
+              <Modal.Columns hint={t('The council member that will create a motion, submission equates to an "aye" vote for chosen option.')}>
                 <InputAddress
                   filter={members}
+<<<<<<< HEAD
                   label={t<string>('vote with account')}
+=======
+                  label={t('vote with account')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onChange={setAccountId}
                   type='account'
                   withLabel
@@ -80,7 +84,7 @@ function BountyInitiateVoting ({ description, index, proposals }: Props): React.
                 accountId={accountId}
                 icon='check'
                 isDisabled={false}
-                label={t<string>('Approve')}
+                label={t('Approve')}
                 onStart={toggleOpen}
                 params={[threshold, approveBountyProposal.current, approveBountyProposal.current.length]}
                 tx={api.tx[councilMod].propose}
@@ -89,7 +93,7 @@ function BountyInitiateVoting ({ description, index, proposals }: Props): React.
                 accountId={accountId}
                 icon='ban'
                 isDisabled={false}
-                label={t<string>('Reject')}
+                label={t('Reject')}
                 onStart={toggleOpen}
                 params={[threshold, closeBountyProposal.current, closeBountyProposal.current.length]}
                 tx={api.tx[councilMod].propose}

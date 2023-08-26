@@ -12,7 +12,12 @@ import CreateModal from '../modals/Create.js';
 import { useTranslation } from '../translate.js';
 import Address from './Address.js';
 
-type SortedAddress = { address: string; isFavorite: boolean };
+interface SortedAddress { address: string; isFavorite: boolean }
+
+interface Props {
+  className?: string;
+  onStatusChange: (status: ActionStatus) => void;
+}
 
 interface Props {
   className?: string;
@@ -31,7 +36,11 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
   const isNextTick = useNextTick();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('contacts'), 'start', 4]
+=======
+    [t('contacts'), 'start', 4]
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   useEffect((): void => {
@@ -61,20 +70,24 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
           <FilterInput
             className='media--1000'
             filterOn={filterOn}
-            label={t<string>('filter by name or tags')}
+            label={t('filter by name or tags')}
             setFilter={setFilter}
           />
         </section>
         <Button.Group>
           <Button
             icon='plus'
-            label={t<string>('Add contact')}
+            label={t('Add contact')}
             onClick={toggleCreate}
           />
         </Button.Group>
       </SummaryBox>
       <Table
+<<<<<<< HEAD
         empty={isNextTick && sortedAddresses && t<string>('no addresses saved yet, add any existing address')}
+=======
+        empty={isNextTick && sortedAddresses && t('no addresses saved yet, add any existing address')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         header={headerRef.current}
         isSplit
       >

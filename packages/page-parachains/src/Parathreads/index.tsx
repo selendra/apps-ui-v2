@@ -26,7 +26,11 @@ function Parathreads ({ actionsQueue, className, ids, leasePeriod, ownedIds }: P
   const leaseMap = useParaMap(ids);
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('parathreads'), 'start', 2],
+=======
+    [t('parathreads'), 'start', 2],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     ['', 'media--2000'],
     [t<string>('head'), 'start media--1500'],
     [t<string>('lifecycle'), 'start'],
@@ -40,7 +44,7 @@ function Parathreads ({ actionsQueue, className, ids, leasePeriod, ownedIds }: P
     <div className={className}>
       <Actions ownedIds={ownedIds} />
       <Table
-        empty={leasePeriod && ids && (ids.length === 0 || leaseMap) && t<string>('There are no available parathreads')}
+        empty={leasePeriod && ids && (ids.length === 0 || leaseMap) && t('There are no available parathreads')}
         header={headerRef.current}
       >
         {leasePeriod && leaseMap?.map(([id, leases]): React.ReactNode => (

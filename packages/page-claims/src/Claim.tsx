@@ -84,12 +84,16 @@ function Claim ({ accountId, className = '', ethereumAddress, ethereumSignature,
       isSuccess={hasClaim}
     >
       <StyledDiv className={className}>
+<<<<<<< HEAD
         {t<string>('Your Ethereum account')}
+=======
+        {t('Your Ethereum account')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         <h2>{addrToChecksum(ethereumAddress.toString())}</h2>
         {hasClaim
           ? (
             <>
-              {t<string>('has a valid claim for')}
+              {t('has a valid claim for')}
               <h2><FormatBalance value={claimValue} /></h2>
               <Button.Group>
                 <TxButton
@@ -104,7 +108,7 @@ function Claim ({ accountId, className = '', ethereumAddress, ethereumSignature,
           )
           : (
             <>
-              {t<string>('does not appear to have a valid claim. Please double check that you have signed the transaction correctly on the correct ETH account.')}
+              {t('does not appear to have a valid claim. Please double check that you have signed the transaction correctly on the correct ETH account.')}
             </>
           )}
       </StyledDiv>

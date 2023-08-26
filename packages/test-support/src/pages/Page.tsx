@@ -1,6 +1,11 @@
-// Copyright 2017-2023 @polkadot/page-accounts authors & contributors
+// Copyright 2017-2023 @polkadot/test-support authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+<<<<<<< HEAD
+=======
+/* global jest, fail */
+
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { RenderResult } from '@testing-library/react';
 import type { ApiProps } from '@polkadot/react-api/types';
 import type { PartialQueueTxExtrinsic, QueueProps, QueueTxExtrinsicAdd } from '@polkadot/react-components/Status/types';
@@ -12,10 +17,13 @@ import React, { Suspense } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import AccountSidebar from '@polkadot/app-accounts/Sidebar';
-import { lightTheme } from '@polkadot/apps/themes';
 import { POLKADOT_GENESIS } from '@polkadot/apps-config';
+<<<<<<< HEAD
 import { ApiCtx } from '@polkadot/react-api';
+=======
+import { AccountSidebar, lightTheme } from '@polkadot/react-components';
+import { ApiCtx } from '@polkadot/react-hooks/ctx/Api';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { QueueCtx } from '@polkadot/react-hooks/ctx/Queue';
 import { TypeRegistry } from '@polkadot/types/create';
 import { keyring } from '@polkadot/ui-keyring';
@@ -107,7 +115,14 @@ jest.mock('@polkadot/react-hooks/useRegistrars', () => ({
 }));
 
 jest.mock('@polkadot/react-hooks/useTheme', () => ({
+<<<<<<< HEAD
   useTheme: () => ({ theme: 'light', themeClassName: 'theme--light' })
+=======
+  useTheme: () => ({
+    theme: 'light',
+    themeClassName: 'theme--light'
+  })
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 }));
 
 export abstract class Page {

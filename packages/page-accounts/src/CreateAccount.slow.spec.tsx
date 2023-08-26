@@ -11,8 +11,13 @@ import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import AccountsApp from '@polkadot/app-accounts';
+<<<<<<< HEAD
 import { lightTheme } from '@polkadot/apps/themes';
 import { ApiCtxRoot } from '@polkadot/react-api';
+=======
+import { ApiCtxRoot } from '@polkadot/react-api';
+import { lightTheme } from '@polkadot/react-components';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { MemoryStore } from '@polkadot/test-support/keyring';
 import { WaitForApi } from '@polkadot/test-support/react';
 import { SUBSTRATE_PORT } from '@polkadot/test-support/substrate';
@@ -46,6 +51,10 @@ const renderAccounts = () => {
   );
 };
 
+<<<<<<< HEAD
+=======
+// eslint-disable-next-line jest/no-disabled-tests
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 describe.skip('--SLOW--: Account Create', () => {
   it('created account is added to list', async () => {
     const { findByTestId, findByText, queryByText } = renderAccounts();

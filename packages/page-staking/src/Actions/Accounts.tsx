@@ -27,10 +27,17 @@ function Accounts ({ allSlashes, className, footer, isInElection, list, minCommi
   const { t } = useTranslation();
 
   const hdrRef = useRef<[React.ReactNode?, string?, number?][]>([
+<<<<<<< HEAD
     [t<string>('stashes'), 'start', 2],
     [t<string>('controller'), 'address'],
     [t<string>('rewards'), 'start media--1200'],
     [t<string>('bonded'), 'number'],
+=======
+    [t('stashes'), 'start', 2],
+    [t('controller'), 'address'],
+    [t('rewards'), 'start media--1200'],
+    [t('bonded'), 'number'],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [],
     []
   ]);
@@ -38,7 +45,7 @@ function Accounts ({ allSlashes, className, footer, isInElection, list, minCommi
   return (
     <Table
       className={className}
-      empty={list && t<string>('No funds staked yet. Bond funds to validate or nominate a validator')}
+      empty={list && t('No funds staked yet. Bond funds to validate or nominate a validator')}
       footer={footer}
       header={hdrRef.current}
     >

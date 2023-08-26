@@ -14,6 +14,7 @@
   },
   "sideEffects": true,
   "type": "module",
+<<<<<<< HEAD
   "version": "0.129.2-0-x",
   "dependencies": {
     "@polkadot/apps-config": "^0.129.2-0-x",
@@ -25,6 +26,19 @@
     "@polkadot/react-params": "^0.129.2-0-x",
     "@polkadot/react-query": "^0.129.2-0-x",
     "@polkadot/react-signer": "^0.129.2-0-x",
+=======
+  "version": "0.132.2-70-x",
+  "dependencies": {
+    "@polkadot/apps-config": "^0.132.2-70-x",
+    "@polkadot/apps-routing": "^0.132.2-70-x",
+    "@polkadot/dev": "^0.76.18",
+    "@polkadot/react-api": "^0.132.2-70-x",
+    "@polkadot/react-components": "^0.132.2-70-x",
+    "@polkadot/react-hooks": "^0.132.2-70-x",
+    "@polkadot/react-params": "^0.132.2-70-x",
+    "@polkadot/react-query": "^0.132.2-70-x",
+    "@polkadot/react-signer": "^0.132.2-70-x",
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     "punycode": "^2.3.0",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
@@ -37,17 +51,29 @@
     "buffer": "^6.0.3",
     "copy-webpack-plugin": "^11.0.0",
     "crypto-browserify": "^3.12.0",
+<<<<<<< HEAD
     "css-loader": "^6.7.3",
     "empty": "^0.10.1",
     "html-webpack-plugin": "^5.5.1",
     "https-browserify": "^1.0.0",
     "mini-css-extract-plugin": "^2.7.5",
+=======
+    "css-loader": "^6.8.1",
+    "empty": "^0.10.1",
+    "html-webpack-plugin": "^5.5.3",
+    "https-browserify": "^1.0.0",
+    "mini-css-extract-plugin": "^2.7.6",
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
     "process": "^0.11.10",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
+<<<<<<< HEAD
     "ts-loader": "^9.4.2"
+=======
+    "ts-loader": "^9.4.4"
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   },
   "peerDependencies": {
     "typescript": "*",

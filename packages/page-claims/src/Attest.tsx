@@ -70,12 +70,12 @@ function Attest ({ accountId, className, ethereumAddress, onSuccess, statementKi
       <Card isError>
         <StyledDiv className={className}>
           {noClaim && (
-            <p>{t<string>('There is no on-chain claimable balance associated with the Ethereum account {{ethereumAddress}}', {
+            <p>{t('There is no on-chain claimable balance associated with the Ethereum account {{ethereumAddress}}', {
               replace: { ethereumAddress }
             })}</p>
           )}
           {!statementSentence && (
-            <p>{t<string>('There is no on-chain attestation statement associated with the Ethereum account {{ethereumAddress}}', {
+            <p>{t('There is no on-chain attestation statement associated with the Ethereum account {{ethereumAddress}}', {
               replace: { ethereumAddress }
             })}</p>
           )}
@@ -88,10 +88,14 @@ function Attest ({ accountId, className, ethereumAddress, onSuccess, statementKi
     return (
       <Card isError>
         <StyledDiv className={className}>
+<<<<<<< HEAD
           {t<string>('We found a pre-claim with this Polkadot address. However, attesting requires signing with this account. To continue with attesting, please add this account as an owned account first.')}
+=======
+          {t('We found a pre-claim with this Polkadot address. However, attesting requires signing with this account. To continue with attesting, please add this account as an owned account first.')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           <h2>
             <FormatBalance
-              label={t<string>('Account balance:')}
+              label={t('Account balance:')}
               value={claimValue}
             />
           </h2>
@@ -109,7 +113,7 @@ function Attest ({ accountId, className, ethereumAddress, onSuccess, statementKi
         />
         <h2>
           <FormatBalance
-            label={t<string>('Account balance:')}
+            label={t('Account balance:')}
             value={claimValue}
           />
         </h2>
@@ -118,7 +122,7 @@ function Attest ({ accountId, className, ethereumAddress, onSuccess, statementKi
             accountId={accountId}
             icon='paper-plane'
             isDisabled={!statementSentence}
-            label={t<string>('I agree')}
+            label={t('I agree')}
             onSuccess={onSuccess}
             params={[statementSentence]}
             tx={api.tx.claims.attest}

@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type React from 'react';
+<<<<<<< HEAD
 
 import { useEffect, useState } from 'react';
 
@@ -9,13 +10,16 @@ import { createNamedHook } from './createNamedHook.js';
 import { useIsMountedRef } from './useIsMountedRef.js';
 import { useScroll } from './useScroll.js';
 import { useWindowSize } from './useWindowSize.js';
+=======
+import type { ElementPosition } from '@polkadot/react-components/Popup/types';
 
-export interface ElementPosition {
-  x: number,
-  y: number,
-  width: number,
-  height: number,
-}
+import { useEffect, useState } from 'react';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
+
+import { createNamedHook } from './createNamedHook.js';
+import { useIsMountedRef } from './useIsMountedRef.js';
+import { useScroll } from './useScroll.js';
+import { useWindowSize } from './useWindowSize.js';
 
 function useElementPositionImpl (ref: React.MutableRefObject<HTMLElement | undefined | null>): ElementPosition | undefined {
   const [elementPosition, setElementPosition] = useState<ElementPosition>();
@@ -24,7 +28,11 @@ function useElementPositionImpl (ref: React.MutableRefObject<HTMLElement | undef
   const scrollY = useScroll();
 
   useEffect(() => {
+<<<<<<< HEAD
     if (mountedRef.current && ref && ref.current) {
+=======
+    if (mountedRef.current && ref?.current) {
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       const { height, width, x, y } = ref.current.getBoundingClientRect();
 
       setElementPosition({

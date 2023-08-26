@@ -25,14 +25,22 @@ function Summary ({ leasePeriod, parachainCount, proposalCount, upcomingCount }:
   return (
     <SummaryBox>
       <section>
+<<<<<<< HEAD
         <CardSummary label={t<string>('parachains')}>
+=======
+        <CardSummary label={t('parachains')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           {isNumber(parachainCount)
             ? formatNumber(parachainCount)
             : <span className='--tmp'>99</span>}
         </CardSummary>
         <CardSummary
           className='media--1000'
+<<<<<<< HEAD
           label={t<string>('parathreads')}
+=======
+          label={t('parathreads')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         >
           {isNumber(upcomingCount)
             ? formatNumber(upcomingCount)
@@ -41,21 +49,29 @@ function Summary ({ leasePeriod, parachainCount, proposalCount, upcomingCount }:
         {isNumber(proposalCount) && (
           <CardSummary
             className='media--1000'
-            label={t<string>('proposals')}
+            label={t('proposals')}
           >
             {formatNumber(proposalCount)}
           </CardSummary>
         )}
       </section>
       <section>
+<<<<<<< HEAD
         <CardSummary label={t<string>('current lease')}>
+=======
+        <CardSummary label={t('current lease')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           {leasePeriod
             ? formatNumber(leasePeriod.currentPeriod)
             : <span className='--tmp'>99</span>}
         </CardSummary>
         <CardSummary
           className='media--1200'
+<<<<<<< HEAD
           label={t<string>('lease period')}
+=======
+          label={t('lease period')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           progress={{
             isBlurred: !leasePeriod,
             total: leasePeriod ? leasePeriod.length : BN_THREE,
@@ -65,7 +81,7 @@ function Summary ({ leasePeriod, parachainCount, proposalCount, upcomingCount }:
         />
       </section>
       <section>
-        <CardSummary label={t<string>('finalized')}>
+        <CardSummary label={t('finalized')}>
           <BestFinalized />
         </CardSummary>
         <SummarySession

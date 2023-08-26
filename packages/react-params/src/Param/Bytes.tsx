@@ -33,7 +33,11 @@ function Bytes ({ className = '', defaultValue, isDisabled, isError, label, name
 
   const toggleLabel = !isDisabled && (
     <Toggle
+<<<<<<< HEAD
       label={t<string>('file upload')}
+=======
+      label={t('file upload')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       onChange={setFileInput}
       value={isFileDrop}
     />

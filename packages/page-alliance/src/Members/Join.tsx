@@ -39,15 +39,19 @@ function Join ({ className, members, onClose, unscrupulous: { accounts } }: Prop
   return (
     <Modal
       className={className}
-      header={t<string>('Join alliance')}
+      header={t('Join alliance')}
       onClose={onClose}
       size='large'
     >
       <Modal.Content>
-        <Modal.Columns hint={t<string>('This account will be submitted to join the aliance. It will be allocated one of the alliance roles upon joining, starting with Ally.')}>
+        <Modal.Columns hint={t('This account will be submitted to join the aliance. It will be allocated one of the alliance roles upon joining, starting with Ally.')}>
           <InputAddress
             filter={available}
+<<<<<<< HEAD
             label={t<string>('alliance account')}
+=======
+            label={t('alliance account')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setAccountId}
             type='account'
           />
@@ -56,7 +60,7 @@ function Join ({ className, members, onClose, unscrupulous: { accounts } }: Prop
           <InputBalance
             defaultValue={api.consts.alliance.allyDeposit}
             isDisabled
-            label={t<string>('alliance deposit')}
+            label={t('alliance deposit')}
           />
         </Modal.Columns>
       </Modal.Content>

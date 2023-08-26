@@ -30,7 +30,7 @@ function Query ({ className }: Props): React.ReactElement<Props> {
   const eras = useCall<INumber[]>(api.derive.staking.erasHistoric);
 
   const labels = useMemo(
-    () => eras && eras.map((e) => e.toHuman() as string),
+    () => eras?.map((e) => e.toHuman() as string),
     [eras]
   );
 
@@ -48,7 +48,11 @@ function Query ({ className }: Props): React.ReactElement<Props> {
       <InputAddressSimple
         className='staking--queryInput'
         defaultValue={value}
+<<<<<<< HEAD
         label={t<string>('validator to query')}
+=======
+        label={t('validator to query')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         onChange={setValidatorId}
         onEnter={_onQuery}
       >

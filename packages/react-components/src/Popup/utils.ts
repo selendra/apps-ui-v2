@@ -2,8 +2,12 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { WindowSize } from '@polkadot/react-hooks/ctx/types';
+<<<<<<< HEAD
 import type { ElementPosition } from '@polkadot/react-hooks/useElementPosition';
 import type { HorizontalPosition, VerticalPosition } from './types.js';
+=======
+import type { ElementPosition, HorizontalPosition, VerticalPosition } from './types.js';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 interface Coords {
   x: number;

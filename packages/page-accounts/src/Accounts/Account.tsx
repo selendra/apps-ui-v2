@@ -14,7 +14,11 @@ import type { AccountBalance, Delegation } from '../types.js';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 import useAccountLocks from '@polkadot/app-referenda/useAccountLocks';
+<<<<<<< HEAD
 import { AddressInfo, AddressSmall, Badge, Button, ChainLock, Columar, CryptoType, Forget, LinkExternal, Menu, Popup, styled, Table, Tags } from '@polkadot/react-components';
+=======
+import { AddressInfo, AddressSmall, Badge, Button, ChainLock, Columar, CryptoType, Forget, LinkExternal, Menu, Popup, styled, Table, Tags, TransferModal } from '@polkadot/react-components';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useAccountInfo, useApi, useBalancesAll, useBestNumber, useCall, useLedger, useQueue, useStakingInfo, useToggle } from '@polkadot/react-hooks';
 import { keyring } from '@polkadot/ui-keyring';
 import { BN, BN_ZERO, formatBalance, formatNumber, isFunction } from '@polkadot/util';
@@ -29,7 +33,10 @@ import MultisigApprove from '../modals/MultisigApprove.js';
 import ProxyOverview from '../modals/ProxyOverview.js';
 import RecoverAccount from '../modals/RecoverAccount.js';
 import RecoverSetup from '../modals/RecoverSetup.js';
+<<<<<<< HEAD
 import Transfer from '../modals/Transfer.js';
+=======
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import UndelegateModal from '../modals/Undelegate.js';
 import { useTranslation } from '../translate.js';
 import { createMenuGroup } from '../util.js';
@@ -140,7 +147,7 @@ function createClearReferendaTx (api: ApiPromise, address: string, ids: [BN, BN]
 async function showLedgerAddress (getLedger: () => Ledger, meta: KeyringJson$Meta): Promise<void> {
   const ledger = getLedger();
 
-  await ledger.getAddress(true, meta.accountOffset as number || 0, meta.addressOffset as number || 0);
+  await ledger.getAddress(true, meta.accountOffset || 0, meta.addressOffset || 0);
 }
 
 const transformRecovery = {
@@ -256,7 +263,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
       try {
         keyring.forgetAccount(address);
         status.status = 'success';
-        status.message = t<string>('account forgotten');
+        status.message = t('account forgotten');
       } catch (error) {
         status.status = 'error';
         status.message = (error as Error).message;
@@ -406,7 +413,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
     isFunction(api.api.tx.multisig?.asMulti) && isMultisig && createMenuGroup('multisigGroup', [
       <Menu.Item
         icon='file-signature'
-        isDisabled={!multiInfos || !multiInfos.length}
+        isDisabled={!multiInfos?.length}
         key='multisigApprovals'
         label={t<string>('Multisig approvals')}
         onClick={toggleMultisig}
@@ -530,7 +537,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
             />
           )}
           {isTransferOpen && (
-            <Transfer
+            <TransferModal
               key='modal-transfer'
               onClose={toggleTransfer}
               senderId={address}
@@ -550,8 +557,8 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
               key='multisig-approve'
               onClose={toggleMultisig}
               ongoing={multiInfos}
-              threshold={meta.threshold as number}
-              who={meta.who as string[]}
+              threshold={meta.threshold}
+              who={meta.who}
             />
           )}
           {isRecoverAccountOpen && (
@@ -582,7 +589,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
                 ? (
                   <Badge
                     className='warning'
-                    hover={t<string>('This is a development account derived from the known development seed. Do not use for any funds on a non-development network.')}
+                    hover={t('This is a development account derived from the known development seed. Do not use for any funds on a non-development network.')}
                     icon='wrench'
                   />
                 )
@@ -591,8 +598,8 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
                     className='warning'
                     hover={
                       <div>
-                        <p>{t<string>('This account is available on all networks. It is recommended to link to a specific network via the account options ("only this network" option) to limit availability. For accounts from an extension, set the network on the extension.')}</p>
-                        <p>{t<string>('This does not send any transaction, rather it only sets the genesis in the account JSON.')}</p>
+                        <p>{t('This account is available on all networks. It is recommended to link to a specific network via the account options ("only this network" option) to limit availability. For accounts from an extension, set the network on the extension.')}</p>
+                        <p>{t('This does not send any transaction, rather it only sets the genesis in the account JSON.')}</p>
                       </div>
                     }
                     icon='exclamation-triangle'
@@ -604,7 +611,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
                 className='recovery'
                 hover={
                   <div>
-                    <p>{t<string>('This account is recoverable, with the following friends:')}</p>
+                    <p>{t('This account is recoverable, with the following friends:')}</p>
                     <div>
                       {recoveryInfo.friends.map((friend, index): React.ReactNode => (
                         <AddressSmall
@@ -616,15 +623,15 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
                     <table>
                       <tbody>
                         <tr>
-                          <td>{t<string>('threshold')}</td>
+                          <td>{t('threshold')}</td>
                           <td>{formatNumber(recoveryInfo.threshold)}</td>
                         </tr>
                         <tr>
-                          <td>{t<string>('delay')}</td>
+                          <td>{t('delay')}</td>
                           <td>{formatNumber(recoveryInfo.delayPeriod)}</td>
                         </tr>
                         <tr>
-                          <td>{t<string>('deposit')}</td>
+                          <td>{t('deposit')}</td>
                           <td>{formatBalance(recoveryInfo.deposit)}</td>
                         </tr>
                       </tbody>
@@ -637,7 +644,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
             {isProxied && proxyInfo?.isEmpty && (
               <Badge
                 className='important'
-                hover={t<string>('Proxied account has no owned proxies')}
+                hover={t('Proxied account has no owned proxies')}
                 icon='sitemap'
                 info='0'
               />
@@ -646,8 +653,8 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
               <Badge
                 className='important'
                 color='purple'
-                hover={t<string>('Multisig approvals pending')}
-                hoverAction={t<string>('View pending approvals')}
+                hover={t('Multisig approvals pending')}
+                hoverAction={t('View pending approvals')}
                 icon='file-signature'
                 onClick={toggleMultisig}
               />
@@ -655,8 +662,8 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
             {delegation?.accountDelegated && (
               <Badge
                 className='information'
-                hover={t<string>('This account has a governance delegation')}
-                hoverAction={t<string>('Manage delegation')}
+                hover={t('This account has a governance delegation')}
+                hoverAction={t('Manage delegation')}
                 icon='calendar-check'
                 onClick={toggleDelegate}
               />
@@ -666,10 +673,10 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
                 className='information'
                 hover={
                   proxy[0].length === 1
-                    ? t<string>('This account has a proxy set')
-                    : t<string>('This account has {{proxyNumber}} proxies set', { replace: { proxyNumber: proxy[0].length } })
+                    ? t('This account has a proxy set')
+                    : t('This account has {{proxyNumber}} proxies set', { replace: { proxyNumber: proxy[0].length } })
                 }
-                hoverAction={t<string>('Manage proxies')}
+                hoverAction={t('Manage proxies')}
                 icon='sitemap'
                 onClick={toggleProxyOverview}
               />
@@ -682,7 +689,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
               <Button
                 className='send-button'
                 icon='paper-plane'
-                label={t<string>('send')}
+                label={t('send')}
                 onClick={toggleTransfer}
               />
             )}
@@ -737,7 +744,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
               </div>
             </Columar.Column>
             <Columar.Column>
-              <h5>{t<string>('account type')}</h5>
+              <h5>{t('account type')}</h5>
               <CryptoType accountId={address} />
             </Columar.Column>
           </Columar>

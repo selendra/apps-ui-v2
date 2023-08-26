@@ -49,7 +49,11 @@ function Slashes ({ buttons, councilId, councilThreshold, slash }: Props): React
   });
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('era {{era}}/unapplied', {
+=======
+    [t('era {{era}}/unapplied', {
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       replace: {
         era: api.query.staking.earliestUnappliedSlash || !api.consts.staking.slashDeferDuration
           ? slash.era.toString()

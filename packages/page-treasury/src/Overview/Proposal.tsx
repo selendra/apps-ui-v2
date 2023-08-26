@@ -52,7 +52,11 @@ function ProposalDisplay ({ className = '', isMember, members, proposal: { counc
         <td className={hasProposals ? 'middle' : 'button'}>
           {hasCouncil
             ? hasProposals
+<<<<<<< HEAD
               ? <a href='#/council/motions'>{t<string>('Voting')}</a>
+=======
+              ? <a href='#/council/motions'>{t('Voting')}</a>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               : withSend && (
                 <Council
                   id={id}

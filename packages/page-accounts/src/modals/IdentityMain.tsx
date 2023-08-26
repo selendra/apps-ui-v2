@@ -147,14 +147,14 @@ function IdentityMain ({ address, className = '', onClose }: Props): React.React
   return (
     <Modal
       className={className}
-      header={t<string>('Register identity')}
+      header={t('Register identity')}
       onClose={onClose}
     >
       <Modal.Content>
         <Input
           autoFocus
           isError={!okDisplay}
-          label={t<string>('display name')}
+          label={t('display name')}
           maxLength={32}
           onChange={setValDisplay}
           placeholder={t<string>('My On-Chain Name')}
@@ -163,101 +163,167 @@ function IdentityMain ({ address, className = '', onClose }: Props): React.React
         <Input
           isDisabled={!hasLegal}
           isError={!okLegal}
+<<<<<<< HEAD
           label={t<string>('legal name')}
           labelExtra={
             <Toggle
               label={t<string>('include field')}
+=======
+          label={t('legal name')}
+          labelExtra={
+            <Toggle
+              label={t('include field')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setHasLegal}
               value={hasLegal}
             />
           }
           maxLength={32}
           onChange={setValLegal}
+<<<<<<< HEAD
           placeholder={t<string>('Full Legal Name')}
+=======
+          placeholder={t('Full Legal Name')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={hasLegal ? valLegal : '<none>'}
         />
         <Input
           isDisabled={!hasEmail}
           isError={!okEmail}
+<<<<<<< HEAD
           label={t<string>('email')}
           labelExtra={
             <Toggle
               label={t<string>('include field')}
+=======
+          label={t('email')}
+          labelExtra={
+            <Toggle
+              label={t('include field')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setHasEmail}
               value={hasEmail}
             />
           }
           maxLength={32}
           onChange={setValEmail}
+<<<<<<< HEAD
           placeholder={t<string>('somebody@example.com')}
+=======
+          placeholder={t('somebody@example.com')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={hasEmail ? valEmail : '<none>'}
         />
         <Input
           isDisabled={!hasWeb}
           isError={!okWeb}
+<<<<<<< HEAD
           label={t<string>('web')}
           labelExtra={
             <Toggle
               label={t<string>('include field')}
+=======
+          label={t('web')}
+          labelExtra={
+            <Toggle
+              label={t('include field')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setHasWeb}
               value={hasWeb}
             />
           }
           maxLength={32}
           onChange={setValWeb}
+<<<<<<< HEAD
           placeholder={t<string>('https://example.com')}
+=======
+          placeholder={t('https://example.com')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={hasWeb ? valWeb : '<none>'}
         />
         <Input
           isDisabled={!hasTwitter}
           isError={!okTwitter}
+<<<<<<< HEAD
           label={t<string>('twitter')}
           labelExtra={
             <Toggle
               label={t<string>('include field')}
+=======
+          label={t('twitter')}
+          labelExtra={
+            <Toggle
+              label={t('include field')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setHasTwitter}
               value={hasTwitter}
             />
           }
           onChange={setValTwitter}
+<<<<<<< HEAD
           placeholder={t<string>('@YourTwitterName')}
+=======
+          placeholder={t('@YourTwitterName')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={hasTwitter ? valTwitter : '<none>'}
         />
         <Input
           isDisabled={!hasDiscord}
           isError={!okDiscord}
+<<<<<<< HEAD
           label={t<string>('discord')}
           labelExtra={
             <Toggle
               label={t<string>('include field')}
+=======
+          label={t('discord')}
+          labelExtra={
+            <Toggle
+              label={t('include field')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setHasDiscord}
               value={hasDiscord}
             />
           }
           onChange={setValDiscord}
+<<<<<<< HEAD
           placeholder={t<string>('YourDiscordHandle')}
+=======
+          placeholder={t('YourDiscordHandle')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={hasDiscord ? valDiscord : '<none>'}
         />
         <Input
           isDisabled={!hasRiot}
           isError={!okRiot}
+<<<<<<< HEAD
           label={t<string>('riot name')}
           labelExtra={
             <Toggle
               label={t<string>('include field')}
+=======
+          label={t('riot name')}
+          labelExtra={
+            <Toggle
+              label={t('include field')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setHasRiot}
               value={hasRiot}
             />
           }
           maxLength={32}
           onChange={setValRiot}
+<<<<<<< HEAD
           placeholder={t<string>('@yourname:matrix.org')}
+=======
+          placeholder={t('@yourname:matrix.org')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={hasRiot ? valRiot : '<none>'}
         />
         <InputBalance
           defaultValue={api.consts.identity?.basicDeposit}
           isDisabled
-          label={t<string>('total deposit')}
+          label={t('total deposit')}
         />
       </Modal.Content>
       <Modal.Actions>
@@ -265,14 +331,14 @@ function IdentityMain ({ address, className = '', onClose }: Props): React.React
           accountId={address}
           icon={'trash-alt'}
           isDisabled={!gotPreviousIdentity}
-          label={t<string>('Clear Identity')}
+          label={t('Clear Identity')}
           onStart={onClose}
           tx={api.tx.identity.clearIdentity}
         />
         <TxButton
           accountId={address}
           isDisabled={!okAll}
-          label={t<string>('Set Identity')}
+          label={t('Set Identity')}
           onStart={onClose}
           params={[info]}
           tx={api.tx.identity.setIdentity}

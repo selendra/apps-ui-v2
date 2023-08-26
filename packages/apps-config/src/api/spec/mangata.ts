@@ -11,6 +11,10 @@ import type { Balance } from '@polkadot/types/interfaces';
 import type { FrameSystemAccountInfo } from '@polkadot/types/lookup';
 import type { OverrideBundleDefinition } from '@polkadot/types/types';
 
+<<<<<<< HEAD
+=======
+import { mangataTypesBundleForPolkadotApps } from '@mangata-finance/type-definitions';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { combineLatest, map } from 'rxjs';
 
 import { memo } from '@polkadot/api-derive/util';
@@ -72,6 +76,7 @@ const definitions: OverrideBundleDefinition = {
       all: getBalance
     }
   },
+<<<<<<< HEAD
   types: [
     {
       // on all versions
@@ -273,6 +278,9 @@ const definitions: OverrideBundleDefinition = {
       }
     }
   }
+=======
+  ...mangataTypesBundleForPolkadotApps
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 };
 
 export default definitions;

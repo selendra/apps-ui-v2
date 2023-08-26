@@ -25,19 +25,31 @@ function Summary ({ bestNumber, className = '', electionsInfo, hasElections }: P
   return (
     <SummaryBox className={className}>
       <section>
+<<<<<<< HEAD
         <CardSummary label={t<string>('seats')}>
+=======
+        <CardSummary label={t('seats')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           {electionsInfo
             ? <>{formatNumber(electionsInfo.members.length)}{electionsInfo.desiredSeats && <>&nbsp;/&nbsp;{formatNumber(electionsInfo.desiredSeats)}</>}</>
             : <span className='--tmp'>99</span>}
         </CardSummary>
         {hasElections && (
           <>
+<<<<<<< HEAD
             <CardSummary label={t<string>('runners up')}>
+=======
+            <CardSummary label={t('runners up')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               {electionsInfo
                 ? <>{formatNumber(electionsInfo.runnersUp.length)}{electionsInfo.desiredRunnersUp && <>&nbsp;/&nbsp;{formatNumber(electionsInfo.desiredRunnersUp)}</>}</>
                 : <span className='--tmp'>99 / 99</span>}
             </CardSummary>
+<<<<<<< HEAD
             <CardSummary label={t<string>('candidates')}>
+=======
+            <CardSummary label={t('candidates')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               {electionsInfo
                 ? formatNumber(electionsInfo.candidateCount)
                 : <span className='--tmp'>99</span>}
@@ -45,9 +57,15 @@ function Summary ({ bestNumber, className = '', electionsInfo, hasElections }: P
           </>
         )}
       </section>
+<<<<<<< HEAD
       {electionsInfo && electionsInfo.voteCount && (
         <section>
           <CardSummary label={t<string>('voting round')}>
+=======
+      {electionsInfo?.voteCount && (
+        <section>
+          <CardSummary label={t('voting round')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             #{formatNumber(electionsInfo.voteCount)}
           </CardSummary>
         </section>
@@ -55,7 +73,7 @@ function Summary ({ bestNumber, className = '', electionsInfo, hasElections }: P
       {electionsInfo && bestNumber && electionsInfo.termDuration && electionsInfo.termDuration.gt(BN_ZERO) && (
         <section>
           <CardSummary
-            label={t<string>('term progress')}
+            label={t('term progress')}
             progress={{
               total: (electionsInfo && bestNumber) ? electionsInfo.termDuration : BN_THREE,
               value: (electionsInfo && bestNumber) ? bestNumber.mod(electionsInfo.termDuration) : BN_TWO,

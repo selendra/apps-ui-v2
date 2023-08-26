@@ -54,10 +54,17 @@ function Unlock ({ address, className, error, onChange, onEnter, tabIndex }: Pro
       <Password
         autoFocus
         isError={!!error}
+<<<<<<< HEAD
         label={t<string>('unlock account with password')}
         labelExtra={
           <Toggle
             label={t<string>('unlock for {{expiry}} min', { replace: { expiry: UNLOCK_MINS } })}
+=======
+        label={t('unlock account with password')}
+        labelExtra={
+          <Toggle
+            label={t('unlock for {{expiry}} min', { replace: { expiry: UNLOCK_MINS } })}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setIsUnlockCached}
             value={isUnlockCached}
           />

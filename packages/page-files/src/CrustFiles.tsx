@@ -123,9 +123,9 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       const dirFiles: DirFile[] = [];
 
-      for (let index = 0; index < files.length; index++) {
+      for (let i = 0, count = files.length; i < count; i++) {
         // console.info('f:', files[index]);
-        dirFiles.push(files[index] as DirFile);
+        dirFiles.push(files[i]);
       }
 
       console.info(dirFiles);
@@ -138,6 +138,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
 
     e.target.value = '';
   }, [setFile, setShowUpMode, queueAction, t]);
+
   const _onImportResult = useCallback<(m: string, s?: ActionStatusBase['status']) => void>(
     (message, status = 'queued') => {
       queueAction && queueAction({
@@ -180,7 +181,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
         }
 
         const fitter: SaveFile[] = [];
-        const mapImport: { [key: string]: boolean } = {};
+        const mapImport: Record<string, boolean> = {};
 
         for (const item of _list) {
           if (item.Hash && item.Name && item.UpEndpoint && item.PinEndpoint) {
@@ -195,7 +196,11 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
         _onImportResult(t<string>('Import Success'), 'success');
       };
     } catch {
+<<<<<<< HEAD
       _onImportResult(t<string>('file content error'), 'error');
+=======
+      _onImportResult(t('file content error'), 'error');
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     }
   }, [wFiles, _onImportResult, t]);
 
@@ -269,8 +274,8 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
       />
     </div>
     <Table
-      empty={t<string>('No files')}
-      emptySpinner={t<string>('Loading')}
+      empty={t('No files')}
+      emptySpinner={t('Loading')}
       header={[
         [t<string>('files'), 'start', 2],
         [t<string>('file cid'), 'expand', 2],
@@ -305,7 +310,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
             <MCopyButton value={f.Hash}>
               <Badge
                 color='highlight'
-                hover={t<string>('Copy file cid')}
+                hover={t('Copy file cid')}
                 icon='copy'
               />
             </MCopyButton>
@@ -332,7 +337,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
               {!f.items && (
                 <Badge
                   color='highlight'
-                  hover={t<string>('Download')}
+                  hover={t('Download')}
                   icon='download'
                   onClick={createOnDown(f)}
                 />
@@ -340,7 +345,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
               <MCopyButton value={createUrl(f)}>
                 <Badge
                   color='highlight'
-                  hover={t<string>('Copy link')}
+                  hover={t('Copy link')}
                   icon='copy'
                 />
               </MCopyButton>

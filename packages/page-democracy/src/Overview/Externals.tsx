@@ -21,16 +21,22 @@ function Externals ({ className }: Props): React.ReactElement<Props> | null {
   const external = useCall<DeriveProposalExternal | null>(api.derive.democracy.nextExternal);
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('external'), 'start'],
     [t<string>('proposer'), 'address'],
     [t<string>('locked')],
+=======
+    [t('external'), 'start'],
+    [t('proposer'), 'address'],
+    [t('locked')],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     []
   ]);
 
   return (
     <Table
       className={className}
-      empty={external === null && t<string>('No external proposal')}
+      empty={external === null && t('No external proposal')}
       header={headerRef.current}
     >
       {external && <External value={external} />}

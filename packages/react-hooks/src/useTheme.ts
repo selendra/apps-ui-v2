@@ -14,6 +14,7 @@ interface Theme {
 }
 
 function useThemeImpl (): Theme {
+<<<<<<< HEAD
   const { theme } = useContext(ThemeContext as React.Context<ThemeDef>);
 
   return useMemo(
@@ -22,6 +23,16 @@ function useThemeImpl (): Theme {
       themeClassName: `theme--${theme}`
     }),
     [theme]
+=======
+  const ctx = useContext(ThemeContext);
+
+  return useMemo(
+    (): Theme => ({
+      theme: (ctx?.theme || 'light') as 'light',
+      themeClassName: `theme--${(ctx?.theme || 'light') as 'light'}`
+    }),
+    [ctx]
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   );
 }
 

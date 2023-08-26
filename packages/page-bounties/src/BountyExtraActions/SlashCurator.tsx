@@ -55,7 +55,11 @@ function SlashCurator ({ action, curatorId, description, index, toggleOpen }: Pr
   const actionProperties = useMemo<Record<ValidUnassignCuratorAction, ActionProperties>>(() => ({
     SlashCuratorAction: {
       filter: allAccounts,
+<<<<<<< HEAD
       header: t<string>('This action will Slash the Curator.'),
+=======
+      header: t('This action will Slash the Curator.'),
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       params: [index],
       proposingAccountTip: t<string>('The account that will create the transaction.'),
       tip: t("Curator's deposit will be slashed and curator will be unassigned. Bounty will return to the Funded state."),
@@ -64,7 +68,11 @@ function SlashCurator ({ action, curatorId, description, index, toggleOpen }: Pr
     },
     SlashCuratorMotion: {
       filter: members,
+<<<<<<< HEAD
       header: t<string>('This action will create a Council motion to slash the Curator.'),
+=======
+      header: t('This action will create a Council motion to slash the Curator.'),
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       params: [threshold, unassignCuratorProposal, unassignCuratorProposal?.length],
       proposingAccountTip: t<string>('The council member that will create the motion, submission equates to an "aye" vote.'),
       tip: t("If the motion is approved, Curator's deposit will be slashed and Curator will be unassigned. Bounty will return to the Funded state."),
@@ -73,7 +81,11 @@ function SlashCurator ({ action, curatorId, description, index, toggleOpen }: Pr
     },
     UnassignCurator: {
       filter: members,
+<<<<<<< HEAD
       header: t<string>('This action will create a Council motion to unassign the Curator.'),
+=======
+      header: t('This action will create a Council motion to unassign the Curator.'),
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       params: [threshold, unassignCuratorProposal, unassignCuratorProposal?.length],
       proposingAccountTip: t<string>('The council member that will create the motion, submission equates to an "aye" vote.'),
       tip: t<string>('If the motion is approved, the current Curator will be unassigned and the Bounty will return to the Funded state.'),
@@ -98,7 +110,11 @@ function SlashCurator ({ action, curatorId, description, index, toggleOpen }: Pr
         <Modal.Columns hint={proposingAccountTip}>
           <InputAddress
             filter={filter}
+<<<<<<< HEAD
             label={t<string>('proposing account')}
+=======
+            label={t('proposing account')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setAccountId}
             type='account'
             withLabel
@@ -108,7 +124,7 @@ function SlashCurator ({ action, curatorId, description, index, toggleOpen }: Pr
           <InputAddress
             defaultValue={curatorId}
             isDisabled
-            label={t<string>('current curator')}
+            label={t('current curator')}
             withLabel
           />
         </Modal.Columns>

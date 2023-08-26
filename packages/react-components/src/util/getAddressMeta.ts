@@ -11,7 +11,11 @@ export function getAddressMeta (address: string, type: KeyringItemType | null = 
   try {
     const pair = keyring.getAddress(address, type);
 
+<<<<<<< HEAD
     meta = pair && pair.meta;
+=======
+    meta = pair?.meta;
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   } catch {
     // we could pass invalid addresses, so it may throw
   }

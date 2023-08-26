@@ -41,7 +41,11 @@ function Pool ({ className = '', members, ownAccounts, params, poolId }: Props):
   );
 
   const renderNominees = useCallback(
+<<<<<<< HEAD
     () => info && info.nominating.map((stashId, count): React.ReactNode => (
+=======
+    () => info?.nominating.map((stashId, count): React.ReactNode => (
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       <AddressMini
         key={`${count}:${stashId}`}
         value={stashId}
@@ -76,9 +80,9 @@ function Pool ({ className = '', members, ownAccounts, params, poolId }: Props):
           {info && info.nominating.length !== 0 && (
             <ExpanderScroll
               className='media--1300'
-              empty={t<string>('No nominees')}
+              empty={t('No nominees')}
               renderChildren={renderNominees}
-              summary={t<string>('Nominees ({{count}})', { replace: { count: info.nominating.length } })}
+              summary={t('Nominees ({{count}})', { replace: { count: info.nominating.length } })}
             />
           )}
         </td>
@@ -86,9 +90,9 @@ function Pool ({ className = '', members, ownAccounts, params, poolId }: Props):
           {members && members.length !== 0 && (
             <ExpanderScroll
               className='media--1200'
-              empty={t<string>('No members')}
+              empty={t('No members')}
               renderChildren={renderMembers}
-              summary={t<string>('Members ({{count}})', { replace: { count: members.length } })}
+              summary={t('Members ({{count}})', { replace: { count: members.length } })}
             />
           )}
         </td>
@@ -121,19 +125,31 @@ function Pool ({ className = '', members, ownAccounts, params, poolId }: Props):
             </div>
             {info.bonded.roles.root.isSome && (
               <div className='label-column-right'>
+<<<<<<< HEAD
                 <div className='label'>{t<string>('root')}</div>
+=======
+                <div className='label'>{t('root')}</div>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 <div className='inline-balance'><AddressMini value={info.bonded.roles.root.unwrap()} /></div>
               </div>
             )}
             {info.bonded.roles.nominator.isSome && (
               <div className='label-column-right'>
+<<<<<<< HEAD
                 <div className='label'>{t<string>('nominator')}</div>
+=======
+                <div className='label'>{t('nominator')}</div>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 <div className='inline-balance'><AddressMini value={info.bonded.roles.nominator.unwrap()} /></div>
               </div>
             )}
             {(info.bonded.roles as { stateToggler?: { isSome: boolean } }).stateToggler?.isSome && (
               <div className='label-column-right'>
+<<<<<<< HEAD
                 <div className='label'>{t<string>('toggler')}</div>
+=======
+                <div className='label'>{t('toggler')}</div>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 <div className='inline-balance'><AddressMini value={(info.bonded.roles as unknown as { stateToggler: { unwrap: () => string } }).stateToggler.unwrap()} /></div>
               </div>
             )}

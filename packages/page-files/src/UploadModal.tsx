@@ -2,7 +2,10 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { CancelTokenSource } from 'axios';
+<<<<<<< HEAD
 import type { TFunction } from 'i18next';
+=======
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { Signer } from '@polkadot/api/types';
 import type { AuthIpfsEndpoint, DirFile, FileInfo, SaveFile, UploadRes } from './types.js';
 
@@ -48,6 +51,7 @@ function ShowFile (p: { file: DirFile | File }) {
   );
 }
 
+<<<<<<< HEAD
 function createAuthIpfsEndpoints (t: TFunction): AuthIpfsEndpoint[] {
   return [
     {
@@ -63,6 +67,23 @@ function createAuthIpfsEndpoints (t: TFunction): AuthIpfsEndpoint[] {
     {
       location: t<string>('Berlin'),
       text: t<string>('⚡️ Thunder Gateway'),
+=======
+function createAuthIpfsEndpoints (t: (key: string, options?: { replace: Record<string, unknown> }) => string): AuthIpfsEndpoint[] {
+  return [
+    {
+      location: t('Singapore'),
+      text: t('DCF'),
+      value: 'https://crustipfs.xyz'
+    },
+    {
+      location: t('Seattle'),
+      text: t('Crust Network'),
+      value: 'https://gw.crustfiles.app'
+    },
+    {
+      location: t('Berlin'),
+      text: t('⚡️ Thunder Gateway'),
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       value: 'https://gw.crustfiles.net'
     }
   ];
@@ -79,7 +100,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
   const [currentEndpoint, setCurrentEndpoint] = useState(endpoints[0]);
   const pinEndpoints = useMemo(() => [
     {
-      text: t<string>('Crust Pinner'),
+      text: t('Crust Pinner'),
       value: 'https://pin.crustcode.com'
     }
   ], [t]);
@@ -113,7 +134,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
     return false;
   }, [file]);
   const [error, setError] = useState('');
-  const errorText = fileSizeError ? t<string>('Do not upload files larger than 100MB!') : error;
+  const errorText = fileSizeError ? t('Do not upload files larger than 100MB!') : error;
   const [upState, setUpState] = useState({ progress: 0, up: false });
   const [cancelUp, setCancelUp] = useState<CancelTokenSource | null>(null);
 
@@ -125,10 +146,10 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
   }, [setAccount, setCurrentPair]);
 
   useEffect(() => {
-    const meta = (currentPair && currentPair.meta) || {};
-    const isExternal = (meta.isExternal as boolean) || false;
-    const isHardware = (meta.isHardware as boolean) || false;
-    const isInjected = (meta.isInjected as boolean) || false;
+    const meta = currentPair?.meta || {};
+    const isExternal = meta.isExternal || false;
+    const isHardware = meta.isHardware || false;
+    const isInjected = meta.isInjected || false;
     const isUsable = !(isExternal || isHardware || isInjected);
 
     setAccountState({ isExternal, isHardware, isInjected });
@@ -141,7 +162,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
 
     // for injected, retrieve the signer
     if (meta.source && isInjected) {
-      web3FromSource(meta.source as string)
+      web3FromSource(meta.source)
         .catch(() => null)
         .then((injected) => setSigner({
           isUsable: isFunction(injected?.signer?.signRaw),
@@ -297,7 +318,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
   return (
     <StyledModal
       className={className}
-      header={t<string>('Upload File')}
+      header={t('Upload File')}
       onClose={_onClose}
       open={true}
       size={'medium'}
@@ -306,7 +327,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
         <Modal.Columns>
           <div className='files'>
             {file.file && <ShowFile file={file.file} />}
-            {file.files && file.files.map((f, i) =>
+            {file.files?.map((f, i) =>
               <ShowFile
                 file={f}
                 key={`file_item:${i}`}
@@ -317,7 +338,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
         <Modal.Columns>
           <Dropdown
             isDisabled={isBusy}
-            label={t<string>('Select a Web3 IPFS Gateway')}
+            label={t('Select a Web3 IPFS Gateway')}
             onChange={_onChangeGateway}
             options={endpoints}
             value={currentEndpoint.value}
@@ -326,7 +347,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
         <Modal.Columns>
           <Dropdown
             isDisabled={true}
-            label={t<string>('Select a Web3 IPFS Pinner')}
+            label={t('Select a Web3 IPFS Pinner')}
             onChange={_onChangePinner}
             options={pinEndpoints}
             value={currentPinEndpoint.value}
@@ -336,10 +357,10 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
           <InputAddress
             defaultValue={account}
             isDisabled={isBusy}
-            label={t<string>('Please choose account')}
+            label={t('Please choose account')}
             labelExtra={
               <Available
-                label={t<string>('transferrable')}
+                label={t('transferrable')}
                 params={account}
               />
             }
@@ -350,7 +371,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
             !upState.up && isLocked && !isInjected &&
             <Password
               isError={false}
-              label={t<string>('password')}
+              label={t('password')}
               onChange={setPassword}
               value={password}
             />
@@ -369,7 +390,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
           icon={'arrow-circle-up'}
           isBusy={isBusy}
           isDisabled={fileSizeError}
-          label={t<string>('Sign and Upload')}
+          label={t('Sign and Upload')}
           onClick={_onClickUp}
         />
       </Modal.Actions>

@@ -14,6 +14,7 @@
   },
   "sideEffects": false,
   "type": "module",
+<<<<<<< HEAD
   "version": "0.129.2-0-x",
   "dependencies": {
     "@polkadot/hw-ledger": "^12.1.1",
@@ -22,11 +23,25 @@
     "@polkadot/react-hooks": "^0.129.2-0-x",
     "@polkadot/util": "^12.1.1",
     "@polkadot/vanitygen": "^0.54.2",
+=======
+  "version": "0.132.2-70-x",
+  "dependencies": {
+    "@polkadot/hw-ledger": "^12.4.2",
+    "@polkadot/phishing": "^0.21.5",
+    "@polkadot/react-components": "^0.132.2-70-x",
+    "@polkadot/react-hooks": "^0.132.2-70-x",
+    "@polkadot/util": "^12.4.2",
+    "@polkadot/vanitygen": "^0.55.3",
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     "detect-browser": "^5.3.0",
     "file-saver": "^2.0.5"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@polkadot/test-support": "0.129.2-0-x"
+=======
+    "@polkadot/test-support": "0.132.2-70-x"
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   },
   "peerDependencies": {
     "react": "*",

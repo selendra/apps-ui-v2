@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright 2017-2023 @polkadot/react-components authors & contributors
+=======
+// Copyright 2017-2023 @polkadot/react-hooks authors & contributors
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 // SPDX-License-Identifier: Apache-2.0
 
 import type { ApiPromise } from '@polkadot/api';
@@ -35,7 +39,11 @@ function getStats (...apis: ApiPromise[]): { stats: ProviderStats, when: number 
     }
   };
 
+<<<<<<< HEAD
   for (let i = 0; i < apis.length; i++) {
+=======
+  for (let i = 0, count = apis.length; i < count; i++) {
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     const s = apis[i].stats;
 
     if (s) {

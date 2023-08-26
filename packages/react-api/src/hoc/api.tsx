@@ -6,10 +6,14 @@ import type { DefaultProps } from './types.js';
 
 import React from 'react';
 
+import { ApiCtx } from '@polkadot/react-hooks/ctx/Api';
 import { assert } from '@polkadot/util';
 
+<<<<<<< HEAD
 import { ApiCtx } from '../Api.js';
 
+=======
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 export default function withApi <P extends ApiProps> (Inner: React.ComponentType<P>, defaultProps: DefaultProps = {}): React.ComponentType<any> {
   class WithApi extends React.PureComponent<SubtractProps<P, ApiProps>> {
     private component: any = React.createRef();
@@ -18,7 +22,7 @@ export default function withApi <P extends ApiProps> (Inner: React.ComponentType
       return (
         <ApiCtx.Consumer>
           {(apiProps?: ApiProps): React.ReactNode => {
-            assert(apiProps && apiProps.api, 'Application root must be wrapped inside \'react-api/Api\' to provide API context');
+            assert(apiProps?.api, 'Application root must be wrapped inside \'react-api/Api\' to provide API context');
 
             return (
               <Inner

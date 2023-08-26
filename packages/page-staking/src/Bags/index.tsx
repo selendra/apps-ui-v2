@@ -38,6 +38,7 @@ function Bags ({ className, ownStashes }: Props): React.ReactElement<Props> {
   const mapOwn = useBagsNodes(stashIds);
 
   const headerRef = useRef<[React.ReactNode?, string?, number?][]>([
+<<<<<<< HEAD
     [t<string>('bags')],
     [t<string>('max'), 'number'],
     [t<string>('min'), 'number'],
@@ -45,6 +46,15 @@ function Bags ({ className, ownStashes }: Props): React.ReactElement<Props> {
     [t<string>('last'), 'address'],
     [t<string>('stashes'), 'address'],
     [t<string>('nodes'), 'number'],
+=======
+    [t('bags')],
+    [t('max'), 'number'],
+    [t('min'), 'number'],
+    [t('first'), 'address'],
+    [t('last'), 'address'],
+    [t('stashes'), 'address'],
+    [t('nodes'), 'number'],
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [undefined, 'mini']
   ]);
 
@@ -81,8 +91,8 @@ function Bags ({ className, ownStashes }: Props): React.ReactElement<Props> {
         <p>{t<string>('Within the context of a single bag, nodes are not sorted by their stake, but instead placed in insertion order. In other words, the most recently inserted node will be the last node in the bag, regardless of stake. Events like staking rewards or slashes do not automatically put you in a different bag. The bags-list pallet comes with an important permissionless extrinsic: rebag. This allows anyone to specify another account that is in the wrong bag, and place it in the correct one.')}</p>
       </MarkWarning>
       <Table
-        empty={filtered && t<string>('No available bags')}
-        emptySpinner={t<string>('Retrieving all available bags, this will take some time')}
+        empty={filtered && t('No available bags')}
+        emptySpinner={t('Retrieving all available bags, this will take some time')}
         header={headerRef.current}
       >
         {filtered?.map(([{ bagLower, bagUpper, index, info, key }, nodesOwn]) => (

@@ -19,19 +19,26 @@ function Announcements ({ accouncements, className }: Props): React.ReactElement
   const { t } = useTranslation();
 
   const annRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('annoucements'), 'start'],
     [t<string>('version'), 'number'],
     [t<string>('codec'), 'number'],
     [t<string>('code'), 'number']
+=======
+    [t('annoucements'), 'start'],
+    [t('version'), 'number'],
+    [t('codec'), 'number'],
+    [t('code'), 'number']
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (
     <div className={className}>
       <Table
-        empty={accouncements && t<string>('No annoucements')}
+        empty={accouncements && t('No annoucements')}
         header={annRef.current}
       >
-        {accouncements && accouncements.map((a) => (
+        {accouncements?.map((a) => (
           <Accouncement
             key={a.key}
             value={a}

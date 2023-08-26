@@ -34,7 +34,7 @@ async function submitRpc (api: ApiPromise, { method, section }: DefinitionRpcExt
   try {
     const rpc = api.rpc as unknown as Record<string, Record<string, (...params: unknown[]) => Promise<unknown>>>;
 
-    assert(isFunction(rpc[section] && rpc[section][method]), `api.rpc.${section}.${method} does not exist`);
+    assert(isFunction(rpc[section]?.[method]), `api.rpc.${section}.${method} does not exist`);
 
     const result = await rpc[section][method](...values);
 
@@ -84,7 +84,11 @@ function extractCurrent (txqueue: QueueTx[]): ItemState {
     isRpc,
     isVisible,
     queueSize: available.length,
+<<<<<<< HEAD
     requestAddress: (currentItem && currentItem.accountId) || null
+=======
+    requestAddress: (currentItem?.accountId) || null
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   };
 }
 

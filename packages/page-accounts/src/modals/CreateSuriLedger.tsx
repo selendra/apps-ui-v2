@@ -41,38 +41,50 @@ function CreateSuriLedger ({ className, onChange, seedType }: Props): React.Reac
   useEffect((): void => {
     const network = ledgerNets.find(({ network }) => network === chainType);
 
-    onChange(`m/44'/${network?.slip44 as number}'/${accIndex}'/0'/${addIndex}'`);
+    onChange(`m/44'/${network?.slip44}'/${accIndex}'/0'/${addIndex}'`);
   }, [accIndex, addIndex, chainType, onChange]);
 
   return (
     <Modal.Columns
       className={className}
-      hint={t<string>('The derivation will be constructed from the values you specify.')}
+      hint={t('The derivation will be constructed from the values you specify.')}
     >
       {seedType === 'bip'
         ? (
           <>
             <Dropdown
+<<<<<<< HEAD
               label={t<string>('Ledger app type (originated from)')}
+=======
+              label={t('Ledger app type (originated from)')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setChainType}
               options={netOpts.current}
               value={chainType}
             />
             <Dropdown
+<<<<<<< HEAD
               label={t<string>('account type')}
+=======
+              label={t('account type')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setAccIndex}
               options={accOps.current}
               value={accIndex}
             />
             <Dropdown
+<<<<<<< HEAD
               label={t<string>('address index')}
+=======
+              label={t('address index')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setAddIndex}
               options={addOps.current}
               value={addIndex}
             />
           </>
         )
-        : <MarkError content={t<string>('Derivation for Ledger-type accounts are only available on mnemonic seeds.')} />
+        : <MarkError content={t('Derivation for Ledger-type accounts are only available on mnemonic seeds.')} />
       }
     </Modal.Columns>
   );

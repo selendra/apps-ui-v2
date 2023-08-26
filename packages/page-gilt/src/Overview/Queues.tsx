@@ -19,15 +19,21 @@ function Queues ({ className, queueTotals }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
+<<<<<<< HEAD
     [t<string>('queues'), 'start'],
     [t<string>('participants'), 'number'],
     [t<string>('balance'), 'number']
+=======
+    [t('queues'), 'start'],
+    [t('participants'), 'number'],
+    [t('balance'), 'number']
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (
     <Table
       className={className}
-      empty={queueTotals && t<string>('No active gilt queues found.')}
+      empty={queueTotals && t('No active gilt queues found.')}
       header={headerRef.current}
     >
       {queueTotals?.map((value) => (

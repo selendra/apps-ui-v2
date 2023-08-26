@@ -6,7 +6,11 @@ import type { OnChangeCb } from '../types.js';
 import { isFunction, isObservable } from '@polkadot/util';
 
 export function triggerChange (value?: unknown, ...callOnResult: (OnChangeCb | undefined)[]): void {
+<<<<<<< HEAD
   if (!callOnResult || !callOnResult.length) {
+=======
+  if (!callOnResult?.length) {
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     return;
   }
 

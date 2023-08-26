@@ -163,7 +163,7 @@ function Upload ({ onClose }: Props): React.ReactElement {
               label={t<string>('deployment account')}
               labelExtra={
                 <Available
-                  label={t<string>('transferrable')}
+                  label={t('transferrable')}
                   params={accountId}
                 />
               }
@@ -177,7 +177,7 @@ function Upload ({ onClose }: Props): React.ReactElement {
               isError={invalidAbi}
               isSupplied={isAbiSupplied}
               isValid={isAbiValid}
-              label={t<string>('json for either ABI or .contract bundle')}
+              label={t('json for either ABI or .contract bundle')}
               onChange={onChangeAbi}
               onRemove={onRemoveAbi}
               withWasm
@@ -187,9 +187,9 @@ function Upload ({ onClose }: Props): React.ReactElement {
                 {!contractAbi.info.source.wasm.length && (
                   <InputFile
                     isError={!isWasmValid}
-                    label={t<string>('compiled contract WASM')}
+                    label={t('compiled contract WASM')}
                     onChange={_onAddWasm}
-                    placeholder={wasm && !isWasmValid && t<string>('The code is not recognized as being in valid WASM format')}
+                    placeholder={wasm && !isWasmValid && t('The code is not recognized as being in valid WASM format')}
                   />
                 )}
                 <InputName
@@ -219,7 +219,7 @@ function Upload ({ onClose }: Props): React.ReactElement {
               <InputBalance
                 isError={!isValueValid}
                 isZeroable
-                label={t<string>('value')}
+                label={t('value')}
                 onChange={setValue}
                 value={value}
               />
@@ -240,14 +240,14 @@ function Upload ({ onClose }: Props): React.ReactElement {
             <Button
               icon='step-forward'
               isDisabled={!code || !contractAbi}
-              label={t<string>('Next')}
+              label={t('Next')}
               onClick={nextStep}
             />
           )
           : (
             <Button
               icon='step-backward'
-              label={t<string>('Prev')}
+              label={t('Prev')}
               onClick={prevStep}
             />
           )

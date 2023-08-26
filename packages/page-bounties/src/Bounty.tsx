@@ -83,14 +83,14 @@ function Bounty ({ bestNumber, bounty, className = '', description, index, propo
             <DueBlocks
               dueBlocks={blocksUntilPayout}
               endBlock={unlockAt}
-              label={t<string>('payout')}
+              label={t('payout')}
             />
           )}
           {blocksUntilUpdate && updateDue && (
             <DueBlocks
               dueBlocks={blocksUntilUpdate}
               endBlock={updateDue}
-              label={t<string>('update')}
+              label={t('update')}
             />
           )}
           <BountyActionMessage

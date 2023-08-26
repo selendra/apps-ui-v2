@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { ActionStatus } from '@polkadot/react-components/Status/types';
-import type { DisplayedJudgement } from '@polkadot/react-components/types';
 import type { AccountId, AccountIndex, Address } from '@polkadot/types/interfaces';
 import type { CreateResult } from '@polkadot/ui-keyring/types';
 import type { AccountBalance, SortedAccount } from './types.js';
@@ -75,7 +74,7 @@ export type SortCategory = typeof SORT_CATEGORY[number];
 function comparator (accountsMap: Record<string, SortedAccount>, balances: Record<string, AccountBalance | undefined>, category: SortCategory, fromMax: boolean): (a: SortedAccount, b: SortedAccount) => number {
   function accountQualifiedName (account: SortedAccount | undefined): string {
     if (account) {
-      const parent = (account.account?.meta.parentAddress || '') as string;
+      const parent = (account.account?.meta.parentAddress || '');
 
       return accountQualifiedName(accountsMap[parent]) + account.address;
     } else {
@@ -117,9 +116,12 @@ export function sortAccounts (accountsList: SortedAccount[], accountsMap: Record
           ? 1
           : -1);
 }
+<<<<<<< HEAD
 
 export function getJudgementColor (name: DisplayedJudgement): 'green' | 'red' {
   return (name === 'Erroneous' || name === 'Low quality')
     ? 'red'
     : 'green';
 }
+=======
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f

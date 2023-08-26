@@ -6,7 +6,12 @@ import type { BN } from '@polkadot/util';
 
 import React from 'react';
 
+<<<<<<< HEAD
 import { CallExpander, Modal, styled } from '@polkadot/react-components';
+=======
+import { Modal, styled } from '@polkadot/react-components';
+import { CallExpander } from '@polkadot/react-params';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 import PaymentInfo from './PaymentInfo.js';
 import { useTranslation } from './translate.js';
@@ -29,7 +34,7 @@ function Transaction ({ accountId, className, currentItem: { extrinsic, isUnsign
   return (
     <StyledModalColumns
       className={className}
-      hint={t<string>('The details of the transaction including the type, the description (as available from the chain metadata) as well as any parameters and fee estimations (as available) for the specific type of call.')}
+      hint={t('The details of the transaction including the type, the description (as available from the chain metadata) as well as any parameters and fee estimations (as available) for the specific type of call.')}
     >
       <CallExpander
         isHeader

@@ -7,8 +7,13 @@ import type { CallFunction } from '@polkadot/types/types';
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
+<<<<<<< HEAD
 import { AddressMini, Call as CallDisplay, Dropdown, Expander, Input, InputAddress, MarkError, Modal, styled, Toggle, TxButton } from '@polkadot/react-components';
+=======
+import { AddressMini, Dropdown, Expander, Input, InputAddress, MarkError, Modal, styled, Toggle, TxButton } from '@polkadot/react-components';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useAccounts, useApi, useWeight } from '@polkadot/react-hooks';
+import { Call as CallDisplay } from '@polkadot/react-params';
 import { assert, isHex } from '@polkadot/util';
 
 import { useTranslation } from '../translate.js';
@@ -18,8 +23,8 @@ interface Props {
   className?: string;
   onClose: () => void;
   ongoing: [H256, Multisig][];
-  threshold: number;
-  who: string[];
+  threshold?: number;
+  who?: string[];
 }
 
 interface MultiInfo {
@@ -44,7 +49,7 @@ const EMPTY_CALL: CallData = {
   callInfo: null
 };
 
-function MultisigApprove ({ className = '', onClose, ongoing, threshold, who }: Props): React.ReactElement<Props> {
+function MultisigApprove ({ className = '', onClose, ongoing, threshold = 0, who = [] }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api } = useApi();
   const { allAccounts } = useAccounts();
@@ -61,8 +66,8 @@ function MultisigApprove ({ className = '', onClose, ongoing, threshold, who }: 
   const [tx, setTx] = useState<SubmittableExtrinsic<'promise'> | null>(null);
 
   const callOptRef = useRef<Option[]>([
-    { text: t<string>('Approve this call hash'), value: 'aye' },
-    { text: t<string>('Cancel this call hash'), value: 'nay' }
+    { text: t('Approve this call hash'), value: 'aye' },
+    { text: t('Cancel this call hash'), value: 'nay' }
   ]);
 
   const hashes = useMemo<Option[]>(
@@ -164,14 +169,18 @@ function MultisigApprove ({ className = '', onClose, ongoing, threshold, who }: 
   return (
     <StyledModal
       className={className}
-      header={t<string>('Pending call hashes')}
+      header={t('Pending call hashes')}
       onClose={onClose}
       size='large'
     >
       <Modal.Content>
         <Modal.Columns hint={t<string>('The call hash from the list of available and unapproved calls.')}>
           <Dropdown
+<<<<<<< HEAD
             label={t<string>('pending hashes {{count}}', {
+=======
+            label={t('pending hashes {{count}}', {
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               replace: { count: hashes.length }
             })}
             onChange={setHash}
@@ -181,17 +190,17 @@ function MultisigApprove ({ className = '', onClose, ongoing, threshold, who }: 
         </Modal.Columns>
         {multisig && (
           <>
-            <Modal.Columns hint={t<string>('The creator for this multisig call')}>
+            <Modal.Columns hint={t('The creator for this multisig call')}>
               <InputAddress
                 defaultValue={multisig.depositor}
                 isDisabled
-                label={t<string>('depositor')}
+                label={t('depositor')}
               />
             </Modal.Columns>
-            <Modal.Columns hint={t<string>('The current approvals applied to this multisig')}>
+            <Modal.Columns hint={t('The current approvals applied to this multisig')}>
               <Expander
                 isPadded
-                summary={t<string>('Existing approvals ({{approvals}}/{{threshold}})', {
+                summary={t('Existing approvals ({{approvals}}/{{threshold}})', {
                   replace: {
                     approvals: multisig.approvals.length,
                     threshold
@@ -211,7 +220,11 @@ function MultisigApprove ({ className = '', onClose, ongoing, threshold, who }: 
         )}
         <Modal.Columns hint={t<string>('The operation type to apply. For approvals both non-final and final approvals are supported.')}>
           <Dropdown
+<<<<<<< HEAD
             label={t<string>('approval type')}
+=======
+            label={t('approval type')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setType}
             options={callOptRef.current}
             value={type}
@@ -222,7 +235,11 @@ function MultisigApprove ({ className = '', onClose, ongoing, threshold, who }: 
             <Modal.Columns hint={t<string>('For approvals outstanding approvers will be shown, for hashes that should be cancelled the first approver is required.')}>
               <InputAddress
                 filter={whoFilter}
+<<<<<<< HEAD
                 label={t<string>('signatory')}
+=======
+                label={t('signatory')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setSignatory}
               />
             </Modal.Columns>
@@ -261,8 +278,8 @@ function MultisigApprove ({ className = '', onClose, ongoing, threshold, who }: 
                     className='tipToggle'
                     label={
                       isMultiCall
-                        ? t<string>('Multisig message with call (for final approval)')
-                        : t<string>('Multisig approval with hash (non-final approval)')
+                        ? t('Multisig message with call (for final approval)')
+                        : t('Multisig approval with hash (non-final approval)')
                     }
                     onChange={setCallOverride}
                     value={isCallOverride}

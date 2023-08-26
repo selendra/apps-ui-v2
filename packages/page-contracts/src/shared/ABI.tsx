@@ -41,11 +41,15 @@ function ABI ({ className, contractAbi, errorText, isDisabled, isError, isFull, 
     ? (
       <Labelled
         className={className}
+<<<<<<< HEAD
         label={label || t<string>('contract ABI')}
+=======
+        label={label || t('contract ABI')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         labelExtra={onRemove && (
           <IconLink
             icon='trash'
-            label={t<string>('Remove ABI')}
+            label={t('Remove ABI')}
             onClick={onRemove}
           />
         )}
@@ -67,9 +71,9 @@ function ABI ({ className, contractAbi, errorText, isDisabled, isError, isFull, 
           isDisabled={isDisabled}
           isError={isError}
           isFull={isFull}
-          label={label || t<string>('contract ABI')}
+          label={label || t('contract ABI')}
           onChange={onChange}
-          placeholder={errorText || t<string>('click to select or drag and drop a JSON file')}
+          placeholder={errorText || t('click to select or drag and drop a JSON file')}
         />
       </div>
     );

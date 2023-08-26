@@ -26,13 +26,17 @@ function Summary ({ activeCap, activeRaised, className, fundCount, isLoading, to
 
   return (
     <SummaryBox className={className}>
+<<<<<<< HEAD
       <CardSummary label={t<string>('funds')}>
+=======
+      <CardSummary label={t('funds')}>
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         {fundCount === undefined
           ? <span className='--tmp'>99</span>
           : formatNumber(fundCount)}
       </CardSummary>
       <CardSummary
-        label={`${t<string>('active raised / cap')}`}
+        label={`${t('active raised / cap')}`}
         progress={{
           hideValue: true,
           isBlurred: isLoading,
@@ -54,7 +58,7 @@ function Summary ({ activeCap, activeRaised, className, fundCount, isLoading, to
         </span>
       </CardSummary>
       <CardSummary
-        label={`${t<string>('total raised / cap')}`}
+        label={`${t('total raised / cap')}`}
         progress={{
           hideValue: true,
           isBlurred: isLoading,

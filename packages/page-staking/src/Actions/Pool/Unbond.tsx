@@ -32,7 +32,7 @@ function Unbond ({ className, controllerId, maxUnbond, onClose, poolId }: Props)
   return (
     <Modal
       className={className}
-      header={t<string>('Unbond funds from pool')}
+      header={t('Unbond funds from pool')}
       onClose={onClose}
       size='large'
     >
@@ -41,15 +41,19 @@ function Unbond ({ className, controllerId, maxUnbond, onClose, poolId }: Props)
           controllerId={controllerId}
           poolId={poolId}
         />
-        <Modal.Columns hint={t<string>('The amount to unbond. It should be less or equal to the full bonded amount.')}>
+        <Modal.Columns hint={t('The amount to unbond. It should be less or equal to the full bonded amount.')}>
           <InputBalance
             autoFocus
             defaultValue={maxUnbond}
             isError={isAmountError}
+<<<<<<< HEAD
             label={t<string>('amount to unbond')}
+=======
+            label={t('amount to unbond')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             labelExtra={
               <FormatBalance
-                label={<span className='label'>{t<string>('bonded')}</span>}
+                label={<span className='label'>{t('bonded')}</span>}
                 value={maxUnbond}
               />
             }
@@ -59,7 +63,11 @@ function Unbond ({ className, controllerId, maxUnbond, onClose, poolId }: Props)
           />
           {bondedBlocks?.gtn(0) && (
             <Static
+<<<<<<< HEAD
               label={t<string>('on-chain bonding duration')}
+=======
+              label={t('on-chain bonding duration')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             >
               <BlockToTime value={bondedBlocks} />
             </Static>
@@ -71,7 +79,11 @@ function Unbond ({ className, controllerId, maxUnbond, onClose, poolId }: Props)
           accountId={controllerId}
           icon='unlock'
           isDisabled={isAmountError}
+<<<<<<< HEAD
           label={t<string>('Unbond')}
+=======
+          label={t('Unbond')}
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onStart={onClose}
           params={[controllerId, amount]}
           tx={api.tx.nominationPools.unbond}
