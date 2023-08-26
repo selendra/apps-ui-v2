@@ -33,16 +33,9 @@ function createExternals (t: (key: string, optionsOrText?: string | { replace: R
       text: t('nav.github', 'GitHub', { ns: 'apps-routing' })
     },
     {
-<<<<<<< HEAD
       href: 'http://t.me/selendra',
       name: 'Community',
       text: t<string>('nav.community', 'Community', { ns: 'apps-routing' })
-=======
-      href: 'https://wiki.polkadot.network',
-      icon: 'book',
-      name: 'wiki',
-      text: t('nav.wiki', 'Wiki', { ns: 'apps-routing' })
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     }
   ];
 }

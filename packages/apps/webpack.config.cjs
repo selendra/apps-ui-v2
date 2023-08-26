@@ -22,11 +22,7 @@ module.exports = merge(
     plugins: [
       new SubresourceIntegrityPlugin(),
       new HtmlWebpackPlugin({
-<<<<<<< HEAD
         PAGE_TITLE: 'Selendra Portal',
-=======
-        PAGE_TITLE: 'Polkadot/Substrate Portal',
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         minify: false,
         template: path.join(context, `${hasPublic ? 'public/' : ''}index.html`)
       })
