@@ -8,7 +8,12 @@ import type { OverrideBundleDefinition } from '@polkadot/types/types';
 import type { Struct, u64, u128, Vec } from '@polkadot/types-codec';
 import type { ITuple } from '@polkadot/types-codec/types';
 
+<<<<<<< HEAD
+import eqDefs from '@equilab/definitions';
+import { map } from 'rxjs';
+=======
 import { map, of } from 'rxjs';
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 import { memo } from '@polkadot/api-derive/util';
 import { U8aFixed } from '@polkadot/types-codec';
@@ -20,7 +25,31 @@ export interface SignedBalance extends Enum {
   readonly asNegative: Balance;
 }
 
+<<<<<<< HEAD
+interface Currency extends Enum {
+  readonly isUnknown: boolean;
+  readonly isUsd: boolean;
+  readonly isEq: boolean;
+  readonly isEth: boolean;
+  readonly isBtc: boolean;
+  readonly isEos: boolean;
+  readonly isDot: boolean;
+}
+
+type CommonBalanceMap = ApiInterfaceRx['query']['balances']['account'];
+
+type EqBalanceDoubleMap<T> = AugmentedQuery<
+'rxjs',
+(key1: AccountIndex | AccountId | Address | string, key2: T | string) => Observable<SignedBalance>,
+[AccountId, Currency]
+>
+
+const { equilibrium, equilibriumNext } = eqDefs;
+
+export const u64FromCurrency = (currency: string): number => {
+=======
 export const u64FromCurrency = (currency: string): bigint => {
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   const buf = Buffer.from(currency.toLowerCase());
   const size = buf.length;
 
@@ -71,7 +100,13 @@ export const createDerives = (tokens: string[]) => tokens.reduce((prev, token, i
           return assetId.toBigInt() === asset;
         });
 
+<<<<<<< HEAD
+export const createCustomAccount = <A = string>(currency: string, currencyToAsset: (curr: string, api?: ApiInterfaceRx) => A, accountDataType = 'AccountData'):
+(instanceId: string, api: ApiInterfaceRx) => RxResult<(arg: string | Uint8Array | AccountId) => Observable<AccountData>> => (_instanceId: string, api: ApiInterfaceRx) => {
+  const registry = api.registry;
+=======
         const balance = entry?.[1];
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
         const free = balance?.isPositive
           ? balance.asPositive

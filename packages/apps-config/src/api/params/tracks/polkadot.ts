@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+// Copyright 2017-2023 @polkadot/app-config authors & contributors
+=======
 // Copyright 2017-2023 @polkadot/apps-config authors & contributors
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 // SPDX-License-Identifier: Apache-2.0
 
 import type { TrackInfo } from './types.js';
