@@ -17,8 +17,8 @@ export const prodChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'Selendra',
     providers: {
+      'Default': 'wss://rpc1.selendra.org',
       'Endpoint 0': 'wss://rpc0.selendra.org',
-      'Endpoint 1': 'wss://rpc1.selendra.org',
     },
     text: 'Selendra',
     ui: {
