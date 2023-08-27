@@ -196,15 +196,6 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
   const header = useMemo(
     (): Record<GroupName, [React.ReactNode?, string?, number?, (() => void)?][]> => {
       const ret: Record<GroupName, [React.ReactNode?, string?, number?, (() => void)?][]> = {
-<<<<<<< HEAD
-        accounts: [[<>{t<string>('accounts')}<div className='sub'>{t<string>('all locally stored accounts')}</div></>]],
-        hardware: [[<>{t<string>('hardware')}<div className='sub'>{t<string>('accounts managed via hardware devices')}</div></>]],
-        injected: [[<>{t<string>('extension')}<div className='sub'>{t<string>('accounts available via browser extensions')}</div></>]],
-        multisig: [[<>{t<string>('multisig')}<div className='sub'>{t<string>('on-chain multisig accounts')}</div></>]],
-        proxied: [[<>{t<string>('proxied')}<div className='sub'>{t<string>('on-chain proxied accounts')}</div></>]],
-        qr: [[<>{t<string>('via qr')}<div className='sub'>{t<string>('accounts available via mobile devices')}</div></>]],
-        testing: [[<>{t<string>('development')}<div className='sub'>{t<string>('accounts derived via development seeds')}</div></>]]
-=======
         accounts: [[<>{t('accounts')}<div className='sub'>{t('all locally stored accounts')}</div></>]],
         hardware: [[<>{t('hardware')}<div className='sub'>{t('accounts managed via hardware devices')}</div></>]],
         injected: [[<>{t('extension')}<div className='sub'>{t('accounts available via browser extensions')}</div></>]],
@@ -212,7 +203,6 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
         proxied: [[<>{t('proxied')}<div className='sub'>{t('on-chain proxied accounts')}</div></>]],
         qr: [[<>{t('via qr')}<div className='sub'>{t('accounts available via mobile devices')}</div></>]],
         testing: [[<>{t('development')}<div className='sub'>{t('accounts derived via development seeds')}</div></>]]
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       };
 
       Object.values(ret).forEach((a): void => {
@@ -326,11 +316,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
           <SortDropdown
             className='media--1500'
             defaultValue={sortBy}
-<<<<<<< HEAD
-            label={t<string>('sort by')}
-=======
             label={t('sort by')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={onSortChange}
             onClick={onSortDirectionChange}
             options={sortOptions.current}
@@ -348,51 +334,6 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
         </section>
         <Button.Group>
           {canStoreAccounts && (
-<<<<<<< HEAD
-            <>
-              <Button
-                icon='plus'
-                label={t<string>('Account')}
-                onClick={toggleCreate}
-              />
-              <Button
-                icon='sync'
-                label={t<string>('From JSON')}
-                onClick={toggleImport}
-              />
-            </>
-          )}
-          <Button
-            icon='qrcode'
-            label={t<string>('From Qr')}
-            onClick={toggleQr}
-          />
-          {isLedgerEnabled && (
-            <Button
-              icon='project-diagram'
-              label={t<string>('From Ledger')}
-              onClick={toggleLedger}
-            />
-          )}
-          {hasAccounts && (
-            <>
-              {hasPalletMultisig && (
-                <Button
-                  icon='plus'
-                  label={t<string>('Multisig')}
-                  onClick={toggleMultisig}
-                />
-              )}
-              {hasPalletProxy && (
-                <Button
-                  icon='plus'
-                  label={t<string>('Proxied')}
-                  onClick={toggleProxy}
-                />
-              )}
-            </>
-          )}
-=======
             <>
               <Button
                 icon='plus'
@@ -436,28 +377,19 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
               )}
             </>
           )}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         </Button.Group>
       </SummaryBox>
       {!isNextTick || !sortedAccounts.length
         ? (
           <Table
-<<<<<<< HEAD
-            empty={isNextTick && sortedAccounts && t<string>("You don't have any accounts. Some features are currently hidden and will only become available once you have accounts.")}
-=======
             empty={isNextTick && sortedAccounts && t("You don't have any accounts. Some features are currently hidden and will only become available once you have accounts.")}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             header={header.accounts}
           />
         )
         : GROUP_ORDER.map((group) =>
           groups[group] && (
             <Table
-<<<<<<< HEAD
-              empty={t<string>('No accounts')}
-=======
               empty={t('No accounts')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               header={header[group]}
               isSplit
               key={group}

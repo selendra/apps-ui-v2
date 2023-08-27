@@ -8,11 +8,7 @@ import { useEffect, useState } from 'react';
 
 import { createNamedHook, useApi, useCall } from '@polkadot/react-hooks';
 
-<<<<<<< HEAD
-const ROLES = <const> ['Retiring', 'Ally', 'Fellow'];
-=======
 const ROLES = ['Retiring', 'Ally', 'Fellow'] as const;
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 function addMembers (prev: Member[], ...query: AccountId32[][]): Member[] {
   const all: Member[] = [];

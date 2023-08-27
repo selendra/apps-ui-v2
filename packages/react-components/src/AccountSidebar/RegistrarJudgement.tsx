@@ -9,9 +9,6 @@ import React, { useEffect, useState } from 'react';
 
 import { useApi, useCall } from '@polkadot/react-hooks';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/RegistrarJudgement.tsx
-import { useTranslation } from '../translate.js';
-=======
 import Dropdown from '../Dropdown.js';
 import Input from '../Input.js';
 import InputAddress from '../InputAddress/index.js';
@@ -20,7 +17,6 @@ import Modal from '../Modal/index.js';
 import Spinner from '../Spinner.js';
 import { useTranslation } from '../translate.js';
 import TxButton from '../TxButton.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/RegistrarJudgement.tsx
 
 interface Props {
   address: string;

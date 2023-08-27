@@ -8,13 +8,10 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 
 import { useToggle } from '@polkadot/react-hooks';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/AddressSection.tsx
-=======
 import AccountName from '../AccountName.js';
 import Button from '../Button/index.js';
 import IdentityIcon from '../IdentityIcon/index.js';
 import Input from '../Input.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/AddressSection.tsx
 import { useTranslation } from '../translate.js';
 
 interface Props {

@@ -88,13 +88,8 @@ function InputMegaGas ({ className,
             isZeroable={isCall}
             label={
               estimatedMgRefTime && (isCall ? !withEstimate : true)
-<<<<<<< HEAD
-                ? t<string>('max RefTime allowed (M, {{estimatedRefTime}} estimated)', { replace: { estimatedMgRefTime: estimatedMgRefTime.toString() } })
-                : t<string>('max RefTime allowed (M)')
-=======
                 ? t('max RefTime allowed (M, {{estimatedRefTime}} estimated)', { replace: { estimatedMgRefTime: estimatedMgRefTime.toString() } })
                 : t('max RefTime allowed (M)')
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             }
             onChange={isDisabled ? undefined : setMegaRefTime}
             value={isDisabled ? undefined : ((isCall && withEstimate) ? BN_ZERO : megaRefTime)}
@@ -103,13 +98,8 @@ function InputMegaGas ({ className,
               <Toggle
                 label={
                   isCall
-<<<<<<< HEAD
-                    ? t<string>('max read gas')
-                    : t<string>('use estimated gas')
-=======
                     ? t('max read gas')
                     : t('use estimated gas')
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 }
                 onChange={setWithEstimate}
                 value={withEstimate}
@@ -123,25 +113,15 @@ function InputMegaGas ({ className,
             isZeroable={isCall}
             label={
               estimatedProofSize && (isCall ? !withEstimate : true)
-<<<<<<< HEAD
-                ? t<string>('max ProofSize allowed ({{estimatedProofSize}} estimated)', { replace: { estimatedProofSize: estimatedProofSize.toString() } })
-                : t<string>('max ProofSize allowed')
-=======
                 ? t('max ProofSize allowed ({{estimatedProofSize}} estimated)', { replace: { estimatedProofSize: estimatedProofSize.toString() } })
                 : t('max ProofSize allowed')
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             }
             onChange={isDisabled ? undefined : setProofSize}
             value={isDisabled ? undefined : ((isCall && withEstimate) ? BN_ZERO : proofSize)}
           />
           <div className='contracts--Input-meter'>
-<<<<<<< HEAD
-            {t<string>('{{executionTime}}s execution time', { replace: { executionTime: executionTime.toFixed(3) } })}{', '}
-            {t<string>('{{percentage}}% of block weight', { replace: { percentage: percentage.toFixed(2) } })}
-=======
             {t('{{executionTime}}s execution time', { replace: { executionTime: executionTime.toFixed(3) } })}{', '}
             {t('{{percentage}}% of block weight', { replace: { percentage: percentage.toFixed(2) } })}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           </div>
         </>
         : <>
@@ -152,13 +132,8 @@ function InputMegaGas ({ className,
             isZeroable={isCall}
             label={
               estimatedMg && (isCall ? !withEstimate : true)
-<<<<<<< HEAD
-                ? t<string>('max gas allowed (M, {{estimatedMg}} estimated)', { replace: { estimatedMg: estimatedMg.toString() } })
-                : t<string>('max gas allowed (M)')
-=======
                 ? t('max gas allowed (M, {{estimatedMg}} estimated)', { replace: { estimatedMg: estimatedMg.toString() } })
                 : t('max gas allowed (M)')
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             }
             onChange={isDisabled ? undefined : setMegaGas}
             value={isDisabled ? undefined : ((isCall && withEstimate) ? BN_ZERO : megaGas)}
@@ -167,13 +142,8 @@ function InputMegaGas ({ className,
               <Toggle
                 label={
                   isCall
-<<<<<<< HEAD
-                    ? t<string>('max read gas')
-                    : t<string>('use estimated gas')
-=======
                     ? t('max read gas')
                     : t('use estimated gas')
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 }
                 onChange={setWithEstimate}
                 value={withEstimate}
@@ -181,13 +151,8 @@ function InputMegaGas ({ className,
             )}
           </InputNumber>
           <div className='contracts--Input-meter'>
-<<<<<<< HEAD
-            {t<string>('{{executionTime}}s execution time', { replace: { executionTime: executionTime.toFixed(3) } })}{', '}
-            {t<string>('{{percentage}}% of block weight', { replace: { percentage: percentage.toFixed(2) } })}
-=======
             {t('{{executionTime}}s execution time', { replace: { executionTime: executionTime.toFixed(3) } })}{', '}
             {t('{{percentage}}% of block weight', { replace: { percentage: percentage.toFixed(2) } })}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           </div>
         </>}
     </div>

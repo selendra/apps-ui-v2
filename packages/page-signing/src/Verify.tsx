@@ -88,11 +88,7 @@ function Verify ({ className = '' }: Props): React.ReactElement {
         <Input
           autoFocus
           className='full'
-<<<<<<< HEAD
-          label={t<string>('using the following data')}
-=======
           label={t('using the following data')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={_onChangeData}
           value={data}
         />
@@ -122,11 +118,7 @@ function Verify ({ className = '' }: Props): React.ReactElement {
         />
         <Static
           className='medium'
-<<<<<<< HEAD
-          label={t<string>('hex input data')}
-=======
           label={t('hex input data')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={
             isHexData
               ? t('Yes')

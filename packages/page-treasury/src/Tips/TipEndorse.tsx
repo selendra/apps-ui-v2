@@ -64,11 +64,7 @@ function TipEndorse ({ defaultId, hash, isMember, isTipped, median, members, rec
             <Modal.Columns hint={t('Your endorsement will be applied for this account.')}>
               <InputAddress
                 filter={members}
-<<<<<<< HEAD
-                label={t<string>('submit with account')}
-=======
                 label={t('submit with account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setAccountId}
                 type='account'
                 withLabel

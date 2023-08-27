@@ -3,11 +3,7 @@
 
 import type { Registrar } from '@polkadot/react-hooks/types';
 
-<<<<<<< HEAD
-import { registry } from '@polkadot/react-api';
-=======
 import { statics } from '@polkadot/react-api';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 import { bob, charlie, ferdie } from '../keyring/index.js';
 

@@ -32,40 +32,24 @@ function Summary ({ referendumCount }: Props): React.ReactElement<Props> {
   return (
     <SummaryBox>
       <section>
-<<<<<<< HEAD
-        <CardSummary label={t<string>('proposals')}>
-=======
         <CardSummary label={t('proposals')}>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           {activeProposals
             ? formatNumber(activeProposals.length)
             : <span className='--tmp'>99</span>}
         </CardSummary>
-<<<<<<< HEAD
-        <CardSummary label={t<string>('total')}>
-=======
         <CardSummary label={t('total')}>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           {publicPropCount
             ? formatNumber(publicPropCount)
             : <span className='--tmp'>99</span>}
         </CardSummary>
       </section>
       <section>
-<<<<<<< HEAD
-        <CardSummary label={t<string>('referenda')}>
-=======
         <CardSummary label={t('referenda')}>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           {referendumCount !== undefined
             ? formatNumber(referendumCount)
             : <span className='--tmp'>99</span>}
         </CardSummary>
-<<<<<<< HEAD
-        <CardSummary label={t<string>('total')}>
-=======
         <CardSummary label={t('total')}>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           {referendumTotal
             ? formatNumber(referendumTotal)
             : <span className='--tmp'>99</span>}

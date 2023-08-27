@@ -105,17 +105,10 @@ function BlockByHash ({ className = '', error, value }: Props): React.ReactEleme
     () => getHeader
       ? [
         [formatNumber(getHeader.number.unwrap()), 'start --digits', 1],
-<<<<<<< HEAD
-        [t<string>('hash'), 'start'],
-        [t<string>('parent'), 'start'],
-        [t<string>('extrinsics'), 'start media--1300'],
-        [t<string>('state'), 'start media--1200'],
-=======
         [t('hash'), 'start'],
         [t('parent'), 'start'],
         [t('extrinsics'), 'start media--1300'],
         [t('state'), 'start media--1200'],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         [runtimeVersion ? `${runtimeVersion.specName.toString()}/${runtimeVersion.specVersion.toString()}` : undefined, 'media--1000']
       ]
       : EMPTY_HEADER,
@@ -138,11 +131,7 @@ function BlockByHash ({ className = '', error, value }: Props): React.ReactEleme
           ? (
             <tr>
               <td colSpan={6}>
-<<<<<<< HEAD
-                <MarkError content={t<string>('Unable to retrieve the specified block details. {{error}}', { replace: { error: blkError.message } }) } />
-=======
                 <MarkError content={t('Unable to retrieve the specified block details. {{error}}', { replace: { error: blkError.message } }) } />
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               </td>
             </tr>
           )

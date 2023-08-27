@@ -51,11 +51,7 @@ function CloseBounty ({ description, index, toggleOpen }: Props): React.ReactEle
         <Modal.Columns hint={t('The council member that will create the close bounty proposal, submission equates to an "aye" vote.')}>
           <InputAddress
             filter={members}
-<<<<<<< HEAD
-            label={t<string>('propose with account')}
-=======
             label={t('propose with account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setAccountId}
             type='account'
             withLabel

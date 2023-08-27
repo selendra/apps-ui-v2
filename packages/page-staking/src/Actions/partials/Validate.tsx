@@ -10,10 +10,7 @@ import { useApi } from '@polkadot/react-hooks';
 import { BN, BN_HUNDRED as MAX_COMM, BN_ONE, bnMax, isFunction } from '@polkadot/util';
 
 import { useTranslation } from '../../translate.js';
-<<<<<<< HEAD
-=======
 import SenderInfo from './SenderInfo.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 interface Props {
   className?: string;
@@ -40,8 +37,8 @@ function Validate ({ className = '', controllerId, minCommission, onChange, stas
   );
 
   const blockedOptions = useRef([
-    { text: t<string>('Yes, allow nominations'), value: true },
-    { text: t<string>('No, block all nominations'), value: false }
+    { text: t('Yes, allow nominations'), value: true },
+    { text: t('No, block all nominations'), value: false }
   ]);
 
   useEffect((): void => {
@@ -94,11 +91,7 @@ function Validate ({ className = '', controllerId, minCommission, onChange, stas
         <Modal.Columns hint={t('The validator can block any new nominations. By default it is set to allow all nominations.')}>
           <Dropdown
             defaultValue={true}
-<<<<<<< HEAD
-            label={t<string>('allows new nominations')}
-=======
             label={t('allows new nominations')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setAllowNoms}
             options={blockedOptions.current}
           />

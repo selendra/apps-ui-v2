@@ -107,11 +107,7 @@ function Parachain ({ bestNumber, className = '', id, lastBacked, lastInclusion,
         <Expander
           className={validators ? '' : '--tmp'}
           renderChildren={valRender}
-<<<<<<< HEAD
-          summary={t<string>('Val. Group {{group}} ({{count}})', {
-=======
           summary={t('Val. Group {{group}} ({{count}})', {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             replace: {
               count: formatNumber(validators?.[1]?.length || 0),
               group: validators ? validators[0] : 0
@@ -120,11 +116,7 @@ function Parachain ({ bestNumber, className = '', id, lastBacked, lastInclusion,
         />
         <Expander
           renderChildren={bckRender}
-<<<<<<< HEAD
-          summary={t<string>('Non-voters ({{count}})', { replace: { count: formatNumber(nonBacked.length) } })}
-=======
           summary={t('Non-voters ({{count}})', { replace: { count: formatNumber(nonBacked.length) } })}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         />
       </td>
       <td className='start together hash media--1500'>

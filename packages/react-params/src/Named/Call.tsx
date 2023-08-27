@@ -13,15 +13,8 @@ import Params from '@polkadot/react-params';
 import { FormatBalance } from '@polkadot/react-query';
 import { Enum, getTypeDef } from '@polkadot/types';
 
-<<<<<<< HEAD:packages/react-components/src/Call.tsx
-import { balanceCalls, balanceCallsOverrides } from './constants.js';
-import Static from './Static.js';
-import { styled } from './styled.js';
-import { useTranslation } from './translate.js';
-=======
 import { balanceCalls, balanceCallsOverrides } from '../overrides.js';
 import { useTranslation } from '../translate.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-params/src/Named/Call.tsx
 
 export interface Props {
   callName?: string;

@@ -117,21 +117,13 @@ function Slashes ({ ownStashes = [], slashes }: Props): React.ReactElement<Props
   );
 
   const emptyHeader = useRef<[React.ReactNode?, string?, number?][]>([
-<<<<<<< HEAD
-    [t<string>('unapplied'), 'start']
-=======
     [t('unapplied'), 'start']
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   if (!rows.length) {
     return (
       <Table
-<<<<<<< HEAD
-        empty={t<string>('There are no unapplied/pending slashes')}
-=======
         empty={t('There are no unapplied/pending slashes')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         header={emptyHeader.current}
       />
     );

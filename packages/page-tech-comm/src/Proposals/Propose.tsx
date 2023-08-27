@@ -74,11 +74,7 @@ function Propose ({ defaultThreshold = DEFAULT_THRESHOLD, defaultValue, filter, 
           <Modal.Content>
             <InputAddress
               filter={members}
-<<<<<<< HEAD
-              label={t<string>('propose from account')}
-=======
               label={t('propose from account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setAcountId}
               type='account'
               withLabel

@@ -1,11 +1,5 @@
 # CHANGELOG
 
-<<<<<<< HEAD
-## master
-
-Changes:
-
-=======
 ## 0.132.1 Jun 19, 2023
 
 Contributed:
@@ -101,7 +95,6 @@ Changes:
 
 - Extend unbonding info message in case of stalled eras
 - Ensure only positive values on stalled era unbonding block calculations
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 - Display hex public key in address conversion utility
 - Disable unreachable endpoints
 

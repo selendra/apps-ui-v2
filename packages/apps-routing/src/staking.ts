@@ -3,11 +3,7 @@
 
 import type { ApiPromise } from '@polkadot/api';
 import type { PalletStakingExposure } from '@polkadot/types/lookup';
-<<<<<<< HEAD
-import type { Route } from './types.js';
-=======
 import type { Route, TFunction } from './types.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 import Component from '@polkadot/app-staking';
 import { ZERO_ACCOUNT } from '@polkadot/react-hooks/useWeight';
@@ -31,9 +27,6 @@ function needsApiCheck (api: ApiPromise): boolean {
 
   try {
     // we need to be able to bond
-<<<<<<< HEAD
-    api.tx.staking.bond(ZERO_ACCOUNT, BN_ONE, { Account: ZERO_ACCOUNT });
-=======
     if (api.tx.staking.bond.meta.args.length === 3) {
       // previous generation, controller account is required
       // @ts-expect-error Previous generation
@@ -45,7 +38,6 @@ function needsApiCheck (api: ApiPromise): boolean {
       // unknown
       return false;
     }
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   } catch {
     console.warn('Unable to create staking bond transaction, disabling staking route');
 
@@ -68,6 +60,6 @@ export default function create (t: TFunction): Route {
     group: 'network',
     icon: 'certificate',
     name: 'staking',
-    text: t<string>('nav.staking', 'Staking', { ns: 'apps-routing' })
+    text: t('nav.staking', 'Staking', { ns: 'apps-routing' })
   };
 }

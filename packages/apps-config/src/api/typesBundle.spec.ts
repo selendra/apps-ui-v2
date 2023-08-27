@@ -37,10 +37,7 @@ export const typesBundle = ${JSON.stringify(typesBundle, null, 2)} as unknown as
 
   describe('specs', (): void => {
     for (const [k, v] of specEntries) {
-<<<<<<< HEAD
-=======
       // eslint-disable-next-line jest/expect-expect
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       it(`adds ${k}`, (): void => {
         const value = objectSpread<{ derives: unknown }>({}, v);
 
@@ -53,10 +50,7 @@ export const typesBundle = ${JSON.stringify(typesBundle, null, 2)} as unknown as
 
   describe('chains', (): void => {
     for (const [k, v] of chainEntries) {
-<<<<<<< HEAD
-=======
       // eslint-disable-next-line jest/expect-expect
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       it(`adds ${k}`, (): void => {
         const value = objectSpread<{ derives: unknown }>({}, v);
 

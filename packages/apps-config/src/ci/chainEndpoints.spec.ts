@@ -40,29 +40,17 @@ describe('check endpoints', (): void => {
       ws: value
     }))
     .filter((v): v is Endpoint => !!v.ws);
-<<<<<<< HEAD
-  let websocket: WebSocket | null = null;
-  let closeTimerId: ReturnType<typeof setTimeout> | null = null;
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
   for (const { name, ws: endpoint } of checks) {
     it(`${name} @ ${endpoint}`, async (): Promise<void> => {
       const [,, hostWithPort] = endpoint.split('/');
       const [host] = hostWithPort.split(':');
-<<<<<<< HEAD
-
-      await fetchJson<DnsResponse>(`https://dns.google/resolve?name=${host}`)
-        .then((json) =>
-          assert(json && json.Answer, 'No DNS entry')
-=======
       let websocket: WebSocket | null = null;
       let closeTimerId: ReturnType<typeof setTimeout> | null = null;
 
       await fetchJson<DnsResponse>(`https://dns.google/resolve?name=${host}`)
         .then((json) =>
           assert(json?.Answer, 'No DNS entry')
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         )
         .then(() =>
           new Promise((resolve, reject): void => {
@@ -84,15 +72,9 @@ describe('check endpoints', (): void => {
 
             websocket.onmessage = (message: { data: string }): void => {
               try {
-<<<<<<< HEAD
-                const result = (JSON.parse(message.data) as { result: unknown }).result as string;
-
-                assert(result.startsWith('0x'), 'Invalid response');
-=======
                 const result = (JSON.parse(message.data) as { result?: string }).result;
 
                 assert(result?.startsWith('0x'), 'Invalid/non-hex response');
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 resolve(result);
               } catch (e) {
                 reject(e);

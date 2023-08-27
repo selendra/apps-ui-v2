@@ -11,19 +11,12 @@ const MAX_SIZE = 48 * 1024;
 // FIXME The sorting here and the sorting from linting seems like a mismatch...
 const HEADER = '// Copyright 2017-2023 @polkadot/apps authors & contributors\n// SPDX-License-Identifier: Apache-2.0\n\n// Do not edit. Auto-generated via node scripts/imgConvert.mjs\n\n';
 
-<<<<<<< HEAD
-=======
 /** @type {Record<string, string>} */
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 const MIME = {
   gif: 'image/gif',
   jpeg: 'image/jpeg',
   png: 'image/png',
   svg: 'image/svg+xml'
-<<<<<<< HEAD
-}
-
-=======
 };
 
 /**
@@ -31,23 +24,10 @@ const MIME = {
  * @param {string} contents
  * @returns {string}
  */
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 function makeContents (k, contents) {
   return `${HEADER}export const ${k} = '${contents}';\n`;
 }
 
-<<<<<<< HEAD
-const all = {};
-const oversized = {};
-
-for (let dir of ['extensions', 'external', 'chains', 'nodes']) {
-  const sub = path.join('packages/apps-config/src/ui/logos', dir);
-  const generated = path.join(sub, 'generated');
-  const result = {};
-
-  if (fs.existsSync(generated)) {
-    fs.rmSync(generated, { recursive: true, force: true });
-=======
 /** @type {Record<string, string>} */
 const all = {};
 /** @type {Record<string, number>} */
@@ -61,7 +41,6 @@ for (const dir of ['extensions', 'external', 'chains', 'nodes']) {
 
   if (fs.existsSync(generated)) {
     fs.rmSync(generated, { force: true, recursive: true });
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   }
 
   fs.mkdirSync(generated);
@@ -97,47 +76,6 @@ for (const dir of ['extensions', 'external', 'chains', 'nodes']) {
       }
     });
 
-<<<<<<< HEAD
-    if (Object.keys(result).length) {
-      let srcs = '';
-
-      for (let dir of ['endpoints', 'extensions', 'links']) {
-        const srcroot = path.join('packages/apps-config/src', dir);
-
-        fs
-          .readdirSync(srcroot)
-          .forEach((file) => {
-            const full = path.join(srcroot, file);
-
-            if (fs.lstatSync(full).isFile() && file.endsWith('.ts')) {
-              srcs += fs.readFileSync(full).toString();
-            }
-          });
-      }
-
-      const notfound = Object
-        .keys(result)
-        .filter((k) => !srcs.includes(k));
-
-      if (notfound.length) {
-        console.log('\n', notfound.length.toString().padStart(3), 'not referenced in', dir, '::\n\n\t', notfound.join(', '), '\n');
-      }
-
-      fs.writeFileSync(path.join(sub, 'index.ts'), `${HEADER}${
-        Object
-          .keys(result)
-          .sort((a, b) => result[a].localeCompare(result[b]))
-          .map((k) => `export { ${k} } from './${result[k]}.js';`)
-          .join('\n')
-      }\n`);
-    }
-}
-
-const allKeys = Object.keys(all);
-const dupes = {};
-
- allKeys.forEach((a) => {
-=======
   if (Object.keys(result).length) {
     let srcs = '';
 
@@ -178,7 +116,6 @@ const allKeys = Object.keys(all);
 const dupes = {};
 
 allKeys.forEach((a) => {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   const d = allKeys.filter((b) =>
     a !== b &&
     all[a] === all[b]
@@ -187,22 +124,14 @@ allKeys.forEach((a) => {
   if (d.length) {
     dupes[a] = d;
   }
-<<<<<<< HEAD
- });
-=======
 });
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 if (Object.keys(dupes).length) {
   const errMsg = `${Object.keys(dupes).length.toString().padStart(3)} dupes found`;
 
   console.log('\n', errMsg, '::\n');
 
-<<<<<<< HEAD
-  for (let [k, d] of Object.entries(dupes)) {
-=======
   for (const [k, d] of Object.entries(dupes)) {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     console.log('\t', k.padStart(30), ' >> ', d.join(', '));
   }
 
@@ -218,13 +147,8 @@ if (numOversized) {
 
   console.log('\n', errMsg, '::\n');
 
-<<<<<<< HEAD
-  for (let [k, v] of Object.entries(oversized)) {
-    console.log('\t', k.padStart(30), formatNumber(v).padStart(15), `(+${formatNumber(v - MAX_SIZE)} bytes)`)
-=======
   for (const [k, v] of Object.entries(oversized)) {
     console.log('\t', k.padStart(30), formatNumber(v).padStart(15), `(+${formatNumber(v - MAX_SIZE)} bytes)`);
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   }
 
   console.log();

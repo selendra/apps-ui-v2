@@ -6,11 +6,7 @@
 
 import type { OverrideBundleDefinition } from '@polkadot/types/types';
 
-<<<<<<< HEAD
-import logionDefault, { session as logionSession } from '@logion/node-api/dist/interfaces/definitions.js';
-=======
 import logionDefault, { runtime as logionRuntime, session as logionSession } from '@logion/node-api/interfaces/definitions';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 const defaultTypesUpTo109 = {
   Address: 'MultiAddress',

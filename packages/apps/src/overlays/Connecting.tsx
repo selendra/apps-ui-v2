@@ -42,13 +42,8 @@ function Connecting ({ className }: Props): React.ReactElement<Props> | null {
         <div>
           {
             isApiConnected
-<<<<<<< HEAD
-              ? t<string>('Waiting to complete metadata retrieval from remote endpoint.')
-              : t<string>('Waiting to establish a connection with the remote endpoint.')
-=======
               ? t('Waiting to complete metadata retrieval from remote endpoint.')
               : t('Waiting to establish a connection with the remote endpoint.')
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           }
         </div>
       </BaseOverlay>

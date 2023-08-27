@@ -459,13 +459,8 @@ function TxSigned ({ className, currentItem, isQueueSubmit, queueSize, requestAd
               isDisabled={!!currentItem.payload}
               label={
                 isSubmit
-<<<<<<< HEAD
-                  ? t<string>('Sign and Submit')
-                  : t<string>('Sign (no submission)')
-=======
                   ? t('Sign and Submit')
                   : t('Sign (no submission)')
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               }
               onChange={setIsSubmit}
               value={isSubmit}
@@ -475,13 +470,8 @@ function TxSigned ({ className, currentItem, isQueueSubmit, queueSize, requestAd
             <Toggle
               label={
                 isQueueSubmit
-<<<<<<< HEAD
-                  ? t<string>('Submit {{queueSize}} items', { replace: { queueSize } })
-                  : t<string>('Submit individual')
-=======
                   ? t('Submit {{queueSize}} items', { replace: { queueSize } })
                   : t('Submit individual')
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               }
               onChange={setIsQueueSubmit}
               value={isQueueSubmit}

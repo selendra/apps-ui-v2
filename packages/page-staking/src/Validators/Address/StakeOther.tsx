@@ -72,11 +72,7 @@ function StakeOther ({ nominators, stakeOther }: Props): React.ReactElement<Prop
       {(!rewarded || rewarded[0] !== 0) && (
         <ExpanderScroll
           className={rewarded ? '' : '--tmp'}
-<<<<<<< HEAD
-          renderChildren={rewarded && rewarded[1]}
-=======
           renderChildren={rewarded?.[1]}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           summary={
             <FormatBalance
               labelPost={` (${rewarded ? rewarded[0] : '0'})`}

@@ -16,15 +16,9 @@ const specDir = path.join(process.cwd(), srcRel);
 
 describe('lightSpecs', (): void => {
   for (const [k, specs] of Object.entries(lightSpecs)) {
-<<<<<<< HEAD
-    describe(k, (): void => {
-      for (const [k, info] of Object.entries(specs)) {
-        it(k, (): void => {
-=======
     describe(`${k}`, (): void => {
       for (const [k, info] of Object.entries(specs)) {
         it(`${k}`, (): void => {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           assert(
             fs.existsSync(path.join(specDir, info)),
             `${srcRel}/${info.slice(2)} does not exist`

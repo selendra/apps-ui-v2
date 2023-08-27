@@ -45,11 +45,7 @@ function StaticParam ({ asHex, children, childrenPre, className = '', defaultVal
       <Static
         className='full'
         label={label}
-<<<<<<< HEAD
-        value={<pre>{value || (isOptional ? <>&nbsp;</> : t<string>('<empty>'))}</pre>}
-=======
         value={<pre>{value || (isOptional ? <>&nbsp;</> : t('<empty>'))}</pre>}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       />
       {children}
     </StyledBare>

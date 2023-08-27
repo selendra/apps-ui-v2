@@ -28,17 +28,8 @@
   "Change reward destination": "Change reward destination",
   "Change session keys": "Change session keys",
   "Change validator preferences": "Change validator preferences",
-<<<<<<< HEAD
-  "Chilled": "Chilled",
-  "Controller account": "Controller account",
-  "Create": "Create",
-  "Create nomination pool": "Create nomination pool",
-  "Distinct stash and controller accounts are recommended to ensure fund security. You will be allowed to make the transaction, but take care to not tie up all funds, only use a portion of the available funds during this period.": "Distinct stash and controller accounts are recommended to ensure fund security. You will be allowed to make the transaction, but take care to not tie up all funds, only use a portion of the available funds during this period.",
-  "Era points": "Era points",
-=======
   "Controller account": "Controller account",
   "Distinct stash and controller accounts are recommended to ensure fund security. You will be allowed to make the transaction, but take care to not tie up all funds, only use a portion of the available funds during this period.": "Distinct stash and controller accounts are recommended to ensure fund security. You will be allowed to make the transaction, but take care to not tie up all funds, only use a portion of the available funds during this period.",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "For fund security, your session key should not match your stash key.": "For fund security, your session key should not match your stash key.",
   "Free balance": "Free balance",
   "Grandpa": "Grandpa",
@@ -129,10 +120,6 @@
   "The Threshold must be a positive number": "The Threshold must be a positive number",
   "The Threshold must lower than 11": "The Threshold must lower than 11",
   "The UI puts a limit of 40 payouts at a time, where each payout is a single validator for a single era.": "The UI puts a limit of 40 payouts at a time, where each payout is a single validator for a single era.",
-<<<<<<< HEAD
-  "The account that will join the pool.": "The account that will join the pool.",
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "The account that will submit the rebag transaction.": "The account that will submit the rebag transaction.",
   "The accounts that will be rebagged as a result of this operation.": "The accounts that will be rebagged as a result of this operation.",
   "The amount placed at-stake should allow some free funds for future transactions.": "The amount placed at-stake should allow some free funds for future transactions.",
@@ -148,16 +135,7 @@
   "The controller does not have sufficient funds available to cover transaction fees. Ensure that a funded controller is used.": "The controller does not have sufficient funds available to cover transaction fees. Ensure that a funded controller is used.",
   "The funds will only be available for withdrawal after the unbonding period, however will not be part of the staked amount after the next validator election. You can follow the unlock countdown in the UI.": "The funds will only be available for withdrawal after the unbonding period, however will not be part of the staked amount after the next validator election. You can follow the unlock countdown in the UI.",
   "The hex output from author_rotateKeys, as executed on the validator node. The keys will show as pending until applied at the start of a new session.": "The hex output from author_rotateKeys, as executed on the validator node. The keys will show as pending until applied at the start of a new session.",
-<<<<<<< HEAD
-  "The id that will be assigned to this nomination pool.": "The id that will be assigned to this nomination pool.",
-  "The initial value to assign to the pool. It is set to the maximum of the minimum bond and the minium nomination value.": "The initial value to assign to the pool. It is set to the maximum of the minimum bond and the minium nomination value.",
-  "The initial value to assign to the pool. It is set to the minimum value required to join a pool.": "The initial value to assign to the pool. It is set to the minimum value required to join a pool.",
   "The key type and crypto type to use for this key. Be aware that different keys have different crypto requirements. You should be familiar with the type requirements for the different keys.": "The key type and crypto type to use for this key. Be aware that different keys have different crypto requirements. You should be familiar with the type requirements for the different keys.",
-  "The metadata description to set for this pool": "The metadata description to set for this pool",
-  "The origin account will also be set as the pool admin, nominator and state toggler.": "The origin account will also be set as the pool admin, nominator and state toggler.",
-=======
-  "The key type and crypto type to use for this key. Be aware that different keys have different crypto requirements. You should be familiar with the type requirements for the different keys.": "The key type and crypto type to use for this key. Be aware that different keys have different crypto requirements. You should be familiar with the type requirements for the different keys.",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "The pool and pool member that is to be affected. The transaction will be sent from the associated pool member account.": "The pool and pool member that is to be affected. The transaction will be sent from the associated pool member account.",
   "The seed and derivation path will be submitted to the validator node. this is an advanced operation, only to be performed when you are sure of the security and connection risks.": "The seed and derivation path will be submitted to the validator node. this is an advanced operation, only to be performed when you are sure of the security and connection risks.",
   "The selected controller tied to this stash. Once set, this account will be able to control the actions performed by the stash account.": "The selected controller tied to this stash. Once set, this account will be able to control the actions performed by the stash account.",

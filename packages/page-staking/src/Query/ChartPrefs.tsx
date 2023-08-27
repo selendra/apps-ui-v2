@@ -72,11 +72,7 @@ function ChartPrefs ({ labels, validatorId }: Props): React.ReactElement<Props> 
       colors={COLORS_POINTS}
       labels={labels}
       legends={legendsRef.current}
-<<<<<<< HEAD
-      title={t<string>('commission')}
-=======
       title={t('commission')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       values={values}
     />
   );

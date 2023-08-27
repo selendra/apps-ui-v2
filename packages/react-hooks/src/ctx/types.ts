@@ -1,12 +1,6 @@
 // Copyright 2017-2023 @polkadot/react-hooks authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-<<<<<<< HEAD
-import type { HeaderExtended } from '@polkadot/api-derive/types';
-import type { ProviderStats } from '@polkadot/rpc-provider/types';
-import type { BlockNumber, EventRecord } from '@polkadot/types/interfaces';
-
-=======
 import type { ApiPromise } from '@polkadot/api';
 import type { SubmittableExtrinsicFunction } from '@polkadot/api/promise/types';
 import type { HeaderExtended } from '@polkadot/api-derive/types';
@@ -44,7 +38,6 @@ export interface ApiProps extends ApiState {
   isWaitingInjected: boolean;
 }
 
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 export interface Accounts {
   allAccounts: string[];
   allAccountsHex: string[];
@@ -95,13 +88,6 @@ export type SidebarState = [string | null, (() => void) | null];
 
 export type Sidebar = undefined | (([address, onUpdateName]: SidebarState) => void);
 
-<<<<<<< HEAD
-export interface ThemeDef {
-  theme: 'dark' | 'light';
-}
-
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 export interface WindowSize {
   height: number;
   width: number;

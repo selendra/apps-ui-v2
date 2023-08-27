@@ -57,11 +57,7 @@ function ChainImg ({ className = '', isInline, logo, onClick, withoutHl }: Props
 }
 
 const STYLE = `
-<<<<<<< HEAD
-  background: none;
-=======
   background: white;
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   border-radius: 50%;
   box-sizing: border-box;
   color: #333;

@@ -8,10 +8,7 @@ import React from 'react';
 
 import { Static } from '@polkadot/react-components';
 
-<<<<<<< HEAD
-=======
 import { Call } from '../Named/index.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useTranslation } from '../translate.js';
 import Bare from './Bare.js';
 import Unknown from './Unknown.js';

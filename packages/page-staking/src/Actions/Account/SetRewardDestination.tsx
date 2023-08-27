@@ -12,10 +12,7 @@ import { useApi, useCall } from '@polkadot/react-hooks';
 
 import { useTranslation } from '../../translate.js';
 import { createDestCurr } from '../destOptions.js';
-<<<<<<< HEAD
-=======
 import SenderInfo from '../partials/SenderInfo.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 interface Props {
   defaultDestination?: RewardDestination;
@@ -46,24 +43,6 @@ function SetRewardDestination ({ controllerId, defaultDestination, onClose, stas
       size='large'
     >
       <Modal.Content>
-<<<<<<< HEAD
-        <Modal.Columns hint={t<string>('The stash and controller pair as linked. This operation will be performed via the controller.')}>
-          <InputAddress
-            defaultValue={stashId}
-            isDisabled
-            label={t<string>('stash account')}
-          />
-          <InputAddress
-            defaultValue={controllerId}
-            isDisabled
-            label={t<string>('controller account')}
-          />
-        </Modal.Columns>
-        <Modal.Columns hint={t<string>('All rewards will go towards the selected output destination when a payout is made.')}>
-          <Dropdown
-            defaultValue={defaultDestination?.toString()}
-            label={t<string>('payment destination')}
-=======
         <SenderInfo
           controllerId={controllerId}
           stashId={stashId}
@@ -72,18 +51,13 @@ function SetRewardDestination ({ controllerId, defaultDestination, onClose, stas
           <Dropdown
             defaultValue={defaultDestination?.toString()}
             label={t('payment destination')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setDestination}
             options={options}
             value={destination}
           />
           {isAccount && (
             <InputAddress
-<<<<<<< HEAD
-              label={t<string>('the payment account')}
-=======
               label={t('the payment account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setDestAccount}
               type='account'
               value={destAccount}

@@ -74,11 +74,7 @@ function Selection ({ onSubmit }: Props): React.ReactElement<Props> {
   return (
     <section className='runtime--Selection'>
       <InputCalls
-<<<<<<< HEAD
-        label={t<string>('call the selected endpoint')}
-=======
         label={t('call the selected endpoint')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         onChange={_onChangeMethod}
       />
       {method && (

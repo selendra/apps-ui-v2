@@ -45,23 +45,6 @@ function SetControllerAccount ({ defaultControllerId, onClose, stashId }: Props)
             value={stashId}
           />
         </Modal.Columns>
-<<<<<<< HEAD
-        <Modal.Columns hint={t<string>('The selected controller tied to this stash. Once set, this account will be able to control the actions performed by the stash account.')}>
-          <InputAddress
-            defaultValue={defaultControllerId}
-            label={t<string>('controller account')}
-            onChange={setControllerId}
-            type='account'
-            value={controllerId}
-          />
-          <InputValidationController
-            accountId={stashId}
-            controllerId={controllerId}
-            defaultController={defaultControllerId}
-            onError={_setError}
-          />
-        </Modal.Columns>
-=======
         {needsController && (
           <Modal.Columns hint={t('The selected controller tied to this stash. Once set, this account will be able to control the actions performed by the stash account.')}>
             <InputAddress
@@ -79,7 +62,6 @@ function SetControllerAccount ({ defaultControllerId, onClose, stashId }: Props)
             />
           </Modal.Columns>
         )}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       </Modal.Content>
       <Modal.Actions>
         <TxButton

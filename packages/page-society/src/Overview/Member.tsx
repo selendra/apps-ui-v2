@@ -66,7 +66,7 @@ function Member ({ bestNumber, className = '', value: { accountId, isCandidateVo
   );
 
   const votedOn = useMemo(
-    () => [isCandidateVoter && t<string>('Candidate'), isDefenderVoter && t<string>('Defender')]
+    () => [isCandidateVoter && t('Candidate'), isDefenderVoter && t('Defender')]
       .filter((s): s is string => !!s)
       .join(', '),
     [isCandidateVoter, isDefenderVoter, t]

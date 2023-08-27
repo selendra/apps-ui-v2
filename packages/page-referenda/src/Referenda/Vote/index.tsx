@@ -1,10 +1,6 @@
 // Copyright 2017-2023 @polkadot/app-democracy authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-<<<<<<< HEAD
-import type { TFunction } from 'i18next';
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { ApiPromise } from '@polkadot/api';
 import type { Preimage } from '@polkadot/react-hooks/types';
 import type { BN } from '@polkadot/util';
@@ -12,11 +8,7 @@ import type { PalletVote, TrackInfo } from '../../types.js';
 
 import React, { useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-import { Button, Modal, ProposedAction, styled, ToggleGroup, TxButton, VoteAccount } from '@polkadot/react-components';
-=======
 import { Button, Modal, styled, ToggleGroup, TxButton, VoteAccount } from '@polkadot/react-components';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useAccounts, useApi, useToggle } from '@polkadot/react-hooks';
 import { ProposedAction } from '@polkadot/react-params';
 
@@ -115,11 +107,7 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
       {isOpen && (
         <StyledModal
           className={className}
-<<<<<<< HEAD
-          header={t<string>('Vote on referendum')}
-=======
           header={t('Vote on referendum')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onClose={toggleOpen}
           size='large'
         >
@@ -194,11 +182,7 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
                 <TxButton
                   accountId={accountId}
                   icon='check-to-slot'
-<<<<<<< HEAD
-                  label={t<string>('Vote')}
-=======
                   label={t('Vote')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onStart={toggleOpen}
                   params={params}
                   tx={api.tx[palletVote].vote}
@@ -209,11 +193,7 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
                   <TxButton
                     accountId={accountId}
                     icon='ban'
-<<<<<<< HEAD
-                    label={t<string>('Vote Nay')}
-=======
                     label={t('Vote Nay')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                     onStart={toggleOpen}
                     params={[id, false]}
                     tx={api.tx[palletVote].vote}
@@ -221,11 +201,7 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
                   <TxButton
                     accountId={accountId}
                     icon='check'
-<<<<<<< HEAD
-                    label={t<string>('Vote Aye')}
-=======
                     label={t('Vote Aye')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                     onStart={toggleOpen}
                     params={[id, true]}
                     tx={api.tx[palletVote].vote}
@@ -239,11 +215,7 @@ function Voting ({ className, id, isConvictionVote, isMember, members, palletVot
       <Button
         icon='check-to-slot'
         isDisabled={isDisabled}
-<<<<<<< HEAD
-        label={t<string>('Vote')}
-=======
         label={t('Vote')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         onClick={toggleOpen}
       />
     </>

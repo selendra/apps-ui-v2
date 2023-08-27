@@ -36,11 +36,7 @@ function eventFilter (records: EventRecord[]): Changes<AccountId32> {
 }
 
 function mapValidators (validators?: AccountId32[]): Validator[] | undefined {
-<<<<<<< HEAD
-  return validators && validators.map((a) => {
-=======
   return validators?.map((a) => {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     const stashId = a.toString();
 
     return {

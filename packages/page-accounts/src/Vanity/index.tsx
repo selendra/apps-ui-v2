@@ -171,24 +171,15 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
 
   const header = useMemo<[React.ReactNode?, string?, number?][]>(
     () => [
-<<<<<<< HEAD
-      [t<string>('matches'), 'start', 2],
-      [t<string>('Evaluated {{count}} keys in {{elapsed}}s ({{avg}} keys/s)', {
-=======
       [t('matches'), 'start', 2],
       [t('Evaluated {{count}} keys in {{elapsed}}s ({{avg}} keys/s)', {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         replace: {
           avg: (keyCount / (elapsed / 1000)).toFixed(3),
           count: keyCount,
           elapsed: (elapsed / 1000).toFixed(2)
         }
       }), 'start --digits'],
-<<<<<<< HEAD
-      [t<string>('secret'), 'start'],
-=======
       [t('secret'), 'start'],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       []
     ],
     [elapsed, keyCount, t]
@@ -220,11 +211,7 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
         <Dropdown
           className='medium'
           defaultValue={type}
-<<<<<<< HEAD
-          label={t<string>('keypair crypto type')}
-=======
           label={t('keypair crypto type')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={setType}
           options={isEthereum ? settings.availableCryptosEth : settings.availableCryptos}
         />

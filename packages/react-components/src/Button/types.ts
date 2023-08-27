@@ -2,10 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { IconName } from '@fortawesome/fontawesome-svg-core';
-<<<<<<< HEAD
-=======
 import type React from 'react';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 export type Button$Callback = () => void | Promise<void>;
 

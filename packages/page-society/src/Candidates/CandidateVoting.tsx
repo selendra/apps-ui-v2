@@ -36,19 +36,11 @@ function CandidateVoting ({ candidateId, isMember, ownMembers }: Props): React.R
           <Modal.Content>
             <InputAddress
               filter={ownMembers}
-<<<<<<< HEAD
-              label={t<string>('vote from account')}
-              onChange={setAccountId}
-            />
-            <Dropdown
-              label={t<string>('vote for candidate')}
-=======
               label={t('vote from account')}
               onChange={setAccountId}
             />
             <Dropdown
               label={t('vote for candidate')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setVote}
               options={voteOptsRef.current}
               value={vote}

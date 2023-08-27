@@ -68,32 +68,24 @@ function Funds ({ bestNumber, className, leasePeriod, value }: Props): React.Rea
   );
 
   const headerActiveRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('ongoing'), 'start', 2],
-=======
     [t('ongoing'), 'start', 2],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [undefined, 'media--800'],
     [undefined, 'media--2000'],
-    [t<string>('ending'), 'media--1200'],
-    [t<string>('leases')],
-    [t<string>('raised')],
-    [t<string>('count'), 'media--1100'],
+    [t('ending'), 'media--1200'],
+    [t('leases')],
+    [t('raised')],
+    [t('count'), 'media--1100'],
     [undefined, 'media--1000']
   ]);
 
   const headedEndedRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('completed'), 'start', 2],
-=======
     [t('completed'), 'start', 2],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [undefined, 'media--800'],
     [undefined, 'media--2000'],
-    [t<string>('ending'), 'media--1200'],
-    [t<string>('leases')],
-    [t<string>('raised')],
-    [t<string>('count'), 'media--1100'],
+    [t('ending'), 'media--1200'],
+    [t('leases')],
+    [t('raised')],
+    [t('count'), 'media--1100'],
     [undefined, 'media--1000']
   ]);
 

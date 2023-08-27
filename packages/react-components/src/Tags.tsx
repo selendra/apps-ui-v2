@@ -33,11 +33,7 @@ function Tags ({ children, className = '', isEditable, isEditing, onChange, onSa
           label={tag}
         />
       ))
-<<<<<<< HEAD
-      : <div>{t<string>('none')}</div>,
-=======
       : <div>{t('none')}</div>,
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [t, value]
   );
 

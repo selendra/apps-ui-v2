@@ -40,11 +40,7 @@ function JustificationList ({ value }: Props): React.ReactElement<Props> | null 
   const { t } = useTranslation();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('justifications'), 'start']
-=======
     [t('justifications'), 'start']
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   const justifications = value.unwrapOr(null);

@@ -84,11 +84,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
         )}
         <CardSummary
           className='media--1300'
-<<<<<<< HEAD
-          label={t<string>('next burn')}
-=======
           label={t('next burn')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         >
           <FormatBalance
             className={burn ? '' : '--tmp'}
@@ -99,11 +95,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
       </section>
       <section>
         <CardSummary
-<<<<<<< HEAD
-          label={t<string>('spendable / available')}
-=======
           label={t('spendable / available')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           progress={{
             hideValue: true,
             isBlurred: !hasSpendable,

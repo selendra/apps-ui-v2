@@ -5,13 +5,8 @@ import type { AddressFlags } from '@polkadot/react-hooks/types';
 
 import React from 'react';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/Flags.tsx
-import { Flag, styled } from '@polkadot/react-components';
-
-=======
 import Flag from '../Flag.js';
 import { styled } from '../styled.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/Flags.tsx
 import { useTranslation } from '../translate.js';
 
 interface Props {

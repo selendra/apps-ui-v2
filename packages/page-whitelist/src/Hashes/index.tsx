@@ -23,11 +23,7 @@ function Hashes ({ className }: Props): React.ReactElement<Props> {
   const hashes = useHashes();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('calls'), 'start'],
-=======
     [t('calls'), 'start'],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [undefined, 'all'],
     [undefined, 'media--1300']
   ]);

@@ -4,38 +4,33 @@
 import type { TFunction, TOptions } from '../types.js';
 import type { LinkOption } from './types.js';
 
-import { createCustom, createDev, createOwn } from './development.js';
 <<<<<<< HEAD
-import { prodChains } from './production.js';
-import { testChains } from './testing.js';
+import { defaultT } from '../util';
+import { createCustom, createDev, createOwn } from './development';
+// import { prodChains, prodRelayKusama, prodRelayPolkadot } from './production';
+import { prodRelaySelendra, testRelaySelendra } from './production';
+import { expandEndpoints } from './util';
+
+export { CUSTOM_ENDPOINT_KEY } from './development';
+export * from './production';
 =======
+import { createCustom, createDev, createOwn } from './development.js';
 import { prodChains, prodRelayKusama, prodRelayPolkadot } from './production.js';
 import { testChains, testRelayRococo, testRelayWestend } from './testing.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { expandEndpoints } from './util.js';
 
 export { CUSTOM_ENDPOINT_KEY } from './development.js';
 export * from './production.js';
 export * from './testing.js';
 
-<<<<<<< HEAD
-function defaultT (keyOrText: string, text?: string, options?: TOptions): string {
-  return (
-    (
-      options &&
-      options.replace &&
-      options.replace.host
-    ) ||
-    text ||
-=======
 function defaultT (keyOrText: string, text?: string | TOptions, options?: TOptions): string {
   return (
     (options?.replace?.host as string) ||
     text?.toString() ||
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     keyOrText
   );
 }
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, withSort = true): LinkOption[] {
   return [
@@ -44,14 +39,14 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
-<<<<<<< HEAD
-      text: t('rpc.header.live', 'Live network', { ns: 'apps-config' }),
-=======
-      text: t('rpc.header.polkadot.relay', 'Polkadot & parachains', { ns: 'apps-config' }),
+      text: t('rpc.header.selendra.relay', 'Selendra & parachains', { ns: 'apps-config' }),
       textBy: '',
       ui: {},
       value: ''
     },
+<<<<<<< HEAD
+    ...expandEndpoints(t, [prodRelaySelendra], firstOnly, withSort),
+=======
     ...expandEndpoints(t, [prodRelayPolkadot], firstOnly, withSort),
     {
       isDisabled: false,
@@ -62,15 +57,19 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
       value: ''
     },
     ...expandEndpoints(t, [prodRelayKusama], firstOnly, withSort),
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     {
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
-      text: t('rpc.header.westend.relay', 'Test Westend & parachains', { ns: 'apps-config' }),
+      text: t('rpc.header.selendra.testnet.relay', 'Selendra Testnet & parachains', { ns: 'apps-config' }),
       textBy: '',
       ui: {},
       value: ''
     },
+<<<<<<< HEAD
+    ...expandEndpoints(t, [testRelaySelendra], firstOnly, withSort),
+=======
     ...expandEndpoints(t, [testRelayWestend], firstOnly, withSort),
     {
       isDisabled: false,
@@ -86,7 +85,6 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
       isHeader: true,
       isSpaced: true,
       text: t('rpc.header.live', 'Live networks', { ns: 'apps-config' }),
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       textBy: '',
       ui: {},
       value: ''
@@ -95,12 +93,13 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
     {
       isDisabled: false,
       isHeader: true,
-      text: t('rpc.header.test', 'Test network', { ns: 'apps-config' }),
+      text: t('rpc.header.test', 'Test networks', { ns: 'apps-config' }),
       textBy: '',
       ui: {},
       value: ''
     },
     ...expandEndpoints(t, testChains, firstOnly, withSort),
+>>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     {
       isDevelopment: true,
       isDisabled: false,

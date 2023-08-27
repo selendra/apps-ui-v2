@@ -1,8 +1,6 @@
 // Copyright 2017-2023 @polkadot/app-bounties authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { BN } from '@polkadot/util';
-
 import React, { useMemo, useRef } from 'react';
 
 import { Button, styled, Table } from '@polkadot/react-components';
@@ -27,17 +25,10 @@ function Bounties ({ className }: Props): React.ReactElement {
   );
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('bounties'), 'start', 3],
-    [t<string>('value')],
-    [t<string>('curator'), 'start'],
-    [t<string>('next action'), 'start', 3]
-=======
     [t('bounties'), 'start', 3],
     [t('value')],
     [t('curator'), 'start'],
     [t('next action'), 'start', 3]
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
   const bestNumber = info.bestNumber;
 
@@ -54,11 +45,7 @@ function Bounties ({ className }: Props): React.ReactElement {
       >
         {sorted && bestNumber && sorted.map(({ bounty, description, index, proposals }) => (
           <Bounty
-<<<<<<< HEAD
-            bestNumber={info.bestNumber as BN}
-=======
             bestNumber={bestNumber}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             bounty={bounty}
             description={description}
             index={index}

@@ -41,11 +41,7 @@ function ABI ({ className, contractAbi, errorText, isDisabled, isError, isFull, 
     ? (
       <Labelled
         className={className}
-<<<<<<< HEAD
-        label={label || t<string>('contract ABI')}
-=======
         label={label || t('contract ABI')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         labelExtra={onRemove && (
           <IconLink
             icon='trash'

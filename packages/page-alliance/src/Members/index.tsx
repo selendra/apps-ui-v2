@@ -29,11 +29,7 @@ function Overview ({ className, members, prime, rule, unscrupulous, voters }: Pr
   const bestNumber = useBestNumber();
 
   const hdrRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('members'), 'start', 3]
-=======
     [t('members'), 'start', 3]
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (

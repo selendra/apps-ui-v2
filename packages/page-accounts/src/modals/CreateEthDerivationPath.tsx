@@ -33,11 +33,7 @@ function CreateEthDerivationPath ({ className, derivePath, deriveValidation, onC
       .fill(0)
       .map((_, i) => ({
         key: i,
-<<<<<<< HEAD
-        text: t<string>('Address index {{index}}', {
-=======
         text: t('Address index {{index}}', {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           replace: { index: i }
         }),
         value: i
@@ -87,11 +83,7 @@ function CreateEthDerivationPath ({ className, derivePath, deriveValidation, onC
               )
               : (
                 <Dropdown
-<<<<<<< HEAD
-                  label={t<string>('address index')}
-=======
                   label={t('address index')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onChange={setAddIndex}
                   options={addressList}
                   value={addIndex}

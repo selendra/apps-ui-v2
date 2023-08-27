@@ -94,11 +94,7 @@ function InputFile ({ accept, className = '', clearContent, isDisabled, isError 
   );
 
   const { getInputProps, getRootProps } = useDropzone({
-<<<<<<< HEAD
-    accept: accept && accept.reduce((all, mime) => ({ ...all, [mime]: [] }), {}),
-=======
     accept: accept?.reduce((all, mime) => ({ ...all, [mime]: [] }), {}),
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     disabled: isDisabled,
     onDrop
   });
@@ -109,13 +105,8 @@ function InputFile ({ accept, className = '', clearContent, isDisabled, isError 
       <em className='label'>
         {
           !file || clearContent
-<<<<<<< HEAD
-            ? placeholder || t<string>('click to select or drag and drop the file here')
-            : placeholder || t<string>('{{name}} ({{size}} bytes)', {
-=======
             ? placeholder || t('click to select or drag and drop the file here')
             : placeholder || t('{{name}} ({{size}} bytes)', {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               replace: {
                 name: file.name,
                 size: formatNumber(file.size)

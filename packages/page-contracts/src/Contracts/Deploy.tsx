@@ -119,13 +119,13 @@ function Deploy ({ codeHash, constructorIndex = 0, onClose, setConstructorIndex 
 
   return (
     <Modal
-      header={t<string>('Deploy a contract')}
+      header={t('Deploy a contract')}
       onClose={onClose}
     >
       <Modal.Content>
         <InputAddress
           isInput={false}
-          label={t<string>('deployment account')}
+          label={t('deployment account')}
           labelExtra={
             <Available
               label={t('transferrable')}
@@ -157,7 +157,7 @@ function Deploy ({ codeHash, constructorIndex = 0, onClose, setConstructorIndex 
           <>
             <Dropdown
               isDisabled={contractAbi.constructors.length <= 1}
-              label={t<string>('deployment constructor')}
+              label={t('deployment constructor')}
               onChange={setConstructorIndex}
               options={constructOptions}
               value={constructorIndex}
@@ -180,29 +180,17 @@ function Deploy ({ codeHash, constructorIndex = 0, onClose, setConstructorIndex 
         )}
         <Input
           isDisabled={!withSalt}
-<<<<<<< HEAD
-          label={t<string>('unique deployment salt')}
-          labelExtra={
-            <Toggle
-              label={t<string>('use deployment salt')}
-=======
           label={t('unique deployment salt')}
           labelExtra={
             <Toggle
               label={t('use deployment salt')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setWithSalt}
               value={withSalt}
             />
           }
           onChange={setSalt}
-<<<<<<< HEAD
-          placeholder={t<string>('0x prefixed hex, e.g. 0x1234 or ascii data')}
-          value={withSalt ? salt : t<string>('<none>')}
-=======
           placeholder={t('0x prefixed hex, e.g. 0x1234 or ascii data')}
           value={withSalt ? salt : t('<none>')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         />
         <InputMegaGas
           weight={weight}
@@ -214,7 +202,7 @@ function Deploy ({ codeHash, constructorIndex = 0, onClose, setConstructorIndex 
           extrinsic={initTx}
           icon='upload'
           isDisabled={!isValid || !initTx}
-          label={t<string>('Deploy')}
+          label={t('Deploy')}
           onClick={onClose}
           onSuccess={_onSuccess}
           withSpinner

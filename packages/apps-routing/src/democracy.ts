@@ -2,11 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { ApiPromise } from '@polkadot/api';
-<<<<<<< HEAD
-import type { Route } from './types.js';
-=======
 import type { Route, TFunction } from './types.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 import Component, { useCounter } from '@polkadot/app-democracy';
 
@@ -35,7 +31,7 @@ export default function create (t: TFunction): Route {
     group: 'governance',
     icon: 'calendar-check',
     name: 'democracy',
-    text: t<string>('nav.democracy', 'Democracy', { ns: 'apps-routing' }),
+    text: t('nav.democracy', 'Democracy', { ns: 'apps-routing' }),
     useCounter
   };
 }

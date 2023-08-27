@@ -8,17 +8,10 @@ import type { BN } from '@polkadot/util';
 import React, { useEffect, useState } from 'react';
 
 import { checkAddress } from '@polkadot/phishing';
-<<<<<<< HEAD:packages/page-accounts/src/modals/Transfer.tsx
-import { InputAddress, InputBalance, MarkError, MarkWarning, Modal, styled, Toggle, TxButton } from '@polkadot/react-components';
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/modals/Transfer.tsx
 import { useApi, useCall } from '@polkadot/react-hooks';
 import { Available } from '@polkadot/react-query';
 import { BN_HUNDRED, BN_ZERO, isFunction, nextTick } from '@polkadot/util';
 
-<<<<<<< HEAD:packages/page-accounts/src/modals/Transfer.tsx
-import { useTranslation } from '../translate.js';
-=======
 import InputAddress from '../InputAddress/index.js';
 import InputBalance from '../InputBalance.js';
 import MarkError from '../MarkError.js';
@@ -28,7 +21,6 @@ import { styled } from '../styled.js';
 import Toggle from '../Toggle.js';
 import { useTranslation } from '../translate.js';
 import TxButton from '../TxButton.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/modals/Transfer.tsx
 
 interface Props {
   className?: string;
@@ -179,7 +171,7 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
               )
             }
           </Modal.Columns>
-          <Modal.Columns hint={t<string>('With the keep-alive option set, the account is protected against removal due to low balances.')}>
+          <Modal.Columns hint={t('With the keep-alive option set, the account is protected against removal due to low balances.')}>
             {isFunction(api.tx.balances?.transferKeepAlive) && (
               <Toggle
                 className='typeToggle'
@@ -218,11 +210,7 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
             !(propRecipientId || recipientId) ||
             !!recipientPhish
           }
-<<<<<<< HEAD:packages/page-accounts/src/modals/Transfer.tsx
-          label={t<string>('Make Transfer')}
-=======
           label={t('Make Transfer')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/modals/Transfer.tsx
           onStart={onClose}
           params={
             canToggleAll && isAll

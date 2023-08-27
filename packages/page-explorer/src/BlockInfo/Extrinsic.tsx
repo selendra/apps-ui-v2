@@ -7,11 +7,7 @@ import type { ICompact, INumber } from '@polkadot/types/types';
 
 import React, { useMemo } from 'react';
 
-<<<<<<< HEAD
-import { AddressMini, CallExpander, LinkExternal, styled } from '@polkadot/react-components';
-=======
 import { AddressMini, LinkExternal, styled } from '@polkadot/react-components';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { convertWeight } from '@polkadot/react-hooks/useWeight';
 import { CallExpander } from '@polkadot/react-params';
 import { BN, formatNumber } from '@polkadot/util';

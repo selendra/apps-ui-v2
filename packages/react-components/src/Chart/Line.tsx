@@ -21,20 +21,6 @@ export interface Props {
   options?: ChartOptions;
   values: (number | BN)[][];
   title?: React.ReactNode;
-<<<<<<< HEAD
-}
-
-interface Dataset {
-  data: number[];
-  fill: boolean;
-  label: string;
-  lineTension: number;
-  backgroundColor: string;
-  borderColor: string;
-  cubicInterpolationMode: 'default' | 'linear';
-  hoverBackgroundColor: string;
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 }
 
 interface Config {
@@ -97,19 +83,12 @@ const BASE_OPTS: ChartOptions = {
   }
 };
 
-<<<<<<< HEAD
-function getOptions (options: ChartOptions = {}): ChartOptions {
-=======
 function getOptions (options: ChartOptions = {}): DatasetChartOptions<'line'> {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   return objectSpread({}, BASE_OPTS, options, {
     // Re-spread plugins for deep(er) copy
     plugins: objectSpread({}, BASE_OPTS.plugins, options.plugins, {
       // Same applied to plugins, we may want specific values
-<<<<<<< HEAD
-=======
       // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       annotation: objectSpread({}, BASE_OPTS.plugins?.annotation, options.plugins?.annotation),
       crosshair: objectSpread({}, BASE_OPTS.plugins?.crosshair, options.plugins?.crosshair),
       tooltip: objectSpread({}, BASE_OPTS.plugins?.tooltip, options.plugins?.tooltip)
@@ -121,11 +100,7 @@ function getOptions (options: ChartOptions = {}): DatasetChartOptions<'line'> {
   });
 }
 
-<<<<<<< HEAD
-function getData (colors: (string | undefined)[] = [], legends: string[], labels: string[], values: (number | BN)[][]): ChartData {
-=======
 function getData (colors: (string | undefined)[] = [], legends: string[], labels: string[], values: (number | BN)[][]): ChartData<'line'> {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   return values.reduce((chartData, values, index): Config => {
     const color = colors[index] || alphaColor(COLORS[index]);
     const data = values.map((value): number => isBn(value) ? value.toNumber() : value);
@@ -143,11 +118,7 @@ function getData (colors: (string | undefined)[] = [], legends: string[], labels
     });
 
     return chartData;
-<<<<<<< HEAD
-  }, { datasets: [] as Dataset[], labels });
-=======
   }, { datasets: [] as ChartDataset<'line'>[], labels });
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 }
 
 function LineChart ({ className = '', colors, labels, legends, options, title, values }: Props): React.ReactElement<Props> | null {

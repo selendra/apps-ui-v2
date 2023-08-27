@@ -35,17 +35,6 @@ export function getContractForAddress (api: ApiPromise, address: string | null):
 }
 
 export function getCallMessageOptions (callContract: ContractPromise | null): DropdownItemProps[] {
-<<<<<<< HEAD
-  return callContract
-    ? callContract.abi.messages.map((m, index) => ({
-      key: m.identifier,
-      text: (
-        <MessageSignature message={m} />
-      ),
-      value: index
-    }))
-    : [];
-=======
   return callContract?.abi.messages.map((m, index) => ({
     key: m.identifier,
     text: (
@@ -53,5 +42,4 @@ export function getCallMessageOptions (callContract: ContractPromise | null): Dr
     ),
     value: index
   })) || [];
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 }

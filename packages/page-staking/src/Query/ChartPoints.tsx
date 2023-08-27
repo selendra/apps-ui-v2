@@ -67,11 +67,7 @@ function ChartPoints ({ labels, validatorId }: Props): React.ReactElement<Props>
       colors={COLORS_POINTS}
       labels={labels}
       legends={legendsRef.current}
-<<<<<<< HEAD
-      title={t<string>('era points')}
-=======
       title={t('era points')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       values={values}
     />
   );

@@ -3,11 +3,8 @@
 
 import React, { useCallback, useState } from 'react';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/index.tsx
-=======
 import { AccountSidebarCtx } from '@polkadot/react-hooks/ctx/AccountSidebar';
 
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/index.tsx
 import Sidebar from './Sidebar.js';
 
 interface Props {
@@ -16,15 +13,7 @@ interface Props {
 
 type State = [string | null, (() => void) | null];
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/index.tsx
-type SetStateContext = undefined | (([address, onUpdateName]: State) => void);
-
 const EMPTY_STATE: State = [null, null];
-
-export const AccountSidebarCtx = React.createContext<SetStateContext>(undefined);
-=======
-const EMPTY_STATE: State = [null, null];
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/index.tsx
 
 function AccountSidebar ({ children }: Props): React.ReactElement<Props> {
   const [[address, onUpdateName], setAddress] = useState<State>(EMPTY_STATE);

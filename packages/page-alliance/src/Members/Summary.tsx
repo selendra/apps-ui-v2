@@ -34,15 +34,9 @@ function Summary ({ className, members, rule }: Props): React.ReactElement<Props
                   target='_blank'
                 >{ipfsLink.ipfsShort}</a>
               )
-<<<<<<< HEAD
-              : t<string>('yes')
-            : t<string>('no')
-          : <span className='--tmp'>{t<string>('no')}</span>
-=======
               : t('yes')
             : t('no')
           : <span className='--tmp'>{t('no')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         }
       </CardSummary>
       <CardSummary label={t('members')}>

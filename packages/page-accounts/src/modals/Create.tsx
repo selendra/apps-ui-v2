@@ -298,11 +298,7 @@ function Create ({ className = '', onClose, onStatusChange, seed: propsSeed, typ
               <Modal.Columns hint={t('If you are moving accounts between applications, ensure that you use the correct type.')}>
                 <Dropdown
                   defaultValue={pairType}
-<<<<<<< HEAD
-                  label={t<string>('keypair crypto type')}
-=======
                   label={t('keypair crypto type')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onChange={_onChangePairType}
                   options={
                     isEthereum

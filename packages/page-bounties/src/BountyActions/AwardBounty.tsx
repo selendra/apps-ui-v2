@@ -53,11 +53,7 @@ function AwardBounty ({ curatorId, description, index }: Props): React.ReactElem
               </Modal.Columns>
               <Modal.Columns hint={t("Reward the bounty to an implementer's account. The implementer will be able to claim the funds after a delay period.")}>
                 <InputAddress
-<<<<<<< HEAD
-                  label={t<string>('implementer account')}
-=======
                   label={t('implementer account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onChange={setBeneficiaryId}
                   withLabel
                 />

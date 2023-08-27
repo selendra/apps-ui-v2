@@ -8,11 +8,7 @@ import { useMemo } from 'react';
 
 import { createNamedHook, useAccounts, useCollectiveMembers } from '@polkadot/react-hooks';
 
-<<<<<<< HEAD
-export type UserRolesInfo = { roles: UserRole[], isCurator: boolean };
-=======
 export interface UserRolesInfo { roles: UserRole[], isCurator: boolean }
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 function useUserRoleImpl (curatorId?: AccountId): UserRolesInfo {
   const { allAccounts, hasAccounts } = useAccounts();

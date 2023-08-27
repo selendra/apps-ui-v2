@@ -3,10 +3,7 @@
 
 import type { Nominations, ValidatorPrefs } from '@polkadot/types/interfaces';
 import type { KeyringJson$Meta } from '@polkadot/ui-keyring/types';
-<<<<<<< HEAD
-=======
 import type { HexString } from '@polkadot/util/types';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { AddressFlags, AddressIdentity, UseAccountInfo } from './types.js';
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
@@ -141,11 +138,7 @@ function useAccountInfoImpl (value: string | null, isContract = false): UseAccou
         }));
         setMeta(accountOrAddress?.meta);
         setName(accountOrAddress?.meta.name || '');
-<<<<<<< HEAD
-        setSortedTags(accountOrAddress?.meta.tags ? (accountOrAddress.meta.tags as string[]).sort() : []);
-=======
         setSortedTags(accountOrAddress?.meta.tags?.sort() || []);
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       } catch {
         // ignore
       }

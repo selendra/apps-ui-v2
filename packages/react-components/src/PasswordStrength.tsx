@@ -46,11 +46,7 @@ function PasswordStrength ({ className = '', value }: Props): React.ReactElement
           style={style}
         />
       </div>
-<<<<<<< HEAD
-      {t<string>('strong')}
-=======
       {t('strong')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     </StyledDiv>
   );
 }

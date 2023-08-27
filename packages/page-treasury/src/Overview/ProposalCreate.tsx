@@ -47,11 +47,7 @@ function Propose ({ className }: Props): React.ReactElement<Props> | null {
           <Modal.Content>
             <Modal.Columns hint={t('This account will make the proposal and be responsible for the bond.')}>
               <InputAddress
-<<<<<<< HEAD
-                label={t<string>('submit with account')}
-=======
                 label={t('submit with account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setAccountId}
                 type='account'
                 withLabel
@@ -59,11 +55,7 @@ function Propose ({ className }: Props): React.ReactElement<Props> | null {
             </Modal.Columns>
             <Modal.Columns hint={t('The beneficiary will receive the full amount if the proposal passes.')}>
               <InputAddress
-<<<<<<< HEAD
-                label={t<string>('beneficiary')}
-=======
                 label={t('beneficiary')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setBeneficiary}
                 type='allPlus'
               />
@@ -85,11 +77,7 @@ function Propose ({ className }: Props): React.ReactElement<Props> | null {
                 onChange={setValue}
               />
               <Static
-<<<<<<< HEAD
-                label={t<string>('proposal bond')}
-=======
                 label={t('proposal bond')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               >
                 {bondPercentage}
               </Static>

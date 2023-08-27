@@ -31,13 +31,8 @@ interface Props {
 }
 
 function CardSummary ({ children, className = '', label, progress }: Props): React.ReactElement<Props> | null {
-<<<<<<< HEAD
-  const value = progress && progress.value;
-  const total = progress && progress.total;
-=======
   const value = progress?.value;
   const total = progress?.total;
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   const left = progress && !isUndefined(value) && !isUndefined(total) && value.gten(0) && total.gtn(0)
     ? (
       value.gt(total)

@@ -16,11 +16,7 @@ import { charlieShortAddress, ferdieShortAddress, mockRegistration, registrars }
 import { mockApiHooks } from '@polkadot/test-support/utils';
 import { keyring } from '@polkadot/ui-keyring';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/Sidebar.spec.tsx
-import { AccountsPage } from '../../test/pages/accountsPage.js';
-=======
 import { AccountsPage } from '../../../page-accounts/test/pages/accountsPage.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/Sidebar.spec.tsx
 
 // FIXME: these all need to be wrapped in waitFor ....
 // eslint-disable-next-line jest/no-disabled-tests

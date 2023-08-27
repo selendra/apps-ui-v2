@@ -45,9 +45,9 @@ function Index ({ bestNumber, className, description, index, proposals, status }
   const availableSlashActions = determineUnassignCuratorAction(roles, status, blocksUntilUpdate);
 
   const slashCuratorActionNames = useRef<Record<ValidUnassignCuratorAction, string>>({
-    SlashCuratorAction: t<string>('Slash curator'),
-    SlashCuratorMotion: t<string>('Slash curator (Council)'),
-    UnassignCurator: t<string>('Unassign curator')
+    SlashCuratorAction: t('Slash curator'),
+    SlashCuratorMotion: t('Slash curator (Council)'),
+    UnassignCurator: t('Unassign curator')
   });
 
   const existingCloseBountyProposal = useMemo(
@@ -130,11 +130,7 @@ function Index ({ bestNumber, className, description, index, proposals, status }
               {showCloseBounty && (
                 <Menu.Item
                   key='closeBounty'
-<<<<<<< HEAD
-                  label={t<string>('Close')}
-=======
                   label={t('Close')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onClick={toggleCloseBounty}
                 />
               )}

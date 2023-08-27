@@ -29,11 +29,7 @@ function BidNew ({ onClose }: Props): React.ReactElement<Props> {
       <Modal.Content>
         <Modal.Columns hint={t('Your candidate/bid account. Once accepted this account will become a member.')}>
           <InputAddress
-<<<<<<< HEAD
-            label={t<string>('bid account')}
-=======
             label={t('bid account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setAccount}
             type='account'
           />
@@ -41,11 +37,7 @@ function BidNew ({ onClose }: Props): React.ReactElement<Props> {
         <Modal.Columns hint={t('The amount to tie to your bid. The lowest bidder moves forward.')}>
           <InputBalance
             autoFocus
-<<<<<<< HEAD
-            label={t<string>('bid amount')}
-=======
             label={t('bid amount')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setAmount}
           />
         </Modal.Columns>

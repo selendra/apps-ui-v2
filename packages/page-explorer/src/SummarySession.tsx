@@ -25,17 +25,10 @@ function SummarySession ({ className, withEra = true, withSession = true }: Prop
   const sessionInfo = useCall<DeriveSessionProgress>(api.derive.session?.progress);
   const forcing = useCall<Forcing>(api.query.staking?.forceEra);
 
-<<<<<<< HEAD
-  const eraLabel = t<string>('era');
-  const sessionLabel = api.query.babe
-    ? t<string>('epoch')
-    : t<string>('session');
-=======
   const eraLabel = t('era');
   const sessionLabel = api.query.babe
     ? t('epoch')
     : t('session');
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   const activeEraStart = sessionInfo?.activeEraStart.unwrapOr(null);
 
   return (
@@ -100,7 +93,7 @@ function SummarySession ({ className, withEra = true, withSession = true }: Prop
                       className={`${sessionInfo ? '' : '--tmp'} isSecondary`}
                       value={activeEraStart}
                     >
-                      &nbsp;{t<string>('elapsed')}
+                      &nbsp;{t('elapsed')}
                     </Elapsed>
                   )}
                 </CardSummary>

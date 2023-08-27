@@ -79,11 +79,7 @@ function ProposeCuratorAction ({ description, index, proposals, value }: Props):
               <Modal.Columns hint={t('The council member that will create the motion.')}>
                 <InputAddress
                   filter={members}
-<<<<<<< HEAD
-                  label={t<string>('proposing account')}
-=======
                   label={t('proposing account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onChange={setAccountId}
                   type='account'
                   withLabel
@@ -91,11 +87,7 @@ function ProposeCuratorAction ({ description, index, proposals, value }: Props):
               </Modal.Columns>
               <Modal.Columns hint={t('Choose a curator whose background and expertise is such that they are capable of determining when the task is complete.')}>
                 <InputAddress
-<<<<<<< HEAD
-                  label={t<string>('select curator')}
-=======
                   label={t('select curator')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onChange={setCuratorId}
                   withLabel
                 />

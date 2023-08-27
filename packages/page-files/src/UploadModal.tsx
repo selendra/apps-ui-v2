@@ -2,10 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { CancelTokenSource } from 'axios';
-<<<<<<< HEAD
-import type { TFunction } from 'i18next';
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { Signer } from '@polkadot/api/types';
 import type { AuthIpfsEndpoint, DirFile, FileInfo, SaveFile, UploadRes } from './types.js';
 
@@ -51,23 +47,6 @@ function ShowFile (p: { file: DirFile | File }) {
   );
 }
 
-<<<<<<< HEAD
-function createAuthIpfsEndpoints (t: TFunction): AuthIpfsEndpoint[] {
-  return [
-    {
-      location: t<string>('Singapore'),
-      text: t<string>('DCF'),
-      value: 'https://crustipfs.xyz'
-    },
-    {
-      location: t<string>('Seattle'),
-      text: t<string>('Crust Network'),
-      value: 'https://gw.crustfiles.app'
-    },
-    {
-      location: t<string>('Berlin'),
-      text: t<string>('⚡️ Thunder Gateway'),
-=======
 function createAuthIpfsEndpoints (t: (key: string, options?: { replace: Record<string, unknown> }) => string): AuthIpfsEndpoint[] {
   return [
     {
@@ -83,7 +62,6 @@ function createAuthIpfsEndpoints (t: (key: string, options?: { replace: Record<s
     {
       location: t('Berlin'),
       text: t('⚡️ Thunder Gateway'),
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       value: 'https://gw.crustfiles.net'
     }
   ];

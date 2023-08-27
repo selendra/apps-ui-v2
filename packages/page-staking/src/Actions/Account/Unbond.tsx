@@ -6,28 +6,17 @@ import type { BN } from '@polkadot/util';
 
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
-import { InputAddress, InputBalance, Modal, Static, styled, TxButton } from '@polkadot/react-components';
-=======
 import { InputBalance, Modal, Static, styled, TxButton } from '@polkadot/react-components';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useApi } from '@polkadot/react-hooks';
 import { BlockToTime, FormatBalance } from '@polkadot/react-query';
 import { BN_ZERO } from '@polkadot/util';
 
 import { useTranslation } from '../../translate.js';
-<<<<<<< HEAD
-import useUnbondDuration from '../useUnbondDuration.js';
-
-interface Props {
-  controllerId?: AccountId | string | null;
-=======
 import SenderInfo from '../partials/SenderInfo.js';
 import useUnbondDuration from '../useUnbondDuration.js';
 
 interface Props {
   controllerId?: string | null;
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   onClose: () => void;
   stakingLedger?: StakingLedger;
   stashId: string;
@@ -42,11 +31,7 @@ function Unbond ({ controllerId, onClose, stakingLedger, stashId }: Props): Reac
 
   return (
     <StyledModal
-<<<<<<< HEAD
-      header={t<string>('Unbond funds')}
-=======
       header={t('Unbond funds')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       onClose={onClose}
       size='large'
     >
@@ -59,17 +44,10 @@ function Unbond ({ controllerId, onClose, stakingLedger, stashId }: Props): Reac
           <InputBalance
             autoFocus
             defaultValue={maxBalance}
-<<<<<<< HEAD
-            label={t<string>('unbond amount')}
-            labelExtra={
-              <FormatBalance
-                label={<span className='label'>{t<string>('bonded')}</span>}
-=======
             label={t('unbond amount')}
             labelExtra={
               <FormatBalance
                 label={<span className='label'>{t('bonded')}</span>}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 value={maxBalance}
               />
             }
@@ -79,11 +57,7 @@ function Unbond ({ controllerId, onClose, stakingLedger, stashId }: Props): Reac
           />
           {bondedBlocks?.gtn(0) && (
             <Static
-<<<<<<< HEAD
-              label={t<string>('on-chain bonding duration')}
-=======
               label={t('on-chain bonding duration')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             >
               <BlockToTime value={bondedBlocks} />
             </Static>
@@ -95,11 +69,7 @@ function Unbond ({ controllerId, onClose, stakingLedger, stashId }: Props): Reac
           accountId={controllerId}
           icon='unlock'
           isDisabled={!maxUnbond?.gt(BN_ZERO)}
-<<<<<<< HEAD
-          label={t<string>('Unbond')}
-=======
           label={t('Unbond')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onStart={onClose}
           params={[maxUnbond]}
           tx={api.tx.staking.unbond}

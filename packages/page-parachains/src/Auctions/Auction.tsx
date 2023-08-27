@@ -27,19 +27,11 @@ function Auction ({ auctionInfo, campaigns, className, winningData }: Props): Re
   const newRaise = useCall<ParaId[]>(api.query.crowdloan.newRaise);
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('bids'), 'start', 3],
-    [t<string>('bidder'), 'address'],
-    [t<string>('crowdloan')],
-    [t<string>('leases')],
-    [t<string>('value')]
-=======
     [t('bids'), 'start', 3],
     [t('bidder'), 'address'],
     [t('crowdloan')],
     [t('leases')],
     [t('value')]
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   const loans = useMemo(

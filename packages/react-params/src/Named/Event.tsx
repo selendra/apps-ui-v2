@@ -8,21 +8,12 @@ import type { Codec } from '@polkadot/types/types';
 
 import React, { useMemo } from 'react';
 
-<<<<<<< HEAD:packages/react-components/src/Event.tsx
-import Params from '@polkadot/react-params';
-
-import { getContractAbi } from './util/index.js';
-import { balanceEvents, balanceEventsOverrides } from './constants.js';
-import Input from './Input.js';
-import { useTranslation } from './translate.js';
-=======
 import { Input } from '@polkadot/react-components';
 import { getContractAbi } from '@polkadot/react-components/util';
 import Params from '@polkadot/react-params';
 
 import { balanceEvents, balanceEventsOverrides } from '../overrides.js';
 import { useTranslation } from '../translate.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-params/src/Named/Event.tsx
 
 export interface Props {
   children?: React.ReactNode;

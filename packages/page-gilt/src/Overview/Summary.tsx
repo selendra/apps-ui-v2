@@ -29,13 +29,8 @@ function Summary ({ activeTotal, className, isDisabled }: Props): React.ReactEle
   return (
     <SummaryBox className={className}>
       <section>
-<<<<<<< HEAD
-        <CardSummary label={t<string>('active')}>
-          {isDisabled ? t<string>('no') : t<string>('yes')}
-=======
         <CardSummary label={t('active')}>
           {isDisabled ? t('no') : t('yes')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         </CardSummary>
         {activeTotal && (
           <CardSummary label={t('index')}>

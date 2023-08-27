@@ -24,17 +24,10 @@ function Hashes ({ className }: Props): React.ReactElement<Props> {
   const hashes = usePreimages();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('preimages'), 'start', 2],
-    [undefined, 'media--1300'],
-    [t<string>('length'), 'media--1000'],
-    [t<string>('status'), 'start media--1200']
-=======
     [t('preimages'), 'start', 2],
     [undefined, 'media--1300'],
     [t('length'), 'media--1000'],
     [t('status'), 'start media--1200']
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (

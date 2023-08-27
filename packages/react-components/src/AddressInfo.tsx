@@ -442,11 +442,7 @@ function createBalanceItems (formatIndex: number, lookup: Record<string, string>
       );
     }
 
-<<<<<<< HEAD
-    if (bestNumber && convictionLocks && convictionLocks.length) {
-=======
     if (bestNumber && convictionLocks?.length) {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       const max = convictionLocks.reduce((max, { total }) => bnMax(max, total), BN_ZERO);
 
       allItems.push(
@@ -469,9 +465,9 @@ function createBalanceItems (formatIndex: number, lookup: Record<string, string>
                       <div className='nowrap'>#{refId.toString()} {formatBalance(total, { forceUnit: '-' })} {locked}</div>
                       <div className='faded nowrap'>{
                         endBlock.eq(BN_MAX_INTEGER)
-                          ? t<string>('ongoing referendum')
+                          ? t('ongoing referendum')
                           : bestNumber.gte(endBlock)
-                            ? t<string>('lock expired')
+                            ? t('lock expired')
                             : <>{formatNumber(endBlock.sub(bestNumber))} {t('blocks')},&nbsp;
                               <BlockToTime
                                 isInline

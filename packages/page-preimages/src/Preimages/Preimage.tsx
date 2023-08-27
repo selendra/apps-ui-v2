@@ -25,11 +25,7 @@ function Preimage ({ className, value }: Props): React.ReactElement<Props> {
       <Hash value={value} />
       <Call value={info} />
       <td className='number media--1000'>
-<<<<<<< HEAD
-        {info && info.proposalLength
-=======
         {info?.proposalLength
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           ? formatNumber(info.proposalLength)
           : <span className='--tmp'>999,999</span>}
       </td>

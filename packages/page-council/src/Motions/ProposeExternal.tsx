@@ -127,11 +127,7 @@ function ProposeExternal ({ className = '', isMember, members }: Props): React.R
             <Modal.Columns hint={t('The council account for the proposal. The selection is filtered by the current members.')}>
               <InputAddress
                 filter={members}
-<<<<<<< HEAD
-                label={t<string>('propose from account')}
-=======
                 label={t('propose from account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setAcountId}
                 type='account'
                 withLabel
@@ -151,11 +147,7 @@ function ProposeExternal ({ className = '', isMember, members }: Props): React.R
                   isDisabled={!!preimage?.proposalLength && !preimage?.proposalLength.isZero() && isHashValid && isImageLenValid}
                   isError={!isImageLenValid}
                   key='inputLength'
-<<<<<<< HEAD
-                  label={t<string>('preimage length')}
-=======
                   label={t('preimage length')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onChange={_onChangeImageLen}
                   value={imageLen}
                 />
@@ -167,11 +159,7 @@ function ProposeExternal ({ className = '', isMember, members }: Props): React.R
               accountId={accountId}
               icon='plus'
               isDisabled={!threshold || !members.includes(accountId || '') || !proposal || (isCurrentPreimage && !isImageLenValid)}
-<<<<<<< HEAD
-              label={t<string>('Propose')}
-=======
               label={t('Propose')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onStart={toggleVisible}
               params={
                 api.tx[modLocation].propose.meta.args.length === 3

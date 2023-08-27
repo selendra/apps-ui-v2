@@ -12,14 +12,8 @@ import Params from '@polkadot/react-params';
 import { getTypeDef } from '@polkadot/types/create';
 import { isUndefined, objectSpread } from '@polkadot/util';
 
-<<<<<<< HEAD:packages/react-components/src/Extrinsic.tsx
-import InputExtrinsic from './InputExtrinsic/index.js';
-import paramComponents from './Params/index.js';
-import { balanceCalls, balanceCallsOverrides } from './constants.js';
-=======
 import paramComponents from '../Extra/index.js';
 import { balanceCalls, balanceCallsOverrides } from '../overrides.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-params/src/Named/Extrinsic.tsx
 
 interface Props {
   className?: string;

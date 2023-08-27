@@ -3,16 +3,10 @@
 
 import React from 'react';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/Judgements.tsx
-import { styled, Tag } from '@polkadot/react-components';
-import { useJudgements } from '@polkadot/react-hooks';
-
-=======
 import { useJudgements } from '@polkadot/react-hooks';
 
 import { styled } from '../styled.js';
 import Tag from '../Tag.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/Judgements.tsx
 import { useTranslation } from '../translate.js';
 import JudgementTag from './JudgementTag.js';
 

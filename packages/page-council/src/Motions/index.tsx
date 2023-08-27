@@ -26,17 +26,10 @@ function Proposals ({ className = '', motions, prime }: Props): React.ReactEleme
   const { isMember, members } = useCollectiveMembers('council');
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('motions'), 'start', 2],
-    [t<string>('threshold')],
-    [t<string>('voting end')],
-    [t<string>('votes'), 'expand'],
-=======
     [t('motions'), 'start', 2],
     [t('threshold')],
     [t('voting end')],
     [t('votes'), 'expand'],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [],
     [undefined, 'badge'],
     []

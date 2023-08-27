@@ -155,11 +155,7 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
       {isOpen && (
         <StyledModal
           className={className}
-<<<<<<< HEAD
-          header={t<string>('Submit proposal')}
-=======
           header={t('Submit proposal')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onClose={toggleOpen}
           size='large'
         >
@@ -167,11 +163,7 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
             <Modal.Columns hint={t('The proposal will be registered from this account and the balance lock will be applied here.')}>
               <InputAddress
                 filter={members}
-<<<<<<< HEAD
-                label={t<string>('propose from account')}
-=======
                 label={t('propose from account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 labelExtra={
                   <Available
                     label={<span className='label'>{t('transferrable')}</span>}
@@ -182,11 +174,7 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
                 type='account'
               />
             </Modal.Columns>
-<<<<<<< HEAD
-            <Modal.Columns hint={t<string>('The origin (and by extension track) that you wish to submit for, each has a different period, different root and acceptance criteria.')}>
-=======
             <Modal.Columns hint={t('The origin (and by extension track) that you wish to submit for, each has a different period, different root and acceptance criteria.')}>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               <TrackDropdown
                 onChange={setTrack}
                 palletReferenda={palletReferenda}
@@ -235,11 +223,7 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
             </Modal.Columns>
             <Modal.Columns
               align='center'
-<<<<<<< HEAD
-              hint={t<string>('The moment of enactment, either at a specific block, or after a specific number of blocks.')}
-=======
               hint={t('The moment of enactment, either at a specific block, or after a specific number of blocks.')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             >
               <ToggleGroup
                 onChange={setEnactIndex}
@@ -284,11 +268,7 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
               accountId={accountId}
               icon='plus'
               isDisabled={!selectedOrigin || !isImageHashValid || !isImageLenValid || !accountId || isInvalidAt || !preimage?.proposalHash}
-<<<<<<< HEAD
-              label={t<string>('Submit proposal')}
-=======
               label={t('Submit proposal')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onStart={toggleOpen}
               params={[
                 selectedOrigin,
@@ -309,11 +289,7 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
       <Button
         icon='plus'
         isDisabled={!isMember}
-<<<<<<< HEAD
-        label={t<string>('Submit proposal')}
-=======
         label={t('Submit proposal')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         onClick={toggleOpen}
       />
     </>

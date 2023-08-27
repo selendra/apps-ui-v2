@@ -134,19 +134,6 @@ function Bond ({ className = '', isNominating, minNominated, minNominatorBond, m
           type='account'
           value={stashId}
         />
-<<<<<<< HEAD
-        <InputAddress
-          label={t<string>('controller account')}
-          onChange={setControllerId}
-          type='account'
-          value={controllerId}
-        />
-        <InputValidationController
-          accountId={stashId}
-          controllerId={controllerId}
-          onError={_setError}
-        />
-=======
         {needsController && (
           <>
             <InputAddress
@@ -162,7 +149,6 @@ function Bond ({ className = '', isNominating, minNominated, minNominatorBond, m
             />
           </>
         )}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       </Modal.Columns>
       {startBalance && (
         <Modal.Columns
@@ -198,11 +184,7 @@ function Bond ({ className = '', isNominating, minNominated, minNominatorBond, m
           />
           {bondedBlocks?.gtn(0) && (
             <Static
-<<<<<<< HEAD
-              label={t<string>('on-chain bonding duration')}
-=======
               label={t('on-chain bonding duration')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             >
               <BlockToTime value={bondedBlocks} />
             </Static>
@@ -212,22 +194,14 @@ function Bond ({ className = '', isNominating, minNominated, minNominatorBond, m
       <Modal.Columns hint={t('Rewards (once paid) can be deposited to either the stash or controller, with different effects.')}>
         <Dropdown
           defaultValue={0}
-<<<<<<< HEAD
-          label={t<string>('payment destination')}
-=======
           label={t('payment destination')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={setDestination}
           options={options}
           value={destination}
         />
         {isAccount && (
           <InputAddress
-<<<<<<< HEAD
-            label={t<string>('the payment account')}
-=======
             label={t('the payment account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setDestAccount}
             type='account'
             value={destAccount}

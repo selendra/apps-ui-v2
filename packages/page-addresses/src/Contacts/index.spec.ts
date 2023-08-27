@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// Copyright 2017-2023 @polkadot/page-addresses authors & contributors
-=======
 // Copyright 2017-2023 @polkadot/app-addresses authors & contributors
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 // SPDX-License-Identifier: Apache-2.0
 
 /// <reference types="@polkadot/dev-test/globals.d.ts" />

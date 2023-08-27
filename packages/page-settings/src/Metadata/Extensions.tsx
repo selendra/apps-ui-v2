@@ -48,11 +48,7 @@ function Extensions ({ chainInfo, className }: Props): React.ReactElement<Props>
   );
 
   const headerRef = useRef<[React.ReactNode?, string?, number?][]>([
-<<<<<<< HEAD
-    [t<string>('Extensions'), 'start']
-=======
     [t('Extensions'), 'start']
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (

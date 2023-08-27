@@ -10,13 +10,8 @@ import React, { Suspense } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-<<<<<<< HEAD
-import { lightTheme } from '@polkadot/apps/themes';
-import { ApiCtxRoot } from '@polkadot/react-api';
-=======
 import { ApiCtxRoot } from '@polkadot/react-api';
 import { lightTheme } from '@polkadot/react-components';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { createApi } from '@polkadot/test-support/api';
 import { aliceSigner, MemoryStore } from '@polkadot/test-support/keyring';
 import { WaitForApi } from '@polkadot/test-support/react';
@@ -51,10 +46,7 @@ const renderBounties = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
 // eslint-disable-next-line jest/no-disabled-tests
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 describe.skip('--SLOW--: Bounties', () => {
   it('list shows an existing bounty', async () => {
     const api = await createApi();

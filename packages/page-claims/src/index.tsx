@@ -10,11 +10,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { Trans } from 'react-i18next';
 
 import { Button, Card, Columar, Input, InputAddress, styled, Tabs, Tooltip } from '@polkadot/react-components';
-<<<<<<< HEAD
-import { TokenUnit } from '@polkadot/react-components/InputNumber';
-=======
 import { TokenUnit } from '@polkadot/react-components/InputConsts/units';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useApi, useCall } from '@polkadot/react-hooks';
 import { u8aToHex, u8aToString } from '@polkadot/util';
 import { decodeAddress } from '@polkadot/util-crypto';
@@ -203,22 +199,14 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
       <Columar>
         <Columar.Column>
           <Card withBottomMargin>
-<<<<<<< HEAD
-            <h2>{t<string>('1. Select your {{chain}} account', {
-=======
             <h2>{t('1. Select your {{chain}} account', {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               replace: {
                 chain: systemChain
               }
             })}</h2>
             <InputAddress
               defaultValue={accountId}
-<<<<<<< HEAD
-              label={t<string>('claim to account')}
-=======
               label={t('claim to account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setAccountId}
               type='all'
             />
@@ -241,19 +229,11 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
             // to be able to know the statement kind so that the users can sign it
             (step >= Step.ETHAddress && !isPreclaimed && !isOldClaimProcess) && (
               <Card withBottomMargin>
-<<<<<<< HEAD
-                <h2>{t<string>('2. Enter the ETH address from the sale.')}</h2>
-                <Input
-                  autoFocus
-                  className='full'
-                  label={t<string>('Pre-sale ethereum address')}
-=======
                 <h2>{t('2. Enter the ETH address from the sale.')}</h2>
                 <Input
                   autoFocus
                   className='full'
                   label={t('Pre-sale ethereum address')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onChange={onChangeEthereumAddress}
                   value={ethereumAddress || ''}
                 />
@@ -271,11 +251,7 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
             )}
           {(step >= Step.Sign && !isPreclaimed) && (
             <Card>
-<<<<<<< HEAD
-              <h2>{t<string>('{{step}}. Sign with your ETH address', { replace: { step: isOldClaimProcess ? '2' : '3' } })}</h2>
-=======
               <h2>{t('{{step}}. Sign with your ETH address', { replace: { step: isOldClaimProcess ? '2' : '3' } })}</h2>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               {!isOldClaimProcess && (
                 <Statement
                   kind={statementKind}

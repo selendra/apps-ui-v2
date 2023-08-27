@@ -28,11 +28,7 @@ function getFiles (dir) {
   const genpath = path.join(dir, 'generated');
 
   if (!fs.existsSync(genpath)) {
-<<<<<<< HEAD
-    fs.mkdirSync(genpath, { force: true });
-=======
     fs.mkdirSync(genpath, { recursive: true });
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   }
 
   const all = fs
@@ -63,11 +59,7 @@ function getFiles (dir) {
         : 0
     );
 
-<<<<<<< HEAD
-  for (let f of all) {
-=======
   for (const f of all) {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     if (f.endsWith('.png')) {
       fs.writeFileSync(path.join(dir, `generated/${f}`).replace('.png', '.ts'), `${HEADER}\n\nexport default 'data:image/png;base64,${fs.readFileSync(path.join(dir, f)).toString('base64')}';\n`);
     }

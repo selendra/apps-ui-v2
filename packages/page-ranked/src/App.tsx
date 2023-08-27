@@ -51,28 +51,17 @@ function App ({ basePath, className, palletColl, palletPoll }: Props): React.Rea
           <Route
             element={
               <Referenda
-<<<<<<< HEAD
-                members={members && members.memberIds}
-                palletReferenda={palletPoll}
-                palletVote={palletColl}
-                ranks={members && members.memberRanks}
-=======
                 members={members?.memberIds}
                 palletReferenda={palletPoll}
                 palletVote={palletColl}
                 ranks={members?.memberRanks}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               />
             }
             path='referenda'
           />
           <Route
             element={
-<<<<<<< HEAD
-              <Members members={members && members.members} />
-=======
               <Members members={members?.members} />
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             }
             index
           />

@@ -3,11 +3,7 @@
 
 import type { OverrideBundleDefinition } from '@polkadot/types/types';
 
-<<<<<<< HEAD
-import definitions from '@digitalnative/type-definitions/standard/index.js';
-=======
 // @ts-expect-error No definitions provided in package
 import { standardTypes } from '@digitalnative/type-definitions';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 export default standardTypes as OverrideBundleDefinition;

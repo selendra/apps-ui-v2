@@ -51,11 +51,7 @@ function Hash ({ className }: Props): React.ReactElement<Props> {
         <Input
           autoFocus
           className='full'
-<<<<<<< HEAD
-          label={t<string>('from the following data')}
-=======
           label={t('from the following data')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={_onChangeData}
           value={data}
         />
@@ -63,11 +59,7 @@ function Hash ({ className }: Props): React.ReactElement<Props> {
       <div className='ui--row'>
         <Static
           className='medium'
-<<<<<<< HEAD
-          label={t<string>('hex input data')}
-=======
           label={t('hex input data')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={
             isHexData
               ? t('Yes')

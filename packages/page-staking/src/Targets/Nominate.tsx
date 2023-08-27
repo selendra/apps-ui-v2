@@ -65,11 +65,7 @@ function Nominate ({ className = '', isDisabled, ownNominators, targets }: Props
             <Modal.Columns hint={t('One of your available nomination accounts, keyed by the stash. The transaction will be sent from the controller.')}>
               <InputAddress
                 filter={stashes}
-<<<<<<< HEAD
-                label={t<string>('the stash account to nominate with')}
-=======
                 label={t('the stash account to nominate with')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={_onChangeStash}
                 value={ids?.stashId}
               />

@@ -9,10 +9,7 @@ import type { NominatedByMap, SortedTargets, TargetSortBy, ValidatorInfo } from 
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-<<<<<<< HEAD
-=======
 import Legend from '@polkadot/app-staking2/Legend';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { Button, Icon, styled, Table, Toggle } from '@polkadot/react-components';
 import { useApi, useAvailableSlashes, useBlocksPerDays, useSavedFlags } from '@polkadot/react-hooks';
 import { BN_HUNDRED } from '@polkadot/util';
@@ -20,10 +17,6 @@ import { BN_HUNDRED } from '@polkadot/util';
 import { MAX_NOMINATIONS } from '../constants.js';
 import ElectionBanner from '../ElectionBanner.js';
 import Filtering from '../Filtering.js';
-<<<<<<< HEAD
-import Legend from '../Legend.js';
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useTranslation } from '../translate.js';
 import useIdentities from '../useIdentities.js';
 import Nominate from './Nominate.js';
@@ -297,17 +290,10 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
   // False positive, this is part of the type...
   // eslint-disable-next-line func-call-spacing
   const header = useMemo<[React.ReactNode?, string?, number?, (() => void)?][]>(() => [
-<<<<<<< HEAD
-    [t<string>('validators'), 'start', 4],
-    [t<string>('payout'), 'media--1400'],
-    [t<string>('nominators'), 'media--1200', 2],
-    [t<string>('comm.'), 'media--1100'],
-=======
     [t('validators'), 'start', 4],
     [t('payout'), 'media--1400'],
     [t('nominators'), 'media--1200', 2],
     [t('comm.'), 'media--1100'],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     ...(SORT_KEYS as (keyof typeof labelsRef.current)[]).map((header): [React.ReactNode?, string?, number?, (() => void)?] => [
       <>{labelsRef.current[header]}<Icon icon={sortBy === header ? (sortFromMax ? 'chevron-down' : 'chevron-up') : 'minus'} /></>,
       `${sorted ? `isClickable ${sortBy === header ? 'highlight--border' : ''} number` : 'number'} ${CLASSES[header] || ''}`,
@@ -408,9 +394,9 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
         empty={sorted && t('No active validators to check')}
         emptySpinner={
           <>
-            {!(validators && allIdentity) && <div>{t<string>('Retrieving validators')}</div>}
-            {!nominatedBy && <div>{t<string>('Retrieving nominators')}</div>}
-            {!displayList && <div>{t<string>('Preparing target display')}</div>}
+            {!(validators && allIdentity) && <div>{t('Retrieving validators')}</div>}
+            {!nominatedBy && <div>{t('Retrieving nominators')}</div>}
+            {!displayList && <div>{t('Preparing target display')}</div>}
           </>
         }
         filter={filter}

@@ -214,11 +214,7 @@ function Modules ({ className = '', onAdd }: Props): React.ReactElement<Props> {
       <div className='storage--actionrow-value'>
         <InputStorage
           defaultValue={startValue}
-<<<<<<< HEAD
-          label={t<string>('selected state query')}
-=======
           label={t('selected state query')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={_onChangeKey}
         />
         <Params

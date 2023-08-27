@@ -92,7 +92,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
     if (files.length > 2000) {
       queueAction({
         action: 'Upload Folder',
-        message: t<string>('Please do not upload more than 2000 files'),
+        message: t('Please do not upload more than 2000 files'),
         status: 'error'
       });
 
@@ -102,7 +102,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
     if (files.length === 0) {
       queueAction({
         action: 'Upload Folder',
-        message: t<string>('Please select non-empty folder'),
+        message: t('Please select non-empty folder'),
         status: 'error'
       });
 
@@ -142,7 +142,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
   const _onImportResult = useCallback<(m: string, s?: ActionStatusBase['status']) => void>(
     (message, status = 'queued') => {
       queueAction && queueAction({
-        action: t<string>('Import files'),
+        action: t('Import files'),
         message,
         status
       });
@@ -159,7 +159,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
   }, [importInputRef]);
   const _onInputImportFile = useCallback<FunInputFile>((e) => {
     try {
-      _onImportResult(t<string>('Importing'));
+      _onImportResult(t('Importing'));
       const fileReader = new FileReader();
       const files = e.target.files;
 
@@ -170,14 +170,14 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
       fileReader.readAsText(files[0], 'UTF-8');
 
       if (!(/(.json)$/i.test(e.target.value))) {
-        return _onImportResult(t<string>('file error'), 'error');
+        return _onImportResult(t('file error'), 'error');
       }
 
       fileReader.onload = (e) => {
         const _list = JSON.parse(e.target?.result as string) as SaveFile[];
 
         if (!Array.isArray(_list)) {
-          return _onImportResult(t<string>('file content error'), 'error');
+          return _onImportResult(t('file content error'), 'error');
         }
 
         const fitter: SaveFile[] = [];
@@ -193,14 +193,10 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
         const filterOld = wFiles.files.filter((item) => !mapImport[item.Hash]);
 
         wFiles.setFiles([...fitter, ...filterOld]);
-        _onImportResult(t<string>('Import Success'), 'success');
+        _onImportResult(t('Import Success'), 'success');
       };
     } catch {
-<<<<<<< HEAD
-      _onImportResult(t<string>('file content error'), 'error');
-=======
       _onImportResult(t('file content error'), 'error');
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     }
   }, [wFiles, _onImportResult, t]);
 
@@ -247,29 +243,29 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
       <div className='uploadBtn'>
         <Button
           icon={'upload'}
-          label={t<string>('Upload')}
+          label={t('Upload')}
           onClick={Noop}
         />
         <div className='uploadMenu'>
           <div
             className='menuItem'
             onClick={onClickUpFile}
-          >{t<string>('File')}</div>
+          >{t('File')}</div>
           <div
             className='menuItem'
             onClick={onClickUpFolder}
-          >{t<string>('Folder')}</div>
+          >{t('Folder')}</div>
         </div>
       </div>
       <div style={{ flex: 1 }} />
       <Button
         icon={'file-import'}
-        label={t<string>('Import')}
+        label={t('Import')}
         onClick={_clickImport}
       />
       <Button
         icon={'file-export'}
-        label={t<string>('Export')}
+        label={t('Export')}
         onClick={_export}
       />
     </div>
@@ -277,12 +273,12 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
       empty={t('No files')}
       emptySpinner={t('Loading')}
       header={[
-        [t<string>('files'), 'start', 2],
-        [t<string>('file cid'), 'expand', 2],
+        [t('files'), 'start', 2],
+        [t('file cid'), 'expand', 2],
         [undefined, 'start'],
-        [t<string>('file size'), 'expand', 2],
-        [t<string>('status'), 'expand'],
-        [t<string>('action'), 'expand'],
+        [t('file size'), 'expand', 2],
+        [t('status'), 'expand'],
+        [t('action'), 'expand'],
         []
       ]}
     >
@@ -327,7 +323,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
               href={'https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/storage_files'}
               rel='noreferrer'
               target='_blank'
-            >{t<string>('View status in Crust')}</a>
+            >{t('View status in Crust')}</a>
           </td>
           <td
             className='end'
@@ -357,7 +353,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
       )}
     </Table>
     <div>
-      {t<string>('Note: The file list is cached locally, switching browsers or devices will not keep displaying the original browser information.')}
+      {t('Note: The file list is cached locally, switching browsers or devices will not keep displaying the original browser information.')}
     </div>
   </StyledMain>;
 }

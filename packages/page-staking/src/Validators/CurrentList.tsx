@@ -13,10 +13,6 @@ import { Table } from '@polkadot/react-components';
 import { useApi, useBlockAuthors, useNextTick } from '@polkadot/react-hooks';
 
 import Filtering from '../Filtering.js';
-<<<<<<< HEAD
-import Legend from '../Legend.js';
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useTranslation } from '../translate.js';
 import Address from './Address/index.js';
 
@@ -141,18 +137,6 @@ function CurrentList ({ className, favorites, hasQueries, isIntentions, isOwn, m
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>(
     isIntentions
       ? [
-<<<<<<< HEAD
-        [t<string>('intentions'), 'start', 3],
-        [t<string>('nominators'), 'expand'],
-        [t<string>('commission'), 'number'],
-        []
-      ]
-      : [
-        [t<string>('validators'), 'start', 3],
-        [t<string>('other stake'), 'expand'],
-        [t<string>('commission')],
-        [t<string>('last #')],
-=======
         [t('intentions'), 'start', 3],
         [t('nominators'), 'expand'],
         [t('commission'), 'number'],
@@ -163,7 +147,6 @@ function CurrentList ({ className, favorites, hasQueries, isIntentions, isOwn, m
         [t('other stake'), 'expand'],
         [t('commission')],
         [t('last #')],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         []
       ]
   );

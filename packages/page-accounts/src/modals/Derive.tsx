@@ -194,11 +194,7 @@ function Derive ({ className = '', from, onClose }: Props): React.ReactElement {
                 {sourceStatic}
                 <Input
                   autoFocus
-<<<<<<< HEAD
-                  label={t<string>('derivation path')}
-=======
                   label={t('derivation path')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   onChange={setSuri}
                   placeholder={t('//hard/soft')}
                 />

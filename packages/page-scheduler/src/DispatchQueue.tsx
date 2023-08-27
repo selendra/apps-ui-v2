@@ -27,13 +27,8 @@ function DispatchQueue ({ className }: Props): React.ReactElement<Props> | null 
   );
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('dispatch queue'), 'start', 2],
-    [t<string>('enact')],
-=======
     [t('dispatch queue'), 'start', 2],
     [t('enact')],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [],
     [undefined, 'media--1000']
   ]);

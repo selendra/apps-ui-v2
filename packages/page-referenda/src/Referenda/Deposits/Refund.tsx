@@ -35,11 +35,7 @@ function Refund ({ className = '', id, palletReferenda }: Props): React.ReactEle
           <Modal.Content>
             <Modal.Columns hint={t('The transaction will be submitted from this account.')}>
               <InputAddress
-<<<<<<< HEAD
-                label={t<string>('refund from account')}
-=======
                 label={t('refund from account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setAccountId}
                 type='account'
               />

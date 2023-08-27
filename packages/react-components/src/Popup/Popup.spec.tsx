@@ -7,11 +7,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import React, { Suspense } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-<<<<<<< HEAD
-import { lightTheme } from '@polkadot/apps/themes';
-=======
 import { lightTheme } from '@polkadot/react-components';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import i18next from '@polkadot/react-components/i18n';
 
 import Popup from './index.js';

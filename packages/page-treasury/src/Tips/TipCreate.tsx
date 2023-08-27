@@ -60,11 +60,7 @@ function TipCreate ({ members }: Props): React.ReactElement<Props> | null {
           <Modal.Content>
             <Modal.Columns hint={t('Use this account to request the tip from. This can be a normal or council account.')}>
               <InputAddress
-<<<<<<< HEAD
-                label={t<string>('submit with account')}
-=======
                 label={t('submit with account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setAccountId}
                 type='account'
                 withLabel
@@ -72,11 +68,7 @@ function TipCreate ({ members }: Props): React.ReactElement<Props> | null {
             </Modal.Columns>
             <Modal.Columns hint={t('The beneficiary will received the tip as approved by council members.')}>
               <InputAddress
-<<<<<<< HEAD
-                label={t<string>('beneficiary')}
-=======
                 label={t('beneficiary')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setBeneficiary}
                 type='allPlus'
               />

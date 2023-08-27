@@ -41,11 +41,7 @@ function Pool ({ className = '', members, ownAccounts, params, poolId }: Props):
   );
 
   const renderNominees = useCallback(
-<<<<<<< HEAD
-    () => info && info.nominating.map((stashId, count): React.ReactNode => (
-=======
     () => info?.nominating.map((stashId, count): React.ReactNode => (
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       <AddressMini
         key={`${count}:${stashId}`}
         value={stashId}
@@ -120,47 +116,35 @@ function Pool ({ className = '', members, ownAccounts, params, poolId }: Props):
         <StyledTr className={`${className} isExpanded isLast`}>
           <td colSpan={4}>
             <div className='label-column-right'>
-              <div className='label'>{t<string>('creator')}</div>
+              <div className='label'>{t('creator')}</div>
               <div className='inline-balance'><AddressMini value={info.bonded.roles.depositor} /></div>
             </div>
             {info.bonded.roles.root.isSome && (
               <div className='label-column-right'>
-<<<<<<< HEAD
-                <div className='label'>{t<string>('root')}</div>
-=======
                 <div className='label'>{t('root')}</div>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 <div className='inline-balance'><AddressMini value={info.bonded.roles.root.unwrap()} /></div>
               </div>
             )}
             {info.bonded.roles.nominator.isSome && (
               <div className='label-column-right'>
-<<<<<<< HEAD
-                <div className='label'>{t<string>('nominator')}</div>
-=======
                 <div className='label'>{t('nominator')}</div>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 <div className='inline-balance'><AddressMini value={info.bonded.roles.nominator.unwrap()} /></div>
               </div>
             )}
             {(info.bonded.roles as { stateToggler?: { isSome: boolean } }).stateToggler?.isSome && (
               <div className='label-column-right'>
-<<<<<<< HEAD
-                <div className='label'>{t<string>('toggler')}</div>
-=======
                 <div className='label'>{t('toggler')}</div>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 <div className='inline-balance'><AddressMini value={(info.bonded.roles as unknown as { stateToggler: { unwrap: () => string } }).stateToggler.unwrap()} /></div>
               </div>
             )}
           </td>
           <td colSpan={4}>
             <div className='label-column-right'>
-              <div className='label'>{t<string>('stash')}</div>
+              <div className='label'>{t('stash')}</div>
               <div className='inline-balance'><AddressMini value={info.stashId} /></div>
             </div>
             <div className='label-column-right'>
-              <div className='label'>{t<string>('rewards')}</div>
+              <div className='label'>{t('rewards')}</div>
               <div className='inline-balance'><AddressMini value={info.rewardId} /></div>
             </div>
           </td>

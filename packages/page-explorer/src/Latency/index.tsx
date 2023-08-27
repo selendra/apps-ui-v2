@@ -123,18 +123,6 @@ function Latency ({ className }: Props): React.ReactElement<Props> {
   const [legend, title] = useMemo(
     () => [
       {
-<<<<<<< HEAD
-        blocks: [t<string>('bytes'), t<string>('average')],
-        events: [t<string>('events'), t<string>('system'), t<string>('average')],
-        extrinsics: [t<string>('extrinsics'), t<string>('average')],
-        times: [t<string>('blocktime'), t<string>('average')]
-      },
-      {
-        blocks: t<string>('blocksize (last {{n}} blocks)', { replace: { n: maxItems } }),
-        events: t<string>('events (last {{n}} blocks)', { replace: { n: maxItems } }),
-        extrinsics: t<string>('extrinsics (last {{n}} blocks)', { replace: { n: maxItems } }),
-        times: t<string>('blocktimes (last {{n}} blocks)', { replace: { n: maxItems } })
-=======
         blocks: [t('bytes'), t('average')],
         events: [t('events'), t('system'), t('average')],
         extrinsics: [t('extrinsics'), t('average')],
@@ -145,7 +133,6 @@ function Latency ({ className }: Props): React.ReactElement<Props> {
         events: t('events (last {{n}} blocks)', { replace: { n: maxItems } }),
         extrinsics: t('extrinsics (last {{n}} blocks)', { replace: { n: maxItems } }),
         times: t('blocktimes (last {{n}} blocks)', { replace: { n: maxItems } })
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       }
     ],
     [maxItems, t]
@@ -157,11 +144,7 @@ function Latency ({ className }: Props): React.ReactElement<Props> {
     <StyledDiv className={className}>
       <SummaryBox>
         <section>
-<<<<<<< HEAD
-          <CardSummary label={t<string>('avg')}>
-=======
           <CardSummary label={t('avg')}>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             {isLoaded
               ? formatTime(timeAvg)
               : EMPTY_TIME}
@@ -176,31 +159,19 @@ function Latency ({ className }: Props): React.ReactElement<Props> {
           </CardSummary>
         </section>
         <section>
-<<<<<<< HEAD
-          <CardSummary label={t<string>('min')}>
-=======
           <CardSummary label={t('min')}>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             {isLoaded
               ? formatTime(timeMin)
               : EMPTY_TIME}
           </CardSummary>
-<<<<<<< HEAD
-          <CardSummary label={t<string>('max')}>
-=======
           <CardSummary label={t('max')}>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             {isLoaded
               ? formatTime(timeMax)
               : EMPTY_TIME
             }
           </CardSummary>
         </section>
-<<<<<<< HEAD
-        <CardSummary label={t<string>('last')}>
-=======
         <CardSummary label={t('last')}>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           {isLoaded
             ? formatTime(points.blockLast, 1)
             : EMPTY_TIME}

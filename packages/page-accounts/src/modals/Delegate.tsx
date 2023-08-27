@@ -73,7 +73,7 @@ function Delegate ({ onClose, previousAmount, previousConviction, previousDelega
             value={delegatedAccount}
           />
         </Modal.Columns>
-        <Modal.Columns hint={t<string>('The amount to allocate and the conviction that will be applied to all votes made on a referendum.')}>
+        <Modal.Columns hint={t('The amount to allocate and the conviction that will be applied to all votes made on a referendum.')}>
           <InputBalance
             autoFocus
             isError={!!amountError?.error}
@@ -95,11 +95,7 @@ function Delegate ({ onClose, previousAmount, previousConviction, previousDelega
             onError={setAmountError}
           />
           <ConvictionDropdown
-<<<<<<< HEAD
-            label={t<string>('conviction')}
-=======
             label={t('conviction')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setConviction}
             value={conviction}
             voteLockingPeriod={

@@ -15,27 +15,17 @@ import { ApiPromise, ScProvider, WsProvider } from '@polkadot/api';
 import { deriveMapCache, setDeriveCache } from '@polkadot/api-derive/util';
 import { ethereumChains, typesBundle } from '@polkadot/apps-config';
 import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
-<<<<<<< HEAD
-import { TokenUnit } from '@polkadot/react-components/InputNumber';
-import { useApiUrl, useEndpoint, useQueue } from '@polkadot/react-hooks';
-import { ApiSigner } from '@polkadot/react-signer';
-=======
 import { TokenUnit } from '@polkadot/react-components/InputConsts/units';
 import { useApiUrl, useEndpoint, useQueue } from '@polkadot/react-hooks';
 import { ApiCtx } from '@polkadot/react-hooks/ctx/Api';
 import { ApiSigner } from '@polkadot/react-signer/signers';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { keyring } from '@polkadot/ui-keyring';
 import { settings } from '@polkadot/ui-settings';
 import { formatBalance, isNumber, isTestChain, objectSpread, stringify } from '@polkadot/util';
 import { defaults as addressDefaults } from '@polkadot/util-crypto/address/defaults';
 
 import { lightSpecs, relaySpecs } from './light/index.js';
-<<<<<<< HEAD
-import { registry } from './typeRegistry.js';
-=======
 import { statics } from './statics.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { decodeUrlTypes } from './urlTypes.js';
 
 interface Props {
@@ -67,17 +57,8 @@ export const DEFAULT_DECIMALS = statics.registry.createType('u32', 12);
 export const DEFAULT_SS58 = statics.registry.createType('u32', addressDefaults.prefix);
 export const DEFAULT_AUX = ['Aux1', 'Aux2', 'Aux3', 'Aux4', 'Aux5', 'Aux6', 'Aux7', 'Aux8', 'Aux9'];
 
-export const ApiCtx = React.createContext<ApiProps>({} as unknown as ApiProps);
-
 const DISALLOW_EXTENSIONS: string[] = [];
 const EMPTY_STATE = { hasInjectedAccounts: false, isApiReady: false } as unknown as ApiState;
-<<<<<<< HEAD
-
-let api: ApiPromise;
-
-export { api, registry };
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 function isKeyringLoaded () {
   try {
@@ -294,11 +275,7 @@ export function ApiCtxRoot ({ apiUrl, children, isElectron, store }: Props): Rea
     [apiUrl, isElectron]
   );
   const value = useMemo<ApiProps>(
-<<<<<<< HEAD
-    () => objectSpread({}, state, { api, apiEndpoint, apiError, apiRelay, apiUrl, createLink, extensions, isApiConnected, isApiInitialized, isElectron, isWaitingInjected: !extensions }),
-=======
     () => objectSpread({}, state, { api: statics.api, apiEndpoint, apiError, apiRelay, apiUrl, createLink, extensions, isApiConnected, isApiInitialized, isElectron, isWaitingInjected: !extensions }),
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [apiError, createLink, extensions, isApiConnected, isApiInitialized, isElectron, state, apiEndpoint, apiRelay, apiUrl]
   );
 
@@ -310,11 +287,7 @@ export function ApiCtxRoot ({ apiUrl, children, isElectron, store }: Props): Rea
       setApiError((error as Error).message);
     };
 
-<<<<<<< HEAD
-    createApi(apiUrl, new ApiSigner(registry, queuePayload, queueSetTxStatus), onError)
-=======
     createApi(apiUrl, new ApiSigner(statics.registry, queuePayload, queueSetTxStatus), onError)
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       .then((types): void => {
         statics.api.on('connected', () => setIsApiConnected(true));
         statics.api.on('disconnected', () => setIsApiConnected(false));

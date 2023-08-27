@@ -66,26 +66,16 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
 
   const storageOptions = useMemo(
     () => [
-<<<<<<< HEAD
-      { text: t<string>('Allow local in-browser account storage'), value: 'on' },
-      { text: t<string>('Do not allow local in-browser account storage'), value: 'off' }
-=======
       { text: t('Allow local in-browser account storage'), value: 'on' },
       { text: t('Do not allow local in-browser account storage'), value: 'off' }
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     ],
     [t]
   );
 
   const themeOptions = useMemo(
     () => [
-<<<<<<< HEAD
-      { text: t<string>('Light theme'), value: 'light' },
-      { text: t<string>('Dark theme'), value: 'dark' }
-=======
       { text: t('Light theme'), value: 'light' },
       { text: t('Dark theme'), value: 'dark' }
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     ],
     [t]
   );
@@ -128,19 +118,11 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
 
   return (
     <div className={className}>
-<<<<<<< HEAD
-      <h1>{t<string>('UI options')}</h1>
-      <div className='ui--row'>
-        <Dropdown
-          defaultValue={state.icon}
-          label={t<string>('default icon theme')}
-=======
       <h1>{t('UI options')}</h1>
       <div className='ui--row'>
         <Dropdown
           defaultValue={state.icon}
           label={t('default icon theme')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={_handleChange('icon')}
           options={iconOptions}
         />
@@ -148,11 +130,7 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
       <div className='ui--row'>
         <Dropdown
           defaultValue={state.uiTheme}
-<<<<<<< HEAD
-          label={t<string>('default interface theme')}
-=======
           label={t('default interface theme')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={_handleChange('uiTheme')}
           options={themeOptions}
         />
@@ -160,28 +138,16 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
       <div className='ui--row'>
         <Dropdown
           defaultValue={state.i18nLang}
-<<<<<<< HEAD
-          label={t<string>('default interface language')}
-=======
           label={t('default interface language')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={_handleChange('i18nLang')}
           options={translateLanguages}
         />
       </div>
-<<<<<<< HEAD
-      <h1>{t<string>('account options')}</h1>
-      <div className='ui--row'>
-        <Dropdown
-          defaultValue={state.prefix}
-          label={t<string>('address prefix')}
-=======
       <h1>{t('account options')}</h1>
       <div className='ui--row'>
         <Dropdown
           defaultValue={state.prefix}
           label={t('address prefix')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onChange={_handleChange('prefix')}
           options={prefixOptions}
         />
@@ -191,22 +157,14 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
           <div className='ui--row'>
             <Dropdown
               defaultValue={state.storage}
-<<<<<<< HEAD
-              label={t<string>('in-browser account creation')}
-=======
               label={t('in-browser account creation')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={_handleChange('storage')}
               options={storageOptions}
             />
           </div>
           {state.storage === 'on' && (
             <div className='ui--row'>
-<<<<<<< HEAD
-              <MarkWarning content={t<string>('It is recommended that you store all keys externally to the in-page browser local storage, either on browser extensions, signers operating via QR codes or hardware devices. This option is provided for advanced users with strong backup policies.')} />
-=======
               <MarkWarning content={t('It is recommended that you store all keys externally to the in-page browser local storage, either on browser extensions, signers operating via QR codes or hardware devices. This option is provided for advanced users with strong backup policies.')} />
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             </div>
           )}
         </>
@@ -236,11 +194,7 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
               : null
             : (
               <div className='ui--row'>
-<<<<<<< HEAD
-                <MarkWarning content={t<string>('Ledger hardware device support is only available on Chromium-based browsers where WebUSB and WebHID support is available in the browser.')} />
-=======
                 <MarkWarning content={t('Ledger hardware device support is only available on Chromium-based browsers where WebUSB and WebHID support is available in the browser.')} />
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               </div>
             )
           }

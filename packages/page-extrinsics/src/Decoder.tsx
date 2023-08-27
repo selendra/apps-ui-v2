@@ -9,14 +9,9 @@ import type { DecodedExtrinsic } from './types.js';
 import React, { useCallback, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-<<<<<<< HEAD
-import { Call as CallDisplay, Input, InputExtrinsic, MarkError, styled } from '@polkadot/react-components';
-import { useApi } from '@polkadot/react-hooks';
-=======
 import { Input, InputExtrinsic, MarkError, styled } from '@polkadot/react-components';
 import { useApi } from '@polkadot/react-hooks';
 import { Call as CallDisplay } from '@polkadot/react-params';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { assert, compactToU8a, isHex, u8aConcat, u8aEq } from '@polkadot/util';
 
 import Decoded from './Decoded.js';

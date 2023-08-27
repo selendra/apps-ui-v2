@@ -10,10 +10,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useApi } from '@polkadot/react-hooks';
 import { BN, BN_ONE, BN_TEN, BN_TWO, BN_ZERO, formatBalance, isBn, isUndefined } from '@polkadot/util';
 
-<<<<<<< HEAD
-=======
 import { TokenUnit } from './InputConsts/units.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import Input, { KEYS_PRE } from './Input.js';
 import { styled } from './styled.js';
 import { useTranslation } from './translate.js';

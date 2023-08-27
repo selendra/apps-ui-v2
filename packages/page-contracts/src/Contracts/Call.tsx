@@ -160,11 +160,7 @@ function Call ({ className = '', contract, messageIndex, onCallResult, onChangeM
   return (
     <StyledModal
       className={`${className} app--contracts-Modal`}
-<<<<<<< HEAD
-      header={t<string>('Call a contract')}
-=======
       header={t('Call a contract')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       onClose={onClose}
     >
       <Modal.Content>
@@ -176,11 +172,7 @@ function Call ({ className = '', contract, messageIndex, onCallResult, onChangeM
         />
         <InputAddress
           defaultValue={accountId}
-<<<<<<< HEAD
-          label={t<string>('call from account')}
-=======
           label={t('call from account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           labelExtra={
             <Available
               label={t('transferrable')}
@@ -273,7 +265,7 @@ function Call ({ className = '', contract, messageIndex, onCallResult, onChangeM
               extrinsic={execTx}
               icon='sign-in-alt'
               isDisabled={!isValid || !execTx}
-              label={t<string>('Execute')}
+              label={t('Execute')}
               onStart={onClose}
             />
           )

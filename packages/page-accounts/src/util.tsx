@@ -116,12 +116,3 @@ export function sortAccounts (accountsList: SortedAccount[], accountsMap: Record
           ? 1
           : -1);
 }
-<<<<<<< HEAD
-
-export function getJudgementColor (name: DisplayedJudgement): 'green' | 'red' {
-  return (name === 'Erroneous' || name === 'Low quality')
-    ? 'red'
-    : 'green';
-}
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f

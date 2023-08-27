@@ -6,16 +6,10 @@ import type { DisplayedJudgement } from '../types.js';
 
 import React, { useMemo } from 'react';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/JudgementTag.tsx
-import { AddressSmall, Menu, Popup, Tag } from '@polkadot/react-components';
-
-import { getJudgementColor } from '../util.js';
-=======
 import AddressSmall from '../AddressSmall.js';
 import Menu from '../Menu/index.js';
 import Popup from '../Popup/index.js';
 import Tag from '../Tag.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/JudgementTag.tsx
 
 interface Props {
   judgement: Judgement

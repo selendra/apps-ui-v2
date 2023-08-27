@@ -105,7 +105,7 @@ function Code ({ className, code, onShowDeploy }: Props): React.ReactElement<Pro
         {!contractAbi && (
           <Button
             icon='upload'
-            label={t<string>('deploy')}
+            label={t('deploy')}
             onClick={_onShowDeploy}
           />
         )}

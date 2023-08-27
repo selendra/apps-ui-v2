@@ -57,17 +57,10 @@ function RecoverSetup ({ address, className = '', onClose }: Props): React.React
         >
           <InputAddressMulti
             available={availableHelpers}
-<<<<<<< HEAD
-            availableLabel={t<string>('available social recovery helpers')}
-            maxCount={MAX_HELPERS}
-            onChange={setHelpers}
-            valueLabel={t<string>('trusted social recovery helpers')}
-=======
             availableLabel={t('available social recovery helpers')}
             maxCount={MAX_HELPERS}
             onChange={setHelpers}
             valueLabel={t('trusted social recovery helpers')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           />
         </Modal.Columns>
         <Modal.Columns hint={t('The threshold for approvals and the delay is the protection associated with the account. The delay should be such that any colluding recovery attempts does have a window to stop.')}>

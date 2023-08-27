@@ -40,11 +40,6 @@ const StyledDiv = styled.div`
   white-space: nowrap;
   top: 0;
 
-
-  .kcpfoD {
-    background: none;
-  }
-
   div {
     display: inline-block;
     vertical-align: middle;

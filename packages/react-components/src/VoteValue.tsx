@@ -29,11 +29,7 @@ interface ValueState {
   value: BN;
 }
 
-<<<<<<< HEAD
-const LOCKS_ORDERED = ['pyconvot', 'democrac', 'phrelect'];
-=======
 const LOCKS_ORDERED = ['pyconvot', 'democrac', 'phrelect'] as const;
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 function getValues (selectedId: string | null | undefined, noDefault: boolean | undefined, allBalances: DeriveBalancesAll, existential: BN): ValueState {
   const sortedLocks = allBalances.lockedBreakdown
@@ -44,11 +40,7 @@ function getValues (selectedId: string | null | undefined, noDefault: boolean | 
     // then sort by the type of lock (we try to find relevant)
     .sort((a, b): number => {
       if (!a.id.eq(b.id)) {
-<<<<<<< HEAD
-        for (let i = 0; i < LOCKS_ORDERED.length; i++) {
-=======
         for (let i = 0, count = LOCKS_ORDERED.length; i < count; i++) {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           const lockName = LOCKS_ORDERED[i];
 
           if (a.id.eq(lockName)) {
@@ -134,11 +126,7 @@ function VoteValue ({ accountId, autoFocus, label, noDefault, onChange }: Props)
       label={label || t('vote value')}
       labelExtra={
         <BalanceVoting
-<<<<<<< HEAD
-          label={<label>{t<string>('voting balance')}</label>}
-=======
           label={<label>{t('voting balance')}</label>}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           params={accountId}
         />
       }

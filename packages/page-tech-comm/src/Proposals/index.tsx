@@ -23,19 +23,11 @@ function Proposals ({ className = '', defaultProposal, defaultThreshold, filter,
   const { t } = useTranslation();
 
   const headerRef = useRef<[React.ReactNode?, string?, number?][]>([
-<<<<<<< HEAD
-    [t<string>('proposals'), 'start', 2],
-    [t<string>('threshold')],
-    [t<string>('voting end')],
-    [t<string>('aye'), 'address'],
-    [t<string>('nay'), 'address'],
-=======
     [t('proposals'), 'start', 2],
     [t('threshold')],
     [t('voting end')],
     [t('aye'), 'address'],
     [t('nay'), 'address'],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     []
   ]);
 

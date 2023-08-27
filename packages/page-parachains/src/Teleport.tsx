@@ -186,11 +186,7 @@ function Teleport ({ onClose }: Props): React.ReactElement<Props> | null {
             defaultValue={destApi?.consts.balances?.existentialDeposit}
             isDisabled
             isLoading={!destApi}
-<<<<<<< HEAD
-            label={t<string>('destination existential deposit')}
-=======
             label={t('destination existential deposit')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           />
         </Modal.Columns>
       </Modal.Content>

@@ -10,10 +10,7 @@ import { useApi } from '@polkadot/react-hooks';
 import { isHex } from '@polkadot/util';
 
 import { useTranslation } from '../../translate.js';
-<<<<<<< HEAD
-=======
 import SenderInfo from './SenderInfo.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 interface Props {
   className?: string;

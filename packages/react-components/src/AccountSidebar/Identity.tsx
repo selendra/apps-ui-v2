@@ -9,13 +9,10 @@ import { useApi, useRegistrars, useSubidentities, useToggle } from '@polkadot/re
 import { AddressIdentityOtherDiscordKey } from '@polkadot/react-hooks/types';
 import { isHex } from '@polkadot/util';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/Identity.tsx
-=======
 import AddressMini from '../AddressMini.js';
 import AvatarItem from '../AvatarItem.js';
 import Expander from '../Expander.js';
 import IconLink from '../IconLink.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/Identity.tsx
 import { useTranslation } from '../translate.js';
 import Judgements from './Judgements.js';
 import RegistrarJudgement from './RegistrarJudgement.js';
@@ -147,11 +144,7 @@ function Identity ({ address, identity }: Props): React.ReactElement<Props> | nu
             )}
             {identity.other && AddressIdentityOtherDiscordKey in identity.other && (
               <div className='tr'>
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/Identity.tsx
-                <div className='th'>{t<string>('discord')}</div>
-=======
                 <div className='th'>{t('discord')}</div>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/Identity.tsx
                 <div className='td'>
                   {identity.other[AddressIdentityOtherDiscordKey]}
                 </div>

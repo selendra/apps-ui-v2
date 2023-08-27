@@ -3,11 +3,8 @@
 
 /// <reference types="@polkadot/dev-test/globals.d.ts" />
 
-<<<<<<< HEAD
-=======
 /* eslint-disable jest/expect-expect */
 
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { ApiPromise } from '@polkadot/api';
 import type { SubmittableExtrinsic } from '@polkadot/api/types';
 import type { DeriveCollectiveProposal } from '@polkadot/api-derive/types';

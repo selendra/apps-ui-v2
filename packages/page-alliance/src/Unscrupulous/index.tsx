@@ -20,19 +20,11 @@ function Unscrupulous ({ className, unscrupulous }: Props): React.ReactElement<P
   const { t } = useTranslation();
 
   const accRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('accounts'), 'start']
-  ]);
-
-  const webRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-    [t<string>('websites'), 'start']
-=======
     [t('accounts'), 'start']
   ]);
 
   const webRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
     [t('websites'), 'start']
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (

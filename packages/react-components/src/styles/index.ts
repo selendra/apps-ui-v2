@@ -1,11 +1,6 @@
 // Copyright 2017-2023 @polkadot/react-components authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-<<<<<<< HEAD
-import type { ThemeProps } from '../types.js';
-
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { createGlobalStyle } from 'styled-components';
 
 import cssComponents from './components.js';
@@ -566,9 +561,5 @@ export default createGlobalStyle<Props>(({ uiHighlight }: Props) => `
   ${cssTheme}
   ${cssForm}
   ${cssMedia}
-<<<<<<< HEAD
-  ${cssComponents(theme)}
-=======
   ${cssComponents}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 `);

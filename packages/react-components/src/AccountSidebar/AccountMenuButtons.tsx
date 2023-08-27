@@ -2,16 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { AddressFlags } from '@polkadot/react-hooks/types';
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/AccountMenuButtons.tsx
-
-import React, { useCallback } from 'react';
-
-import { Button, styled } from '@polkadot/react-components';
-import { useApi, useToggle } from '@polkadot/react-hooks';
-import { isFunction } from '@polkadot/util';
-
-import Transfer from '../modals/Transfer.js';
-=======
 
 import React, { useCallback } from 'react';
 
@@ -21,7 +11,6 @@ import { isFunction } from '@polkadot/util';
 import Button from '../Button/index.js';
 import { TransferModal } from '../modals/index.js';
 import { styled } from '../styled.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/AccountMenuButtons.tsx
 import { useTranslation } from '../translate.js';
 
 interface Props {

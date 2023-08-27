@@ -6,11 +6,7 @@ import type { BN } from '@polkadot/util';
 
 import React, { useCallback, useState } from 'react';
 
-<<<<<<< HEAD
-import { Button, Extrinsic, Icon, InputNumber, styled, Toggle, TxButton } from '@polkadot/react-components';
-=======
 import { Button, Icon, InputNumber, styled, Toggle, TxButton } from '@polkadot/react-components';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useApi, useToggle } from '@polkadot/react-hooks';
 import { Extrinsic } from '@polkadot/react-params';
 import { BN_ZERO, isFunction } from '@polkadot/util';
@@ -53,19 +49,11 @@ function Sudo ({ className, isMine, sudoKey }: Props): React.ReactElement<Props>
             isDisabled={!withWeight}
             isError={weight.eq(BN_ZERO)}
             isZeroable={false}
-<<<<<<< HEAD
-            label={t<string>('unchecked weight for this call')}
-            labelExtra={
-              <Toggle
-                className='sudoToggle'
-                label={t<string>('with weight override')}
-=======
             label={t('unchecked weight for this call')}
             labelExtra={
               <Toggle
                 className='sudoToggle'
                 label={t('with weight override')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={toggleWithWeight}
                 value={withWeight}
               />

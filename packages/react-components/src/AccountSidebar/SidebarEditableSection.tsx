@@ -6,10 +6,7 @@ import React, { useCallback, useEffect, useMemo } from 'react';
 import { useAccountInfo, useOutsideClick } from '@polkadot/react-hooks';
 import { keyring } from '@polkadot/ui-keyring';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/SidebarEditableSection.tsx
-=======
 import Tags from '../Tags.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/SidebarEditableSection.tsx
 import AccountMenuButtons from './AccountMenuButtons.js';
 import AddressSection from './AddressSection.js';
 import Flags from './Flags.js';

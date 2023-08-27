@@ -84,11 +84,7 @@ function Claim ({ accountId, className = '', ethereumAddress, ethereumSignature,
       isSuccess={hasClaim}
     >
       <StyledDiv className={className}>
-<<<<<<< HEAD
-        {t<string>('Your Ethereum account')}
-=======
         {t('Your Ethereum account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         <h2>{addrToChecksum(ethereumAddress.toString())}</h2>
         {hasClaim
           ? (
@@ -99,7 +95,7 @@ function Claim ({ accountId, className = '', ethereumAddress, ethereumSignature,
                 <TxButton
                   icon='paper-plane'
                   isUnsigned
-                  label={t<string>('Claim')}
+                  label={t('Claim')}
                   onSuccess={onSuccess}
                   {...constructTx(api, systemChain, accountId, ethereumSignature, statementKind, isOldClaimProcess)}
                 />

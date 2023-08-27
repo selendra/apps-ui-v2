@@ -1,20 +1,6 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "baseUrl": "./packages",
-    "composite": true,
-    "outDir": "./build",
-    /*
-     * We have a couple of issues that forces us to disable this -
-     *  1. apps-electron is still CJS
-     *  2. some of our packaged dependencies are problematic
-     *
-     * (also disabled in tsconfig.json)
-     */
-    "verbatimModuleSyntax": false
-=======
     "composite": true
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   },
   "files": [],
   "references": [

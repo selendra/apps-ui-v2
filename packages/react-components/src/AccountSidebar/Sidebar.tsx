@@ -3,20 +3,12 @@
 
 import React, { useRef, useState } from 'react';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/Sidebar.tsx
-import { LinkExternal, styled } from '@polkadot/react-components';
-import Sidebar from '@polkadot/react-components/Sidebar';
-import { colorLink } from '@polkadot/react-components/styles/theme';
-import { useAccountInfo } from '@polkadot/react-hooks';
-
-=======
 import { useAccountInfo } from '@polkadot/react-hooks';
 
 import LinkExternal from '../LinkExternal.js';
 import Sidebar from '../Sidebar.js';
 import { styled } from '../styled.js';
 import { colorLink } from '../styles/theme.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/Sidebar.tsx
 import Balances from './Balances.js';
 import Identity from './Identity.js';
 import Multisig from './Multisig.js';

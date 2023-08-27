@@ -6,14 +6,9 @@ import type { BN } from '@polkadot/util';
 
 import React, { useMemo } from 'react';
 
-<<<<<<< HEAD:packages/react-components/src/CallExpander.tsx
-import CallDisplay from './Call.js';
-import Expander from './Expander.js';
-=======
 import { Expander } from '@polkadot/react-components';
 
 import CallDisplay from './Call.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-params/src/Named/CallExpander.tsx
 
 interface Props {
   children?: React.ReactNode;

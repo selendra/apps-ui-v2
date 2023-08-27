@@ -1,11 +1,8 @@
 // Copyright 2017-2023 @polkadot/app-addresses authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-<<<<<<< HEAD
-=======
 /* global jest */
 
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { Row } from '@polkadot/test-support/pagesElements';
 import type { AccountOverrides as ContactOverrides } from '@polkadot/test-support/types';
 

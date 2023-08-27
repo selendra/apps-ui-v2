@@ -49,11 +49,7 @@ function Seconding ({ deposit, depositors, image, proposalId }: Props): React.Re
             </Modal.Columns>
             <Modal.Columns hint={t('Endorsing a proposal that indicates your backing for the proposal. Proposals with greater interest moves up the queue for potential next referendums.')}>
               <InputAddress
-<<<<<<< HEAD
-                label={t<string>('endorse with account')}
-=======
                 label={t('endorse with account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setAccountId}
                 type='account'
                 withLabel

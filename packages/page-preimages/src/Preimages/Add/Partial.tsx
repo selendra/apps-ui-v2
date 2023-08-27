@@ -96,20 +96,12 @@ function Partial ({ className, onChange }: Props): React.ReactElement<Props> {
           onChange={setProposal}
         />
         <Static
-<<<<<<< HEAD
-          label={t<string>('preimage hash')}
-=======
           label={t('preimage hash')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={encodedHash}
           withCopy
         />
         <Static
-<<<<<<< HEAD
-          label={t<string>('preimage length')}
-=======
           label={t('preimage length')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           value={encodedLength || '0'}
           withCopy
         />

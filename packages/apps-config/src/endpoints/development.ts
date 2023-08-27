@@ -4,7 +4,7 @@
 import type { TFunction } from '../types.js';
 import type { LinkOption } from './types.js';
 
-export const CUSTOM_ENDPOINT_KEY = 'polkadot-app-custom-endpoints';
+export const CUSTOM_ENDPOINT_KEY = 'selendra-app-custom-endpoints';
 
 interface EnvWindow {
   // eslint-disable-next-line camelcase

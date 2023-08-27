@@ -51,22 +51,13 @@ function ReferendumVotes ({ className, count, isAye, total, votes }: Props): Rea
   return (
     <ExpanderScroll
       className={className}
-<<<<<<< HEAD
-      empty={votes && t<string>('No voters')}
-=======
       empty={votes && t('No voters')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       // help={change.gtn(0) && (
       //   <>
       //     <FormatBalance value={change} />
       //     <p>{isWinning
-<<<<<<< HEAD
-      //       ? t<string>('The amount this total can be reduced by to change the referendum outcome. This assumes changes to the convictions of the existing votes, with no additional turnout.')
-      //       : t<string>('The amount this total should be increased by to change the referendum outcome. This assumes additional turnout with new votes at 1x conviction.')
-=======
       //       ? t('The amount this total can be reduced by to change the referendum outcome. This assumes changes to the convictions of the existing votes, with no additional turnout.')
       //       : t('The amount this total should be increased by to change the referendum outcome. This assumes additional turnout with new votes at 1x conviction.')
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       //     }</p>
       //   </>
       // )}

@@ -14,15 +14,6 @@
   },
   "sideEffects": false,
   "type": "module",
-<<<<<<< HEAD
-  "version": "0.129.2-0-x",
-  "dependencies": {
-    "@testing-library/react": "^14.0.0",
-    "testcontainers": "^9.5.0"
-  },
-  "devDependencies": {
-    "@polkadot/types-support": "^10.5.1",
-=======
   "version": "0.132.2-70-x",
   "dependencies": {
     "@testing-library/react": "^14.0.0",
@@ -30,7 +21,6 @@
   },
   "devDependencies": {
     "@polkadot/types-support": "^10.9.1",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     "@testing-library/jest-dom": "^5.16.5",
     "tsconfig-paths": "^4.2.0"
   },

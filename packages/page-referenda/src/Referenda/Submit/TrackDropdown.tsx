@@ -28,11 +28,7 @@ function TrackDropdown ({ className, exclude, include, onChange, palletReferenda
     <Dropdown
       className={className}
       defaultValue={trackOpts[0].value}
-<<<<<<< HEAD
-      label={t<string>('submission track')}
-=======
       label={t('submission track')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       onChange={onChange}
       options={trackOpts}
     />

@@ -7,11 +7,7 @@ import type { HexString } from '@polkadot/util/types';
 
 import React, { useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-import { Extrinsic, InputAddress, InputBalance, Modal, Static, styled, TxButton } from '@polkadot/react-components';
-=======
 import { InputAddress, InputBalance, Modal, Static, styled, TxButton } from '@polkadot/react-components';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import { useApi } from '@polkadot/react-hooks';
 import { Extrinsic } from '@polkadot/react-params';
 import { Available } from '@polkadot/react-query';
@@ -74,11 +70,7 @@ function PreImage ({ className = '', imageHash, isImminent = false, onClose }: P
       <Modal.Content>
         <Modal.Columns hint={t('This account will pay the fees for the preimage, based on the size thereof.')}>
           <InputAddress
-<<<<<<< HEAD
-            label={t<string>('send from account')}
-=======
             label={t('send from account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             labelExtra={
               <Available
                 label={<span className='label'>{t('transferrable')}</span>}
@@ -102,11 +94,7 @@ function PreImage ({ className = '', imageHash, isImminent = false, onClose }: P
             onChange={setProposal}
           />
           <Static
-<<<<<<< HEAD
-            label={t<string>('preimage hash')}
-=======
             label={t('preimage hash')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             value={encodedHash}
             withCopy
           />

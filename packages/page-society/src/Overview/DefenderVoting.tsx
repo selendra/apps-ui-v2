@@ -35,19 +35,11 @@ function DefenderVoting ({ isMember, ownMembers }: Props): React.ReactElement<Pr
           <Modal.Content>
             <InputAddress
               filter={ownMembers}
-<<<<<<< HEAD
-              label={t<string>('vote from account')}
-              onChange={setAccountId}
-            />
-            <Dropdown
-              label={t<string>('vote for defender')}
-=======
               label={t('vote from account')}
               onChange={setAccountId}
             />
             <Dropdown
               label={t('vote for defender')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={setVote}
               options={voteOptsRef.current}
               value={vote}

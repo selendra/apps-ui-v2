@@ -4,8 +4,6 @@
     "baseUrl": "./packages",
     "composite": false
   },
-<<<<<<< HEAD
-=======
   "include": [
     "packages/**/public/env-config.js",
     "packages/**/src/**/*",
@@ -17,7 +15,6 @@
     "eslint.config.js",
     "i18next-scanner.config.cjs"
   ],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "exclude": [
     "build/**/*",
     "**/build/**/*",

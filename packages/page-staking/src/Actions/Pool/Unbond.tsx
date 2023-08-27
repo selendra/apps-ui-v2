@@ -46,11 +46,7 @@ function Unbond ({ className, controllerId, maxUnbond, onClose, poolId }: Props)
             autoFocus
             defaultValue={maxUnbond}
             isError={isAmountError}
-<<<<<<< HEAD
-            label={t<string>('amount to unbond')}
-=======
             label={t('amount to unbond')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             labelExtra={
               <FormatBalance
                 label={<span className='label'>{t('bonded')}</span>}
@@ -63,11 +59,7 @@ function Unbond ({ className, controllerId, maxUnbond, onClose, poolId }: Props)
           />
           {bondedBlocks?.gtn(0) && (
             <Static
-<<<<<<< HEAD
-              label={t<string>('on-chain bonding duration')}
-=======
               label={t('on-chain bonding duration')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             >
               <BlockToTime value={bondedBlocks} />
             </Static>
@@ -79,11 +71,7 @@ function Unbond ({ className, controllerId, maxUnbond, onClose, poolId }: Props)
           accountId={controllerId}
           icon='unlock'
           isDisabled={isAmountError}
-<<<<<<< HEAD
-          label={t<string>('Unbond')}
-=======
           label={t('Unbond')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           onStart={onClose}
           params={[controllerId, amount]}
           tx={api.tx.nominationPools.unbond}

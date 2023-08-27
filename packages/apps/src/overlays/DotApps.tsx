@@ -49,11 +49,7 @@ function DotApps ({ className }: Props): React.ReactElement<Props> | null {
         type='info'
       >
         <div>
-<<<<<<< HEAD
-          {t<string>('You are connected to the development instance of the UI. For a fully decentralized experience, you are encouraged to use the IPFS deployed version as the canonical URL: ')}
-=======
           {t('You are connected to the development instance of the UI. For a fully decentralized experience, you are encouraged to use the IPFS deployed version as the canonical URL: ')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
           <a
             href={appsUrl}
             rel='noreferrer'

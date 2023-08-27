@@ -2,8 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type React from 'react';
-<<<<<<< HEAD
-=======
 
 export interface ElementPosition {
   x: number,
@@ -11,7 +9,6 @@ export interface ElementPosition {
   width: number,
   height: number,
 }
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 export type HorizontalPosition = 'left' | 'middle' | 'right'
 

@@ -32,15 +32,9 @@ function Peers ({ className = '', peers }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('connected peers'), 'start', 2],
-    [t<string>('best hash'), 'start'],
-    [t<string>('best #'), 'number']
-=======
     [t('connected peers'), 'start', 2],
     [t('best hash'), 'start'],
     [t('best #'), 'number']
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   const sorted = useMemo(

@@ -51,11 +51,7 @@ function VoteStandard ({ accountId, id, isAye, onChange, voteLockingPeriod }: Pr
         onChange={setBalance}
       />
       <ConvictionDropdown
-<<<<<<< HEAD
-        label={t<string>('conviction')}
-=======
         label={t('conviction')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
         onChange={setConviction}
         value={conviction}
         voteLockingPeriod={voteLockingPeriod}

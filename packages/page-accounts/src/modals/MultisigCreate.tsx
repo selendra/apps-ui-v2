@@ -2,10 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { ActionStatus } from '@polkadot/react-components/Status/types';
-<<<<<<< HEAD
-=======
 import type { HexString } from '@polkadot/util/types';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { ModalProps } from '../types.js';
 
 import React, { useCallback, useState } from 'react';
@@ -184,17 +181,10 @@ function Multisig ({ className = '', onClose, onStatusChange }: Props): React.Re
           >
             <InputAddressMulti
               available={availableSignatories}
-<<<<<<< HEAD
-              availableLabel={t<string>('available signatories')}
-              maxCount={MAX_SIGNATORIES}
-              onChange={_onChangeAddressMulti}
-              valueLabel={t<string>('selected signatories')}
-=======
               availableLabel={t('available signatories')}
               maxCount={MAX_SIGNATORIES}
               onChange={_onChangeAddressMulti}
               valueLabel={t('selected signatories')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             />
           </Modal.Columns>
         )}

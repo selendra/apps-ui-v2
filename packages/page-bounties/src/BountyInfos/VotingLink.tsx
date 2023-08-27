@@ -19,11 +19,7 @@ function VotingLink ({ className }: Props): React.ReactElement<Props> {
       className={className}
       href='#/council/motions'
     >
-<<<<<<< HEAD
-      {t<string>('Voting')}
-=======
       {t('Voting')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     </StyledA>
   );
 }

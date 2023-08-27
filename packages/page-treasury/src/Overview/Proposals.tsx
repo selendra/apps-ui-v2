@@ -22,15 +22,9 @@ function ProposalsBase ({ className = '', isApprovals, isMember, members, propos
   const { t } = useTranslation();
 
   const header = useMemo<([React.ReactNode?, string?, number?] | false)[]>(() => [
-<<<<<<< HEAD
-    [isApprovals ? t<string>('Approved') : t<string>('Proposals'), 'start', 2],
-    [],
-    [t<string>('proposer'), 'address'],
-=======
     [isApprovals ? t('Approved') : t('Proposals'), 'start', 2],
     [],
     [t('proposer'), 'address'],
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     [],
     []
   ], [isApprovals, t]);

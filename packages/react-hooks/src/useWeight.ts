@@ -62,10 +62,7 @@ function useWeightImpl (call?: Call | null): Result {
   const { api } = useApi();
   const mountedRef = useIsMountedRef();
   const [state, setState] = useState<Result>(() => objectSpread({
-<<<<<<< HEAD
-=======
     // eslint-disable-next-line @typescript-eslint/unbound-method
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     isWeightV2: !isFunction(api.registry.createType<V1Weight>('Weight').toBn)
   }, EMPTY_STATE));
 

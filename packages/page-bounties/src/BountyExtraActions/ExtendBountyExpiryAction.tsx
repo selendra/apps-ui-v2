@@ -62,11 +62,7 @@ function ExtendBountyExpiryAction ({ curatorId, description, index, toggleOpen }
             <Input
               autoFocus
               defaultValue={''}
-<<<<<<< HEAD
-              label={t<string>('bounty remark')}
-=======
               label={t('bounty remark')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
               onChange={onRemarkChange}
               value={remark}
             />

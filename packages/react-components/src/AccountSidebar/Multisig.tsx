@@ -5,12 +5,7 @@ import type { KeyringJson$Meta } from '@polkadot/ui-keyring/types';
 
 import React from 'react';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/Multisig.tsx
-import { AddressMini } from '@polkadot/react-components';
-
-=======
 import AddressMini from '../AddressMini.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/Multisig.tsx
 import { useTranslation } from '../translate.js';
 
 interface Props {
@@ -36,11 +31,7 @@ function Multisig ({ isMultisig, meta }: Props): React.ReactElement<Props> | nul
         <div className='tr'>
           <div className='th'>{t('threshold')}</div>
           <div className='td'>
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/Multisig.tsx
-            {threshold as string}/{(who as string[]).length}
-=======
             {threshold}/{who?.length}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/Multisig.tsx
           </div>
         </div>
         <div className='tr'>

@@ -89,11 +89,7 @@ function Vote ({ electionsInfo }: Props): React.ReactElement<Props> | null {
           <Modal.Content>
             <Modal.Columns hint={t('The vote will be recorded for the selected account.')}>
               <InputAddress
-<<<<<<< HEAD
-                label={t<string>('voting account')}
-=======
                 label={t('voting account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setAccountId}
                 type='account'
               />
@@ -122,7 +118,7 @@ function Vote ({ electionsInfo }: Props): React.ReactElement<Props> | null {
               />
             </Modal.Columns>
             {bondValue && (
-              <Modal.Columns hint={t<string>('The amount will be reserved for the duration of your vote')}>
+              <Modal.Columns hint={t('The amount will be reserved for the duration of your vote')}>
                 <InputBalance
                   defaultValue={bondValue}
                   isDisabled

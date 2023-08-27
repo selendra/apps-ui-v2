@@ -19,17 +19,10 @@ function Collections ({ className, infos }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-<<<<<<< HEAD
-    [t<string>('collections'), 'start', 2],
-    [t<string>('owner'), 'address media--1000'],
-    [t<string>('status')],
-    [t<string>('items')]
-=======
     [t('collections'), 'start', 2],
     [t('owner'), 'address media--1000'],
     [t('status')],
     [t('items')]
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   ]);
 
   return (

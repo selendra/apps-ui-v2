@@ -7,14 +7,9 @@ import React, { Suspense, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import createRoutes from '@polkadot/apps-routing';
-<<<<<<< HEAD
-import { ErrorBoundary, Spinner, styled, TabsCtx } from '@polkadot/react-components';
-import { useApi, useQueue } from '@polkadot/react-hooks';
-=======
 import { ErrorBoundary, Spinner, styled } from '@polkadot/react-components';
 import { useApi, useQueue } from '@polkadot/react-hooks';
 import { TabsCtx } from '@polkadot/react-hooks/ctx/Tabs';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 import { findMissingApis } from '../endpoint.js';
 import { useTranslation } from '../translate.js';

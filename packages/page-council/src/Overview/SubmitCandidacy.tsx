@@ -34,17 +34,13 @@ function SubmitCandidacy ({ electionsInfo }: Props): React.ReactElement<Props> |
           <Modal.Content>
             <Modal.Columns hint={t('This account will appear in the list of candidates. With enough votes in an election, it will become either a runner-up or a council member.')}>
               <InputAddress
-<<<<<<< HEAD
-                label={t<string>('candidate account')}
-=======
                 label={t('candidate account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                 onChange={setAccountId}
                 type='account'
               />
             </Modal.Columns>
             {api.consts[modLocation] && (
-              <Modal.Columns hint={t<string>('The bond will be reserved for the duration of your candidacy and membership.')}>
+              <Modal.Columns hint={t('The bond will be reserved for the duration of your candidacy and membership.')}>
                 <InputBalance
                   defaultValue={api.consts[modLocation as 'council']?.candidacyBond as u128}
                   isDisabled

@@ -4,10 +4,7 @@
 import type { Dispatch, SetStateAction } from 'react';
 import type { KeyringPair, KeyringPair$Json } from '@polkadot/keyring/types';
 import type { ActionStatus } from '@polkadot/react-components/Status/types';
-<<<<<<< HEAD
-=======
 import type { HexString } from '@polkadot/util/types';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { ModalProps } from '../types.js';
 
 import React, { useCallback, useMemo, useState } from 'react';

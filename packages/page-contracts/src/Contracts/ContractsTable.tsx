@@ -44,9 +44,9 @@ function ContractsTable ({ contracts: keyringContracts }: Props): React.ReactEle
   const [contractLinks, setContractLinks] = useState<Record<string, ContractLink[]>>({});
 
   const headerRef = useRef<[string?, string?, number?][]>([
-    [t<string>('contracts'), 'start'],
+    [t('contracts'), 'start'],
     [undefined, undefined, 3],
-    [t<string>('status'), 'start'],
+    [t('status'), 'start'],
     []
   ]);
 

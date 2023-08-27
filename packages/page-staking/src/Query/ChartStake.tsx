@@ -85,11 +85,7 @@ function ChartStake ({ labels, validatorId }: Props): React.ReactElement<Props> 
       colors={COLORS_STAKE}
       labels={labels}
       legends={legends}
-<<<<<<< HEAD
-      title={t<string>('elected stake')}
-=======
       title={t('elected stake')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
       values={values}
     />
   );

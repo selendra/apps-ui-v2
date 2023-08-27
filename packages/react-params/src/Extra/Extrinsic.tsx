@@ -6,11 +6,7 @@ import type { RawParam, RawParamOnChange, RawParamOnEnter, RawParamOnEscape } fr
 
 import React, { useCallback } from 'react';
 
-<<<<<<< HEAD:packages/react-components/src/Params/Extrinsic.tsx
-import BaseExtrinsic from '../Extrinsic.js';
-=======
 import { Extrinsic as BaseExtrinsic } from '../Named/index.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-params/src/Extra/Extrinsic.tsx
 
 interface Props {
   className?: string;

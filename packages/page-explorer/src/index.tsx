@@ -1,12 +1,7 @@
 // Copyright 2017-2023 @polkadot/app-explorer authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-<<<<<<< HEAD
-import type { TFunction } from 'i18next';
-import type { TabItem } from '@polkadot/react-components/Tabs/types';
-=======
 import type { TabItem } from '@polkadot/react-components/types';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { KeyedEvent } from '@polkadot/react-hooks/ctx/types';
 
 import React, { useMemo, useRef } from 'react';
@@ -30,11 +25,7 @@ interface Props {
   newEvents?: KeyedEvent[];
 }
 
-<<<<<<< HEAD
-function createItemsRef (t: TFunction): TabItem[] {
-=======
 function createItemsRef (t: (key: string, options?: { replace: Record<string, unknown> }) => string): TabItem[] {
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   return [
     {
       isRoot: true,

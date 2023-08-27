@@ -3,13 +3,8 @@
 
 import React from 'react';
 
-<<<<<<< HEAD:packages/page-accounts/src/Sidebar/Balances.tsx
-import { AddressInfo, styled } from '@polkadot/react-components';
-
-=======
 import AddressInfo from '../AddressInfo.js';
 import { styled } from '../styled.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/react-components/src/AccountSidebar/Balances.tsx
 import { useTranslation } from '../translate.js';
 
 interface Props {

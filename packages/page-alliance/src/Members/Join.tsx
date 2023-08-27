@@ -47,16 +47,12 @@ function Join ({ className, members, onClose, unscrupulous: { accounts } }: Prop
         <Modal.Columns hint={t('This account will be submitted to join the aliance. It will be allocated one of the alliance roles upon joining, starting with Ally.')}>
           <InputAddress
             filter={available}
-<<<<<<< HEAD
-            label={t<string>('alliance account')}
-=======
             label={t('alliance account')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
             onChange={setAccountId}
             type='account'
           />
         </Modal.Columns>
-        <Modal.Columns hint={t<string>('The bond will be reserved for the duration of your alliance membership.')}>
+        <Modal.Columns hint={t('The bond will be reserved for the duration of your alliance membership.')}>
           <InputBalance
             defaultValue={api.consts.alliance.allyDeposit}
             isDisabled

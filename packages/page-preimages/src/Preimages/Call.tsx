@@ -5,14 +5,9 @@ import type { Preimage } from '@polkadot/react-hooks/types';
 
 import React from 'react';
 
-<<<<<<< HEAD
-import { AddressMini, CallExpander, MarkError, MarkWarning } from '@polkadot/react-components';
-import { ZERO_ACCOUNT } from '@polkadot/react-hooks/useWeight';
-=======
 import { AddressMini, MarkError, MarkWarning } from '@polkadot/react-components';
 import { ZERO_ACCOUNT } from '@polkadot/react-hooks/useWeight';
 import { CallExpander } from '@polkadot/react-params';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 import { useTranslation } from '../translate.js';
 
@@ -33,11 +28,7 @@ function PreimageCall ({ className = '', value }: Props): React.ReactElement<Pro
             <>
               {value.proposal && (
                 <CallExpander
-<<<<<<< HEAD
-                  labelHash={t<string>('call')}
-=======
                   labelHash={t('call')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                   value={value.proposal}
                 />
               )}

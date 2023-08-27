@@ -15,11 +15,8 @@ import Holder from './Holder.js';
 import ParamComp from './ParamComp.js';
 import translate from './translate.js';
 import { createValue } from './values.js';
-<<<<<<< HEAD
-=======
 
 export * from './Named/index.js';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 
 interface Props extends I18nProps {
   children?: React.ReactNode;
@@ -87,11 +84,7 @@ class Params extends React.PureComponent<Props, State> {
   }
 
   public override render (): React.ReactNode {
-<<<<<<< HEAD
-    const { children, className = '', isDisabled, isError, onEnter, onEscape, overrides, params, registry = api.registry, withBorder = true, withExpander } = this.props;
-=======
     const { children, className = '', isDisabled, isError, onEnter, onEscape, overrides, params, registry = statics.api.registry, withBorder = true, withExpander } = this.props;
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
     const { values = this.props.values } = this.state;
 
     if (!values?.length) {

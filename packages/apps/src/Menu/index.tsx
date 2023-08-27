@@ -27,15 +27,16 @@ interface Props {
 function createExternals (t: (key: string, optionsOrText?: string | { replace: Record<string, unknown> }, options?: { ns: string }) => string): ItemRoute[] {
   return [
     {
-      href: 'http://github.com/selendra',
+      href: 'https://github.com/polkadot-js/apps',
       icon: 'code-branch',
       name: 'github',
       text: t('nav.github', 'GitHub', { ns: 'apps-routing' })
     },
     {
-      href: 'http://t.me/selendra',
-      name: 'Community',
-      text: t<string>('nav.community', 'Community', { ns: 'apps-routing' })
+      href: 'https://wiki.polkadot.network',
+      icon: 'book',
+      name: 'wiki',
+      text: t('nav.wiki', 'Wiki', { ns: 'apps-routing' })
     }
   ];
 }
@@ -97,12 +98,12 @@ function Menu ({ className = '' }: Props): React.ReactElement<Props> {
   const routeRef = useRef(createRoutes(t));
 
   const groupRef = useRef({
-    accounts: t<string>('Accounts'),
-    developer: t<string>('Developer'),
-    files: t<string>('Files'),
-    governance: t<string>('Governance'),
-    network: t<string>('Network'),
-    settings: t<string>('Settings')
+    accounts: t('Accounts'),
+    developer: t('Developer'),
+    files: t('Files'),
+    governance: t('Governance'),
+    network: t('Network'),
+    settings: t('Settings')
   });
 
   const hasSudo = useMemo(

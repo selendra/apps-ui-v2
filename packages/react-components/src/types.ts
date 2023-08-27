@@ -5,10 +5,6 @@ import type { IconName } from '@fortawesome/fontawesome-svg-core';
 import type React from 'react';
 import type { SubmittableExtrinsic } from '@polkadot/api/types';
 import type { Abi } from '@polkadot/api-contract';
-<<<<<<< HEAD
-import type { ThemeDef } from '@polkadot/react-hooks/ctx/types';
-=======
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import type { AccountId, AccountIndex, Address, Index } from '@polkadot/types/interfaces';
 import type { ActionStatus, TxCallback, TxFailedCallback } from './Status/types.js';
 

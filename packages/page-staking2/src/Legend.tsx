@@ -25,11 +25,7 @@ function Legend ({ className, isRelay, minCommission }: Props): React.ReactEleme
           color='blue'
           icon='chevron-right'
         />
-<<<<<<< HEAD:packages/page-staking/src/Legend.tsx
-        <span>{t<string>('Next session')}</span>
-=======
         <span>{t('Next session')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/page-staking2/src/Legend.tsx
       </span>
       {minCommission && (
         <span>
@@ -37,11 +33,7 @@ function Legend ({ className, isRelay, minCommission }: Props): React.ReactEleme
             color='red'
             icon='cancel'
           />
-<<<<<<< HEAD:packages/page-staking/src/Legend.tsx
-          <span>{t<string>('Chilled')}</span>
-=======
           <span>{t('Chilled')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/page-staking2/src/Legend.tsx
         </span>
       )}
       {isRelay && (
@@ -50,11 +42,7 @@ function Legend ({ className, isRelay, minCommission }: Props): React.ReactEleme
             color='purple'
             icon='vector-square'
           />
-<<<<<<< HEAD:packages/page-staking/src/Legend.tsx
-          <span>{t<string>('Para validator')}</span>
-=======
           <span>{t('Para validator')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/page-staking2/src/Legend.tsx
         </span>
       )}
       <span>
@@ -62,77 +50,49 @@ function Legend ({ className, isRelay, minCommission }: Props): React.ReactEleme
           color='green'
           info='5'
         />
-<<<<<<< HEAD:packages/page-staking/src/Legend.tsx
-        <span>{t<string>('Produced blocks')}</span>
-=======
         <span>{t('Produced blocks')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/page-staking2/src/Legend.tsx
       </span>
       <span>
         <Badge
           color='green'
           icon='envelope'
         />
-<<<<<<< HEAD:packages/page-staking/src/Legend.tsx
-        <span>{t<string>('Online message')}</span>
-=======
         <span>{t('Online message')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/page-staking2/src/Legend.tsx
       </span>
       <span>
         <Badge
           color='green'
           icon='hand-paper'
         />
-<<<<<<< HEAD:packages/page-staking/src/Legend.tsx
-        <span>{t<string>('Nominating')}</span>
-=======
         <span>{t('Nominating')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/page-staking2/src/Legend.tsx
       </span>
       <span>
         <Badge
           color='red'
           icon='balance-scale-right'
         />
-<<<<<<< HEAD:packages/page-staking/src/Legend.tsx
-        <span>{t<string>('Oversubscribed')}</span>
-=======
         <span>{t('Oversubscribed')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/page-staking2/src/Legend.tsx
       </span>
       <span>
         <Badge
           color='red'
           icon='skull-crossbones'
         />
-<<<<<<< HEAD:packages/page-staking/src/Legend.tsx
-        <span>{t<string>('Slashed')}</span>
-=======
         <span>{t('Slashed')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/page-staking2/src/Legend.tsx
       </span>
       <span>
         <Badge
           color='red'
           icon='user-slash'
         />
-<<<<<<< HEAD:packages/page-staking/src/Legend.tsx
-        <span>{t<string>('Blocks nominations')}</span>
-=======
         <span>{t('Blocks nominations')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/page-staking2/src/Legend.tsx
       </span>
       <span>
         <Tag
           color='lightgrey'
           label='1,220'
         />
-<<<<<<< HEAD:packages/page-staking/src/Legend.tsx
-        <span>{t<string>('Era points')}</span>
-=======
         <span>{t('Era points')}</span>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f:packages/page-staking2/src/Legend.tsx
       </span>
     </StyledDiv>
   );

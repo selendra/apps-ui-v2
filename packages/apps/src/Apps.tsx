@@ -5,12 +5,7 @@ import type { BareProps as Props } from '@polkadot/react-components/types';
 
 import React, { useMemo } from 'react';
 
-<<<<<<< HEAD
-import AccountSidebar from '@polkadot/app-accounts/Sidebar';
-import { styled } from '@polkadot/react-components/styled';
-=======
 import { AccountSidebar, styled } from '@polkadot/react-components';
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
 import GlobalStyle from '@polkadot/react-components/styles';
 import { useApi, useTheme } from '@polkadot/react-hooks';
 import Signer from '@polkadot/react-signer';

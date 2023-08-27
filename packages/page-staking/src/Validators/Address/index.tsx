@@ -194,11 +194,7 @@ function Address ({ address, className = '', filterName, hasQueries, isElected, 
               <Columar.Column>
                 {isMain && stakeOwn?.gtn(0) && (
                   <>
-<<<<<<< HEAD
-                    <h5>{t<string>('own stake')}</h5>
-=======
                     <h5>{t('own stake')}</h5>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                     <FormatBalance
                       value={stakeOwn}
                     />
@@ -208,21 +204,13 @@ function Address ({ address, className = '', filterName, hasQueries, isElected, 
               <Columar.Column>
                 {hasQueries && (
                   <>
-<<<<<<< HEAD
-                    <h5>{t<string>('graphs')}</h5>
-=======
                     <h5>{t('graphs')}</h5>
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                     <a href={statsLink}>
                       <Icon
                         className='highlight--color'
                         icon='chart-line'
                       />
-<<<<<<< HEAD
-                      &nbsp;{t<string>('historic results')}
-=======
                       &nbsp;{t('historic results')}
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
                     </a>
                   </>
                 )}

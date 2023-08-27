@@ -63,13 +63,10 @@
   "Additional types as a JSON file (or edit below)": "",
   "Address Prefix": "",
   "Address index {{index}}": "",
-<<<<<<< HEAD
-=======
   "Addresses": "",
   "Advanced creation options": "",
   "After delay": "",
   "All active/available tracks": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "All bags": "",
   "All pools": "",
   "All rewards will go towards the selected output destination when a payout is made.": "",
@@ -77,9 +74,6 @@
   "All the listed validators and all their nominators will receive their rewards.": "",
   "All validators": "",
   "All voters may alter their votes any number of times prior to the close of the poll.": "",
-<<<<<<< HEAD
-  "Allow local in-browser account storage": "",
-=======
   "Allocate a suggested tip amount. With enough endorsements, the suggested values are averaged and sent to the beneficiary.": "",
   "Allocation value is smaller than the minimum bounty value.": "",
   "Allow local in-browser account storage": "",
@@ -89,7 +83,6 @@
   "Announcements ({{count}})": "",
   "Any account can request payout for stakers, this is not limited to accounts that will be rewarded.": "",
   "Any account set as proxy will be able to perform actions in place of the proxied account": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "Any combination of the four options may be approved of by the voter. There is no need to select only one option!": "",
   "Any democracy vote performed by the delegated account will result in an additional vote from the delegating account": "",
   "Application of slashes from era {{id}}": "",
@@ -203,11 +196,8 @@
   "Create nomination pool": "",
   "Crowdloan": "",
   "Crust Network": "",
-<<<<<<< HEAD
-=======
   "Crust Pinner": "",
   "Crypto not detected": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "Curator proposal under voting": "",
   "Curator slash under voting": "",
   "Curator's deposit": "",
@@ -220,13 +210,10 @@
   "Custom index": "",
   "DCF": "",
   "Dark theme": "",
-<<<<<<< HEAD
-=======
   "Deciding": "",
   "Decimals": "",
   "Decision deposit": "",
   "Decode": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "Defender": "",
   "Delegate": "",
   "Delegate democracy votes": "",
@@ -245,9 +232,6 @@
   "Development": "",
   "Distinct stash and controller accounts are recommended to ensure fund security. You will be allowed to make the transaction, but take care to not tie up all funds, only use a portion of the available funds during this period.": "",
   "Do not allow local in-browser account storage": "",
-<<<<<<< HEAD
-  "Enactment period": "",
-=======
   "Do not include a tip for the block author": "",
   "Do not transfer any funds directly to a specific account that is associated with a loan or a team. Use the \"Contribute\" action to record the contribution on-chain using the crowdloan runtime module. When the fund is dissolved, after either the parachain lease expires or the loan ending without winning, the full value will be returned to your account by the runtime. Funds sent directly to an account, without using the crowdloan functionality, may not be returned by the receiving account.": "",
   "Do not upload files larger than 100MB!": "",
@@ -271,7 +255,6 @@
   "Ensure that you utilized the \"Save\" functionality before using a generated address to receive funds. Without saving the address and the associated seed any funds sent to it will be lost.": "",
   "Ensure you are using a strong password for proper account protection.": "",
   "Era is overdue for completion due to current network operating conditions": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "Era points": "",
   "Evaluated {{count}} keys in {{elapsed}}s ({{avg}} keys/s)": "",
   "Execute": "",
@@ -290,11 +273,8 @@
   "Flags": "",
   "Folder": "",
   "For approvals outstanding approvers will be shown, for hashes that should be cancelled the first approver is required.": "",
-<<<<<<< HEAD
-=======
   "For fund security, your session key should not match your stash key.": "",
   "Forget": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "Forget this account": "",
   "Forget this address": "",
   "Forks": "",
@@ -353,15 +333,11 @@
   "Latency": "",
   "Learn more...": "",
   "Ledger app type (originated from)": "",
-<<<<<<< HEAD
-  "Light theme": "",
-=======
   "Ledger hardware device support is only available on Chromium-based browsers where WebUSB and WebHID support is available in the browser.": "",
   "Ledger support is still experimental and some issues may remain. Trust, but verify the addresses on your devices before transferring large amounts. There are some features that will not work, including batch calls (used extensively in staking and democracy) as well as any identity operations.": "",
   "Lifetime (# of blocks)": "",
   "Light theme": "",
   "Loading": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "Locked funds (e.g. for staking) are counted.": "",
   "Locked1x": "",
   "Locked2x": "",
@@ -679,10 +655,7 @@
   "Society": "",
   "Soft derivation paths are not allowed on ed25519": "",
   "Specified payment account": "",
-<<<<<<< HEAD
-=======
   "Split": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "Split of 1000x": "",
   "Split of 1000x from the original sale; will mean a total of 10 billion DOT from genesis. Apparent DOT price would be 1000x lower and apparent account balances 1000x higher.": "",
   "Split of 100x": "",
@@ -743,9 +716,6 @@
   "Teleport assets": "",
   "Test account": "",
   "The All bags list is composed of bags that each describe a range of active bonded funds of the nominators. In each bag is a list of nodes that correspond to a nominator and their staked funds.": "",
-<<<<<<< HEAD
-  "The account that will create the transaction.": "",
-=======
   "The Curator account that will be used to send this transaction. Any applicable fees will be paid by this account.": "",
   "The Id of this parachain as known on the network (selected from nextFreeId)": "",
   "The Threshold must be a positive number": "",
@@ -764,14 +734,10 @@
   "The account that will submit the rebag transaction.": "",
   "The account that you wish to delegate to": "",
   "The account to transfer from. This account should have sufficient assets for this transfer.": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "The account type that you wish to create. This is the top-level derivation.": "",
   "The accounts that will be rebagged as a result of this operation.": "",
   "The actual fully constructed signed output. This can be used for submission via other channels.": "",
-<<<<<<< HEAD
-=======
   "The actual proposal to make, based on the selected call and parameters thereof.": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "The address index on the account that you wish to add. This is the second-level derivation.": "",
   "The address that has previously setup a proxy to one of the accounts that you control.": "",
   "The amount deposited to the recipient will be net the calculated cross-chain fee. If the recipient address is new, the amount deposited should be greater than the Existential Deposit": "",
@@ -813,11 +779,8 @@
   "The call data for this transaction matching the hash. Once sent, the multisig will be executed against this.": "",
   "The call hash as calculated for this transaction": "",
   "The call hash from the list of available and unapproved calls.": "",
-<<<<<<< HEAD
-=======
   "The candidate/bid account. Once accepted this account will become a member.": "",
   "The code is not recognized as being in valid WASM format": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "The codeHash is not a valid hex hash": "",
   "The commission is below the on-chain minimum of {{p}}%": "",
   "The commission is deducted from all rewards before the remainder is split with nominators.": "",
@@ -867,8 +830,6 @@
   "The length value witll be auto-populated from the on-chain value if is is found.": "",
   "The local name for this account. Changing this does not affect your on-line identity, so this is only used to indicate the name of the account locally.": "",
   "The maximum amount you can delegate is the amount of funds available on the delegating account.": "",
-<<<<<<< HEAD
-=======
   "The metadata description to set for this pool": "",
   "The minimum balance allowed for the asset.": "",
   "The minimum balance for the asset. This is specified in the units and decimals as requested.": "",
@@ -883,7 +844,6 @@
   "The number of decimals for this token. Max allowed via the UI is set to 20.": "",
   "The number of periods this bid is to be freezed for, less than the maximum period": "",
   "The number of periods this bid is to be locked for, less than the maximum period.": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "The operation type to apply. For approvals both non-final and final approvals are supported.": "",
   "The origin (and by extension track) that you wish to submit for, each has a different period, different root and acceptance criteria.": "",
   "The origin account will also be set as the pool admin, nominator and state toggler.": "",
@@ -897,8 +857,6 @@
   "The proposal that will be affected. Once closed for the current voting round, it would need to be re-submitted to council for a subsequent voting round.": "",
   "The proposal will be registered from this account and the balance lock will be applied here.": "",
   "The proxy is one of the allowed proxies on the account, as set and filtered by the transaction type.": "",
-<<<<<<< HEAD
-=======
   "The recipient account for this minting operation.": "",
   "The recipient account has no balance, ensure the tip is more than the existential deposit to create the account.": "",
   "The recipient is associated with a known phishing site on {{url}}": "",
@@ -912,7 +870,6 @@
   "The selected destination account does not exist and cannot be used to receive rewards": "",
   "The selected id for the asset. This should not match an already-existing asset id.": "",
   "The selected validators to nominate, either via the \"currently best algorithm\" or via a manual selection.": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "The sending account that will be used to send this transaction. Any applicable fees will be paid by this account.": "",
   "The signatories has the ability to create transactions using the multisig and approve transactions sent by others.Once the threshold is reached with approvals, the multisig transaction is enacted on-chain.": "",
   "The signatory is one of the allowed accounts on the multisig, making a recorded approval for the transaction.": "",
@@ -974,12 +931,9 @@
   "This action will Slash the Curator.": "",
   "This action will create a Council motion to slash the Curator.": "",
   "This action will create a Council motion to unassign the Curator.": "",
-<<<<<<< HEAD
-=======
   "This amount will be reserved from your account and returned after bounty claim is confirmed or if you give up, unless you are slashed earlier.": "",
   "This amount will be sent to your account after bounty is rewarded and you claim curator's fee.": "",
   "This chain does not yet support atomic batch operations. This means that if the transaction gets executed and one of the operations do fail (due to invalid data or lack of available funds) some of the changes made may not be applied.": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "This could either be an approval for the hash or with full call details. The call as last approval triggers execution.": "",
   "This could mean your nomination has not been applied to any validator in the active set by the election algorithm or it has been applied against a validator who is either oversubscribed or chilled.": "",
   "This does not send any transaction, rather it only sets the genesis in the account JSON.": "",
@@ -1013,6 +967,7 @@
   "Unable to decode the block events. {{error}}": "",
   "Unable to find deployed contract code at the specified address": "",
   "Unable to find on-chain WASM code for the supplied codeHash": "",
+  "Unable to retrieve the specified block details. {{error}}": "",
   "Unassign curator": "",
   "Unassign curator under voting": "",
   "Unbid": "",
@@ -1120,9 +1075,6 @@
   "You have {{upgradableCount}} extensions that need to be updated with the latest chain properties in order to display the correct information for the chain you are connected to.": "",
   "You need to sign an attestation for the following account:": "",
   "You need to sign an attestation for the following accounts:": "",
-<<<<<<< HEAD
-  "YourDiscordHandle": "",
-=======
   "You need to supply at last one running validator for your parachain alongside this request.": "",
   "You need to unlock this account to be able to sign data.": "",
   "You should not setup proxies to act as a self-proxy.": "",
@@ -1140,7 +1092,6 @@
   "YourDiscordHandle": "",
   "abstain vote value": "",
   "accept curator role": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "account": "",
   "account forgotten": "",
   "account name": "",
@@ -1211,11 +1162,8 @@
   "backup file": "",
   "bags": "",
   "balance": "",
-<<<<<<< HEAD
-=======
   "beneficiary": "",
   "best": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "best #": "",
   "best hash": "",
   "bid account": "",
@@ -1228,13 +1176,10 @@
   "block weight": "",
   "blockhash to query at": "",
   "blocks": "",
-<<<<<<< HEAD
-=======
   "blocksize (last {{n}} blocks)": "",
   "blocktime": "",
   "blocktimes (last {{n}} blocks)": "",
   "bond": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "bonded": "",
   "bounties": "",
   "bounty bond": "",
@@ -1492,13 +1437,9 @@
   "launch period": "",
   "lease period": "",
   "leases": "",
-<<<<<<< HEAD
-  "length": "",
-=======
   "legal name": "",
   "length": "",
   "length of lock (blocks, calculated)": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "lifecycle": "",
   "lifetime": "",
   "link": "",
@@ -1566,11 +1507,8 @@
   "nominated accounts": "",
   "nominator": "",
   "nominators": "",
-<<<<<<< HEAD
-=======
   "nominators to be removed": "",
   "none": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "of {{locked}} vested": "",
   "on-chain bonding duration": "",
   "on-chain multisig accounts": "",
@@ -1585,6 +1523,7 @@
   "our best": "",
   "overall/validator": "",
   "own": "",
+  "own stake": "",
   "owner": "",
   "parachain id": "",
   "parachain name": "",
@@ -1594,13 +1533,10 @@
   "parent": "",
   "partial seed": "",
   "participants": "",
-<<<<<<< HEAD
-=======
   "password": "",
   "password (repeat)": "",
   "past": "",
   "payment destination": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "payout": "",
   "payout stakers for (multiple)": "",
   "payout stakers for (single)": "",
@@ -1684,12 +1620,9 @@
   "returns": "",
   "reward commission percentage": "",
   "rewards": "",
-<<<<<<< HEAD
-=======
   "rewards & slashes": "",
   "riot": "",
   "riot name": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "root": "",
   "rotation": "",
   "rule": "",
@@ -1711,8 +1644,6 @@
   "send to address": "",
   "send via proxy": "",
   "sending from my account": "",
-<<<<<<< HEAD
-=======
   "sent": "",
   "session": "",
   "session keys": "",
@@ -1727,7 +1658,6 @@
   "signature {{type}}": "",
   "skeptic": "",
   "society head": "",
->>>>>>> ee79dc8ca86484d8700d24a4be0f001360f84b4f
   "somebody@example.com": "",
   "sort by": "",
   "spend period": "",
